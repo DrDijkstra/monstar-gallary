@@ -20,15 +20,6 @@
 		922720C62848B4AF0027E003 /* gallaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720C52848B4AF0027E003 /* gallaryTests.swift */; };
 		922720D02848B4AF0027E003 /* gallaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720CF2848B4AF0027E003 /* gallaryUITests.swift */; };
 		922720D22848B4AF0027E003 /* gallaryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720D12848B4AF0027E003 /* gallaryUITestsLaunchTests.swift */; };
-		922720E22848B8410027E003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922720DF2848B8410027E003 /* Assets.xcassets */; };
-		922720E32848B8410027E003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922720DF2848B8410027E003 /* Assets.xcassets */; };
-		922720E42848B8410027E003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922720DF2848B8410027E003 /* Assets.xcassets */; };
-		922720E52848B8410027E003 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 922720E02848B8410027E003 /* appstore.png */; };
-		922720E62848B8410027E003 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 922720E02848B8410027E003 /* appstore.png */; };
-		922720E72848B8410027E003 /* appstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 922720E02848B8410027E003 /* appstore.png */; };
-		922720E82848B8410027E003 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 922720E12848B8410027E003 /* playstore.png */; };
-		922720E92848B8410027E003 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 922720E12848B8410027E003 /* playstore.png */; };
-		922720EA2848B8410027E003 /* playstore.png in Resources */ = {isa = PBXBuildFile; fileRef = 922720E12848B8410027E003 /* playstore.png */; };
 		922720EC2848B9FE0027E003 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720EB2848B9FE0027E003 /* SplashViewController.swift */; };
 		922720ED2848B9FE0027E003 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720EB2848B9FE0027E003 /* SplashViewController.swift */; };
 		922720EE2848B9FE0027E003 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720EB2848B9FE0027E003 /* SplashViewController.swift */; };
@@ -75,9 +66,6 @@
 		922720CB2848B4AF0027E003 /* monstar-gallaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "monstar-gallaryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922720CF2848B4AF0027E003 /* gallaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gallaryUITests.swift; sourceTree = "<group>"; };
 		922720D12848B4AF0027E003 /* gallaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gallaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		922720DF2848B8410027E003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		922720E02848B8410027E003 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
-		922720E12848B8410027E003 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
 		922720EB2848B9FE0027E003 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +129,6 @@
 				922720B72848B4AF0027E003 /* Assets.xcassets */,
 				922720B92848B4AF0027E003 /* LaunchScreen.storyboard */,
 				922720BC2848B4AF0027E003 /* Info.plist */,
-				922720DE2848B8410027E003 /* AppIcons */,
 				922720B42848B4AE0027E003 /* gallary.xcdatamodeld */,
 				92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */,
 			);
@@ -163,16 +150,6 @@
 				922720D12848B4AF0027E003 /* gallaryUITestsLaunchTests.swift */,
 			);
 			path = gallaryUITests;
-			sourceTree = "<group>";
-		};
-		922720DE2848B8410027E003 /* AppIcons */ = {
-			isa = PBXGroup;
-			children = (
-				922720DF2848B8410027E003 /* Assets.xcassets */,
-				922720E02848B8410027E003 /* appstore.png */,
-				922720E12848B8410027E003 /* playstore.png */,
-			);
-			path = AppIcons;
 			sourceTree = "<group>";
 		};
 		92E321DF2848C129004E1AC5 /* GallaryViewer */ = {
@@ -288,12 +265,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922720E52848B8410027E003 /* appstore.png in Resources */,
 				922720BB2848B4AF0027E003 /* LaunchScreen.storyboard in Resources */,
 				922720B82848B4AF0027E003 /* Assets.xcassets in Resources */,
-				922720E22848B8410027E003 /* Assets.xcassets in Resources */,
 				922720B32848B4AE0027E003 /* Main.storyboard in Resources */,
-				922720E82848B8410027E003 /* playstore.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,9 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922720E32848B8410027E003 /* Assets.xcassets in Resources */,
-				922720E62848B8410027E003 /* appstore.png in Resources */,
-				922720E92848B8410027E003 /* playstore.png in Resources */,
 				92E321E42848C298004E1AC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,9 +283,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				922720E42848B8410027E003 /* Assets.xcassets in Resources */,
-				922720E72848B8410027E003 /* appstore.png in Resources */,
-				922720EA2848B8410027E003 /* playstore.png in Resources */,
 				92E321E52848C299004E1AC5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
