@@ -32,6 +32,12 @@
 		922720EC2848B9FE0027E003 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720EB2848B9FE0027E003 /* SplashViewController.swift */; };
 		922720ED2848B9FE0027E003 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720EB2848B9FE0027E003 /* SplashViewController.swift */; };
 		922720EE2848B9FE0027E003 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720EB2848B9FE0027E003 /* SplashViewController.swift */; };
+		92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
+		92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
+		92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
+		92B5AD5C2849146D003E9FE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */; };
+		92B5AD5D2849146D003E9FE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */; };
+		92B5AD5E2849146D003E9FE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */; };
 		92E321E42848C298004E1AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
 		92E321E52848C299004E1AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -73,6 +79,8 @@
 		922720E02848B8410027E003 /* appstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appstore.png; sourceTree = "<group>"; };
 		922720E12848B8410027E003 /* playstore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playstore.png; sourceTree = "<group>"; };
 		922720EB2848B9FE0027E003 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		92E321E72848C29A004E1AC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +143,7 @@
 				922720BC2848B4AF0027E003 /* Info.plist */,
 				922720DE2848B8410027E003 /* AppIcons */,
 				922720B42848B4AE0027E003 /* gallary.xcdatamodeld */,
+				92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */,
 			);
 			path = "monstar-gallary";
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				920808252848CB74002E88DA /* PhotoCollectionVC.swift */,
+				92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */,
 			);
 			path = GallaryViewer;
 			sourceTree = "<group>";
@@ -320,6 +330,8 @@
 				920808262848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				922720B02848B4AE0027E003 /* ViewController.swift in Sources */,
 				922720AC2848B4AE0027E003 /* AppDelegate.swift in Sources */,
+				92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
+				92B5AD5C2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 				922720AE2848B4AE0027E003 /* SceneDelegate.swift in Sources */,
 				922720EC2848B9FE0027E003 /* SplashViewController.swift in Sources */,
 			);
@@ -329,7 +341,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B5AD5D2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 				922720C62848B4AF0027E003 /* gallaryTests.swift in Sources */,
+				92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
 				920808272848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				922720ED2848B9FE0027E003 /* SplashViewController.swift in Sources */,
 			);
@@ -343,6 +357,8 @@
 				920808282848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				922720D02848B4AF0027E003 /* gallaryUITests.swift in Sources */,
 				922720D22848B4AF0027E003 /* gallaryUITestsLaunchTests.swift in Sources */,
+				92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
+				92B5AD5E2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -486,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

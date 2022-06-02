@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "png-transparent-computer-icons-dots-three-buttons-text-monochrome-black-thumbnail.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "png-transparent-computer-icons-dots-three-buttons-text-monochrome-black-thumbnail-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "png-transparent-computer-icons-dots-three-buttons-text-monochrome-black-thumbnail-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotoCollectionVC: UIViewController {
+class PhotoCollectionVC: BaseViewController {
 
     @IBOutlet weak var navBar: UINavigationBar!
     
