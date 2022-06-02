@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="Monstar_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore.png" translatesAutoresizingMaskIntoConstraints="NO" id="WlR-Mg-CYc">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WlR-Mg-CYc" secondAttribute="height" multiplier="1:1" id="Kfb-GJ-hNO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WlR-Mg-CYc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="eQM-Yw-kUm"/>
+                            <constraint firstItem="WlR-Mg-CYc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="i2o-Ka-Qsf"/>
+                            <constraint firstItem="WlR-Mg-CYc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="zak-iG-3ZA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DI6-a0-rFT"/>
+                    <connections>
+                        <segue destination="dcq-1m-oPl" kind="show" identifier="goToImageCollectionView" id="kjV-P0-Lnq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4000" y="68"/>
+        </scene>
+        <!--Photo CollectionVC-->
+        <scene sceneID="TYZ-bB-t2I">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="dcq-1m-oPl" customClass="PhotoCollectionVC" customModule="Monstar_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lW2-fT-3Vw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-sF-4Q7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" systemColor="labelColor"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Photos" id="cvx-XJ-kvh"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jmn-yP-LXR">
+                                <rect key="frame" x="52" y="425" width="310.5" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="W0c-bt-Gd0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="dcq-1m-oPl" eventType="touchUpInside" id="6Aw-Bz-cjj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="x86-0i-qFy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jmn-yP-LXR" firstAttribute="centerX" secondItem="x86-0i-qFy" secondAttribute="centerX" id="4yu-ZG-6Jo"/>
+                            <constraint firstItem="ZBh-sF-4Q7" firstAttribute="leading" secondItem="x86-0i-qFy" secondAttribute="leading" id="EPn-y8-WWz"/>
+                            <constraint firstItem="ZBh-sF-4Q7" firstAttribute="trailing" secondItem="x86-0i-qFy" secondAttribute="trailing" id="HE9-ys-CR6"/>
+                            <constraint firstItem="ZBh-sF-4Q7" firstAttribute="top" secondItem="x86-0i-qFy" secondAttribute="top" id="bSi-hH-NPR"/>
+                            <constraint firstItem="Jmn-yP-LXR" firstAttribute="centerY" secondItem="x86-0i-qFy" secondAttribute="centerY" id="cIn-yk-lcd"/>
+                            <constraint firstItem="Jmn-yP-LXR" firstAttribute="width" secondItem="lW2-fT-3Vw" secondAttribute="width" multiplier="0.75" id="yTx-Wo-tFm"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" id="kpu-qc-3Dk"/>
+                    <connections>
+                        <outlet property="navBar" destination="ZBh-sF-4Q7" id="WUw-9D-dSI"/>
+                        <segue destination="fKc-7K-XuS" kind="show" identifier="goToImageView" id="sdu-aM-AsE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgn-qr-xOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857.9710144927537" y="83.705357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uue-j5-G9m">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="fKc-7K-XuS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9CX-gR-nMS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OdP-M8-cCM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y4Q-LN-BcR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wMf-7h-bjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2922" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="appstore.png" width="1024" height="1024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

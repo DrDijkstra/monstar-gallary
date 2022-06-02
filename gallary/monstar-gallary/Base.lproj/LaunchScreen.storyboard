@@ -16,8 +16,21 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore.png" translatesAutoresizingMaskIntoConstraints="NO" id="oJ0-pL-yAw">
+                                <rect key="frame" x="87" y="333" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="oJ0-pL-yAw" secondAttribute="height" multiplier="1:1" id="Gpk-el-Sst"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="oJ0-pL-yAw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FbU-S4-4ck"/>
+                            <constraint firstItem="oJ0-pL-yAw" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ITK-RH-R2f"/>
+                            <constraint firstItem="oJ0-pL-yAw" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.57971" id="orl-2Q-dK1"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -26,6 +39,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="appstore.png" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
