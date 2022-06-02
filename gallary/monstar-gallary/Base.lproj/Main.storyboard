@@ -48,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-sF-4Q7">
+                            <navigationBar contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZBh-sF-4Q7">
                                 <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                                 <textAttributes key="largeTitleTextAttributes">
                                     <color key="textColor" systemColor="labelColor"/>
@@ -73,8 +73,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Jmn-yP-LXR" firstAttribute="centerX" secondItem="x86-0i-qFy" secondAttribute="centerX" id="4yu-ZG-6Jo"/>
-                            <constraint firstItem="ZBh-sF-4Q7" firstAttribute="leading" secondItem="x86-0i-qFy" secondAttribute="leading" id="EPn-y8-WWz"/>
-                            <constraint firstItem="ZBh-sF-4Q7" firstAttribute="trailing" secondItem="x86-0i-qFy" secondAttribute="trailing" id="HE9-ys-CR6"/>
+                            <constraint firstItem="ZBh-sF-4Q7" firstAttribute="leading" secondItem="lW2-fT-3Vw" secondAttribute="leading" id="EPn-y8-WWz"/>
+                            <constraint firstItem="ZBh-sF-4Q7" firstAttribute="trailing" secondItem="lW2-fT-3Vw" secondAttribute="trailing" id="HE9-ys-CR6"/>
                             <constraint firstItem="ZBh-sF-4Q7" firstAttribute="top" secondItem="x86-0i-qFy" secondAttribute="top" id="bSi-hH-NPR"/>
                             <constraint firstItem="Jmn-yP-LXR" firstAttribute="centerY" secondItem="x86-0i-qFy" secondAttribute="centerY" id="cIn-yk-lcd"/>
                             <constraint firstItem="Jmn-yP-LXR" firstAttribute="width" secondItem="lW2-fT-3Vw" secondAttribute="width" multiplier="0.75" id="yTx-Wo-tFm"/>
@@ -89,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgn-qr-xOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1857.9710144927537" y="83.705357142857139"/>
+            <point key="canvasLocation" x="1857.5892857142856" y="82.608695652173921"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="Uue-j5-G9m">
@@ -119,8 +119,8 @@
                         <viewLayoutGuide key="safeArea" id="OdP-M8-cCM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4nG-xS-A2d" firstAttribute="leading" secondItem="OdP-M8-cCM" secondAttribute="leading" id="7Pf-wU-waI"/>
-                            <constraint firstItem="OdP-M8-cCM" firstAttribute="trailing" secondItem="4nG-xS-A2d" secondAttribute="trailing" id="Ffh-VR-f1O"/>
+                            <constraint firstItem="4nG-xS-A2d" firstAttribute="leading" secondItem="9CX-gR-nMS" secondAttribute="leading" id="7Pf-wU-waI"/>
+                            <constraint firstAttribute="trailing" secondItem="4nG-xS-A2d" secondAttribute="trailing" id="Ffh-VR-f1O"/>
                             <constraint firstItem="4nG-xS-A2d" firstAttribute="top" secondItem="OdP-M8-cCM" secondAttribute="top" id="Q83-2d-59s"/>
                             <constraint firstItem="OdP-M8-cCM" firstAttribute="trailing" secondItem="88J-fX-b1x" secondAttribute="trailing" id="U5W-lP-GZh"/>
                             <constraint firstItem="88J-fX-b1x" firstAttribute="top" secondItem="4nG-xS-A2d" secondAttribute="bottom" id="bph-FQ-lLA"/>

@@ -11,9 +11,18 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
 
         
     }
+    
+    @objc func rotated() {
+        let height: CGFloat = 50 //whatever height you want to add to the existing height
+        let bounds = UIScreen.main.bounds
+        self.navigationController?.navigationBar.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height + height)
+    }
+    
+    
     
     func showToast(message: String, duration : Double = 0.5){
         var toastWidth = CGFloat(UIScreen.main.bounds.width * 0.7)

@@ -29,6 +29,14 @@
 		92B5AD5C2849146D003E9FE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */; };
 		92B5AD5D2849146D003E9FE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */; };
 		92B5AD5E2849146D003E9FE7 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */; };
+		92B5AD75284923E0003E9FE7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD61284923E0003E9FE7 /* Kingfisher.framework */; platformFilter = ios; };
+		92B5AD76284923E0003E9FE7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD61284923E0003E9FE7 /* Kingfisher.framework */; platformFilter = ios; };
+		92B5AD99284923E0003E9FE7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD73284923E0003E9FE7 /* Alamofire.framework */; };
+		92B5AD9A284923E0003E9FE7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD73284923E0003E9FE7 /* Alamofire.framework */; };
+		92B5AD9B28492437003E9FE7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD73284923E0003E9FE7 /* Alamofire.framework */; };
+		92B5AD9C28492437003E9FE7 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD73284923E0003E9FE7 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		92B5AD9E28492438003E9FE7 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD61284923E0003E9FE7 /* Kingfisher.framework */; };
+		92B5AD9F28492438003E9FE7 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD61284923E0003E9FE7 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92E321E42848C298004E1AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
 		92E321E52848C299004E1AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -50,6 +58,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		92B5AD9D28492437003E9FE7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92B5AD9F28492438003E9FE7 /* Kingfisher.framework in Embed Frameworks */,
+				92B5AD9C28492437003E9FE7 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		920808252848CB74002E88DA /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
 		922720A82848B4AE0027E003 /* Monstar Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monstar Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +92,8 @@
 		922720EB2848B9FE0027E003 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
+		92B5AD73284923E0003E9FE7 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		92E321E72848C29A004E1AC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +102,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B5AD9E28492438003E9FE7 /* Kingfisher.framework in Frameworks */,
+				92B5AD9B28492437003E9FE7 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +111,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B5AD75284923E0003E9FE7 /* Kingfisher.framework in Frameworks */,
+				92B5AD99284923E0003E9FE7 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +120,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B5AD76284923E0003E9FE7 /* Kingfisher.framework in Frameworks */,
+				92B5AD9A284923E0003E9FE7 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +131,7 @@
 		9227209F2848B4AE0027E003 = {
 			isa = PBXGroup;
 			children = (
+				92B5AD60284923E0003E9FE7 /* Frameworks */,
 				922720AA2848B4AE0027E003 /* monstar-gallary */,
 				922720C42848B4AF0027E003 /* gallaryTests */,
 				922720CE2848B4AF0027E003 /* gallaryUITests */,
@@ -152,6 +184,15 @@
 			path = gallaryUITests;
 			sourceTree = "<group>";
 		};
+		92B5AD60284923E0003E9FE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92B5AD61284923E0003E9FE7 /* Kingfisher.framework */,
+				92B5AD73284923E0003E9FE7 /* Alamofire.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		92E321DF2848C129004E1AC5 /* GallaryViewer */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +212,7 @@
 				922720A42848B4AE0027E003 /* Sources */,
 				922720A52848B4AE0027E003 /* Frameworks */,
 				922720A62848B4AE0027E003 /* Resources */,
+				92B5AD9D28492437003E9FE7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -488,23 +530,30 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UZAVNXXC5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "monstar-gallary/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to save photo in your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.monstar.sanjay..gallary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.monstar.sanjay.gallary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -516,23 +565,30 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UZAVNXXC5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "monstar-gallary/Info.plist";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to save photo in your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.monstar.sanjay..gallary;
+				PRODUCT_BUNDLE_IDENTIFIER = com.monstar.sanjay.gallary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -545,6 +601,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UZAVNXXC5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Frameworks/Carthage-Frame/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks/Carthage-Frame/Carthage/Build/tvOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
@@ -566,6 +628,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UZAVNXXC5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Frameworks/Carthage-Frame/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks/Carthage-Frame/Carthage/Build/tvOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
@@ -586,6 +654,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UZAVNXXC5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Frameworks/Carthage-Frame/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks/Carthage-Frame/Carthage/Build/tvOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.monstar.sanjay..gallaryUITests;
@@ -605,6 +679,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2UZAVNXXC5;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Frameworks/Carthage-Frame/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks/Carthage-Frame/Carthage/Build/tvOS",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.monstar.sanjay..gallaryUITests;
