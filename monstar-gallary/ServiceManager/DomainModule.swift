@@ -14,8 +14,12 @@ class DomainModule {
     
     static var selfRef : DomainModule? = nil
     
+    let requestInterceptor : Interceptor
+    
     init() {
-        networkService = NetworkServiceImpl()
+       
+        requestInterceptor = Interceptor()
+        networkService = NetworkServiceImpl(interceptor: requestInterceptor)
     }
     
     static func initModule(_ domainModule : DomainModule) {

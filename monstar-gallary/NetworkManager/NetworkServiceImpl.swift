@@ -10,13 +10,22 @@ import Alamofire
 
 class NetworkServiceImpl: NetworkService {
     func getPhotosBy(pageNumber: String, gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) {
-        executeRequest(RequestRouter.getAllPhotosBy(pageNumber: pageNumber), gwCallback: gwCallback)
+      
+        executeRequest(RequestRouter.getAllPhotos(pageNumber: pageNumber), gwCallback: gwCallback)
     }
     
-   
     
-    init(){
-        self.sm = Session()
+   
+    var requestInterceptor:Interceptor
+    
+    init(interceptor:Interceptor){
+       print("hello sanjay")
+        let smConfig = URLSessionConfiguration.default
+        smConfig.timeoutIntervalForRequest = 10
+        
+        self.requestInterceptor = interceptor
+        
+        self.sm = Session(configuration: smConfig, interceptor: requestInterceptor)
     }
     
     
@@ -33,8 +42,30 @@ class NetworkServiceImpl: NetworkService {
     
     
     private func executeRequest<T:ApiGwResponse>(_ urlRequest: URLRequestConvertible, gwCallback: @escaping (ApiGwCallResult<T>) -> Void) -> Void {
-
+        print(urlRequest)
+       
+        sm.request(urlRequest)
+            .validate()
+            .responseString { (response: AFDataResponse<String>) in
+                print("Sanjay")
+                #if DEBUG
+                self.printRequestResponse(response)
+                #endif
+                
+                
+                switch response.result{
+                case .success(var responseString):
+                    print(responseString)
+                    
+                case .failure(let error):
+                    print(error)
+                    
+                }
+            }
     }
+    
+    
+  
     
 
     

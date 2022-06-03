@@ -9,22 +9,22 @@ import Foundation
 import Alamofire
 
 enum RequestRouter : URLRequestConvertible, URLConvertible{
-    case getAllPhotosBy(pageNumber:String)
+    case getAllPhotos(pageNumber:String)
     
-    static var baseUrl = "http://10.88.250.90:20002"
+    static var baseUrl = "https://api.unsplash.com"
     
     
     var method: HTTPMethod {
         switch self {
-        case .getAllPhotosBy:
+        case .getAllPhotos:
             return .get
         }
     }
     
     var path: String {
         switch self {
-        case .getAllPhotosBy:
-            return ApiUrl.checkUserStatus.rawValue
+        case .getAllPhotos(_):
+            return ApiUrl.photos.rawValue
         }
     }
     
@@ -33,8 +33,10 @@ enum RequestRouter : URLRequestConvertible, URLConvertible{
         urlRequest.httpMethod = method.rawValue
         
         switch self {
-        case .checkUserStatus(let moblieNumber):
-            urlRequest = try URLEncoding.default.encode(urlRequest, with: ["msisdn" : moblieNumber])
+        case .getAllPhotos(let pageNumber):
+            urlRequest = try URLEncoding.default.encode(urlRequest,
+            with: ["page" : pageNumber,
+                   "client_id" : "8SFITXbEwzilN-NZIIHXEtEBDHfAisWyulw1jSmIWac"])
         
         return urlRequest
         }

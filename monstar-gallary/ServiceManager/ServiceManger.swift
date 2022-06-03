@@ -23,8 +23,14 @@ public class ServiceManger {
         return selfRef!
     }
     
-    public func initManager(sdkConfig : ServiceManagerConfig) -> Void {
+    private init(){
+        let domainModule = DomainModule()
+        DomainModule.initModule(domainModule)
         monstarGalleryService = MonstarGallaryServiceImpl()
+    }
+    
+    public static func initManager(sdkConfig : ServiceManagerConfig) -> Void {
+     
     }
     
     

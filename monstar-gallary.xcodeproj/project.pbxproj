@@ -101,6 +101,9 @@
 		9242D49E284A2A6300C4471B /* ServiceManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D49D284A2A6300C4471B /* ServiceManagerConfig.swift */; };
 		9242D49F284A2A6300C4471B /* ServiceManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D49D284A2A6300C4471B /* ServiceManagerConfig.swift */; };
 		9242D4A0284A2A6300C4471B /* ServiceManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D49D284A2A6300C4471B /* ServiceManagerConfig.swift */; };
+		9242D4A2284A4AC200C4471B /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4A1284A4AC200C4471B /* Interceptor.swift */; };
+		9242D4A3284A4AC200C4471B /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4A1284A4AC200C4471B /* Interceptor.swift */; };
+		9242D4A4284A4AC200C4471B /* Interceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4A1284A4AC200C4471B /* Interceptor.swift */; };
 		92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
@@ -189,6 +192,7 @@
 		9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ConvertDataToUtf8String.swift"; sourceTree = "<group>"; };
 		9242D494284A1F9C00C4471B /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
 		9242D49D284A2A6300C4471B /* ServiceManagerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerConfig.swift; sourceTree = "<group>"; };
+		9242D4A1284A4AC200C4471B /* Interceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interceptor.swift; sourceTree = "<group>"; };
 		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
@@ -397,6 +401,7 @@
 			children = (
 				9242D47F284A19B900C4471B /* ApiUrl.swift */,
 				9242D494284A1F9C00C4471B /* RequestRouter.swift */,
+				9242D4A1284A4AC200C4471B /* Interceptor.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -586,6 +591,7 @@
 				9242D4282849F22A00C4471B /* Presenter.swift in Sources */,
 				922720AC2848B4AE0027E003 /* AppDelegate.swift in Sources */,
 				9242D477284A0C3A00C4471B /* HeaderName.swift in Sources */,
+				9242D4A2284A4AC200C4471B /* Interceptor.swift in Sources */,
 				9242D4352849F56100C4471B /* ImageUrlEntity.swift in Sources */,
 				9242D480284A19B900C4471B /* ApiUrl.swift in Sources */,
 				9242D48C284A1C5600C4471B /* ApiGwError.swift in Sources */,
@@ -633,6 +639,7 @@
 				9242D46A284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */,
 				9242D48D284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				9242D496284A1F9C00C4471B /* RequestRouter.swift in Sources */,
+				9242D4A3284A4AC200C4471B /* Interceptor.swift in Sources */,
 				922720ED2848B9FE0027E003 /* SplashViewController.swift in Sources */,
 				9242D481284A19B900C4471B /* ApiUrl.swift in Sources */,
 				9242D453284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
@@ -673,6 +680,7 @@
 				9242D454284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
 				9242D479284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D459284A041B00C4471B /* PhotoService.swift in Sources */,
+				9242D4A4284A4AC200C4471B /* Interceptor.swift in Sources */,
 				9242D497284A1F9C00C4471B /* RequestRouter.swift in Sources */,
 				9242D4262849F21E00C4471B /* Interactor.swift in Sources */,
 				9242D46B284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */,

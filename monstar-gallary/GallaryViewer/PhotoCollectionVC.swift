@@ -14,12 +14,15 @@ class PhotoCollectionVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ServiceManger.initManager(sdkConfig: ServiceManagerConfig())
         
     }
     
 
     @IBAction func onButtonClick(_ sender: Any) {
-        performSegue(withIdentifier: "goToImageView", sender: self)
+//        performSegue(withIdentifier: "goToImageView", sender: self)
+        let presenter = PhotoViewerPresenter()
+        
         
         
     }
