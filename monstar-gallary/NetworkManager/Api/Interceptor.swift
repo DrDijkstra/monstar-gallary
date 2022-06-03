@@ -31,9 +31,9 @@ class Interceptor: RequestInterceptor {
     func adapt(_ urlRequest: URLRequest, for session: Session, completion: @escaping (Result<URLRequest, Error>) -> Void) {
         var urlRequest = urlRequest
         
-        //let clientId :String? = "8SFITXbEwzilN-NZIIHXEtEBDHfAisWyulw1jSmIWac"
+        let authtoken :String? = "Client-ID 8SFITXbEwzilN-NZIIHXEtEBDHfAisWyulw1jSmIWac"
         
-        //urlRequest.setValue( clientId , forHTTPHeaderField: HeaderName.clientId.rawValue)
+        urlRequest.setValue( authtoken , forHTTPHeaderField: HeaderName.auth.rawValue)
 
         completion(.success(urlRequest))
         

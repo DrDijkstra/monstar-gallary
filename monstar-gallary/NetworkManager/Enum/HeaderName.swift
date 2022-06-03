@@ -10,6 +10,7 @@ import Foundation
 enum HeaderName : String{
     case contentType = "Content-Type"
     case clientId = "client-id"
+    case auth  = "Authorization"
     static let contentTypeJson = "application/json;UTF-8"
 
 }

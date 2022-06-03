@@ -31,8 +31,6 @@ enum RequestRouter : URLRequestConvertible, URLConvertible{
     func asURLRequest() throws -> URLRequest {
         var urlRequest = URLRequest(url: try getFullUrl())
         urlRequest.httpMethod = method.rawValue
-        urlRequest = try URLEncoding.default.encode(urlRequest,
-        with: ["client_id" : "8SFITXbEwzilN-NZIIHXEtEBDHfAisWyulw1jSmIWac"])
         
         
         switch self {
