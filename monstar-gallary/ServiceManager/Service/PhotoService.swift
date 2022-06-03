@@ -18,8 +18,8 @@ class PhotoServiceImpl: PhotoService {
     
     let apiGwService:NetworkService
     init() {
-//        let domainModule = DomainModule.getInstance()
-//        apiGwService = domainModule.getApiGwService()
+        let domainModule = DomainModule.getInstance()
+        apiGwService = domainModule.getNetworkService()
         
     }
 

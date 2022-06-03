@@ -68,6 +68,33 @@
 		9242D463284A05CA00C4471B /* ApiGwResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D462284A05CA00C4471B /* ApiGwResponse.swift */; };
 		9242D464284A05CA00C4471B /* ApiGwResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D462284A05CA00C4471B /* ApiGwResponse.swift */; };
 		9242D465284A05CA00C4471B /* ApiGwResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D462284A05CA00C4471B /* ApiGwResponse.swift */; };
+		9242D469284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D468284A0A1C00C4471B /* ApiPhotosResponse.swift */; };
+		9242D46A284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D468284A0A1C00C4471B /* ApiPhotosResponse.swift */; };
+		9242D46B284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D468284A0A1C00C4471B /* ApiPhotosResponse.swift */; };
+		9242D472284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D471284A0B4E00C4471B /* NetworkServiceImpl.swift */; };
+		9242D473284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D471284A0B4E00C4471B /* NetworkServiceImpl.swift */; };
+		9242D474284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D471284A0B4E00C4471B /* NetworkServiceImpl.swift */; };
+		9242D477284A0C3A00C4471B /* HeaderName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D476284A0C3A00C4471B /* HeaderName.swift */; };
+		9242D478284A0C3A00C4471B /* HeaderName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D476284A0C3A00C4471B /* HeaderName.swift */; };
+		9242D479284A0C3A00C4471B /* HeaderName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D476284A0C3A00C4471B /* HeaderName.swift */; };
+		9242D47B284A0F6000C4471B /* DomainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D47A284A0F6000C4471B /* DomainModule.swift */; };
+		9242D47C284A0F6000C4471B /* DomainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D47A284A0F6000C4471B /* DomainModule.swift */; };
+		9242D47D284A0F6000C4471B /* DomainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D47A284A0F6000C4471B /* DomainModule.swift */; };
+		9242D480284A19B900C4471B /* ApiUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D47F284A19B900C4471B /* ApiUrl.swift */; };
+		9242D481284A19B900C4471B /* ApiUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D47F284A19B900C4471B /* ApiUrl.swift */; };
+		9242D482284A19B900C4471B /* ApiUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D47F284A19B900C4471B /* ApiUrl.swift */; };
+		9242D484284A1A3100C4471B /* ApiProtectionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D483284A1A3100C4471B /* ApiProtectionLabel.swift */; };
+		9242D485284A1A3100C4471B /* ApiProtectionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D483284A1A3100C4471B /* ApiProtectionLabel.swift */; };
+		9242D486284A1A3100C4471B /* ApiProtectionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D483284A1A3100C4471B /* ApiProtectionLabel.swift */; };
+		9242D488284A1B8A00C4471B /* ApiCallResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D487284A1B8A00C4471B /* ApiCallResponseCode.swift */; };
+		9242D489284A1B8A00C4471B /* ApiCallResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D487284A1B8A00C4471B /* ApiCallResponseCode.swift */; };
+		9242D48A284A1B8A00C4471B /* ApiCallResponseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D487284A1B8A00C4471B /* ApiCallResponseCode.swift */; };
+		9242D48C284A1C5600C4471B /* ApiGwError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D48B284A1C5600C4471B /* ApiGwError.swift */; };
+		9242D48D284A1C5600C4471B /* ApiGwError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D48B284A1C5600C4471B /* ApiGwError.swift */; };
+		9242D48E284A1C5600C4471B /* ApiGwError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D48B284A1C5600C4471B /* ApiGwError.swift */; };
+		9242D491284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */; };
+		9242D492284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */; };
+		9242D493284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */; };
 		92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
@@ -145,6 +172,15 @@
 		9242D45A284A050D00C4471B /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9242D45E284A055D00C4471B /* ApiGwCallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGwCallResult.swift; sourceTree = "<group>"; };
 		9242D462284A05CA00C4471B /* ApiGwResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGwResponse.swift; sourceTree = "<group>"; };
+		9242D468284A0A1C00C4471B /* ApiPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPhotosResponse.swift; sourceTree = "<group>"; };
+		9242D471284A0B4E00C4471B /* NetworkServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceImpl.swift; sourceTree = "<group>"; };
+		9242D476284A0C3A00C4471B /* HeaderName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderName.swift; sourceTree = "<group>"; };
+		9242D47A284A0F6000C4471B /* DomainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModule.swift; sourceTree = "<group>"; };
+		9242D47F284A19B900C4471B /* ApiUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiUrl.swift; sourceTree = "<group>"; };
+		9242D483284A1A3100C4471B /* ApiProtectionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiProtectionLabel.swift; sourceTree = "<group>"; };
+		9242D487284A1B8A00C4471B /* ApiCallResponseCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallResponseCode.swift; sourceTree = "<group>"; };
+		9242D48B284A1C5600C4471B /* ApiGwError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGwError.swift; sourceTree = "<group>"; };
+		9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ConvertDataToUtf8String.swift"; sourceTree = "<group>"; };
 		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
@@ -206,11 +242,11 @@
 		922720AA2848B4AE0027E003 /* monstar-gallary */ = {
 			isa = PBXGroup;
 			children = (
+				9242D48F284A1D3400C4471B /* Extention */,
 				9242D448284A01A900C4471B /* NetworkManager */,
 				9242D43F2849FE4A00C4471B /* ServiceManager */,
 				9242D41D2849EFD800C4471B /* Storyboards */,
 				92E321DF2848C129004E1AC5 /* GallaryViewer */,
-				9242D4332849F3C500C4471B /* Entity */,
 				922720AB2848B4AE0027E003 /* AppDelegate.swift */,
 				922720AD2848B4AE0027E003 /* SceneDelegate.swift */,
 				922720EB2848B9FE0027E003 /* SplashViewController.swift */,
@@ -270,10 +306,12 @@
 		9242D43F2849FE4A00C4471B /* ServiceManager */ = {
 			isa = PBXGroup;
 			children = (
+				9242D4332849F3C500C4471B /* Entity */,
 				9242D455284A03FB00C4471B /* Service */,
 				9242D4402849FFA300C4471B /* ServiceManger.swift */,
 				9242D444284A012000C4471B /* MonstarGallaryService.swift */,
 				9242D451284A026800C4471B /* MonstarGallaryServiceImpl.swift */,
+				9242D47A284A0F6000C4471B /* DomainModule.swift */,
 			);
 			path = ServiceManager;
 			sourceTree = "<group>";
@@ -281,11 +319,11 @@
 		9242D448284A01A900C4471B /* NetworkManager */ = {
 			isa = PBXGroup;
 			children = (
-				9242D449284A01C700C4471B /* ApiCallResult.swift */,
-				9242D44D284A020C00C4471B /* ResponseStatus.swift */,
+				9242D47E284A19AA00C4471B /* Api */,
+				9242D475284A0BED00C4471B /* Enum */,
+				9242D467284A09DD00C4471B /* Model */,
 				9242D45A284A050D00C4471B /* NetworkService.swift */,
-				9242D45E284A055D00C4471B /* ApiGwCallResult.swift */,
-				9242D462284A05CA00C4471B /* ApiGwResponse.swift */,
+				9242D471284A0B4E00C4471B /* NetworkServiceImpl.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -296,6 +334,69 @@
 				9242D456284A041B00C4471B /* PhotoService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9242D467284A09DD00C4471B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9242D470284A0B0900C4471B /* BaseResponse */,
+				9242D46F284A0ABA00C4471B /* Response */,
+				9242D46C284A0AA100C4471B /* Request */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9242D46C284A0AA100C4471B /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		9242D46F284A0ABA00C4471B /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				9242D468284A0A1C00C4471B /* ApiPhotosResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		9242D470284A0B0900C4471B /* BaseResponse */ = {
+			isa = PBXGroup;
+			children = (
+				9242D449284A01C700C4471B /* ApiCallResult.swift */,
+				9242D44D284A020C00C4471B /* ResponseStatus.swift */,
+				9242D45E284A055D00C4471B /* ApiGwCallResult.swift */,
+				9242D462284A05CA00C4471B /* ApiGwResponse.swift */,
+				9242D48B284A1C5600C4471B /* ApiGwError.swift */,
+			);
+			path = BaseResponse;
+			sourceTree = "<group>";
+		};
+		9242D475284A0BED00C4471B /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9242D476284A0C3A00C4471B /* HeaderName.swift */,
+				9242D483284A1A3100C4471B /* ApiProtectionLabel.swift */,
+				9242D487284A1B8A00C4471B /* ApiCallResponseCode.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		9242D47E284A19AA00C4471B /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				9242D47F284A19B900C4471B /* ApiUrl.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		9242D48F284A1D3400C4471B /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 		92B5AD60284923E0003E9FE7 /* Frameworks */ = {
@@ -451,6 +552,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9242D472284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
+				9242D47B284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D463284A05CA00C4471B /* ApiGwResponse.swift in Sources */,
 				9242D4202849F20E00C4471B /* View.swift in Sources */,
 				922720B62848B4AE0027E003 /* gallary.xcdatamodeld in Sources */,
@@ -460,17 +563,24 @@
 				9242D4412849FFA300C4471B /* ServiceManger.swift in Sources */,
 				920808262848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				9242D4242849F21E00C4471B /* Interactor.swift in Sources */,
+				9242D484284A1A3100C4471B /* ApiProtectionLabel.swift in Sources */,
 				9242D4302849F24900C4471B /* Router.swift in Sources */,
 				9242D4282849F22A00C4471B /* Presenter.swift in Sources */,
 				922720AC2848B4AE0027E003 /* AppDelegate.swift in Sources */,
+				9242D477284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D4352849F56100C4471B /* ImageUrlEntity.swift in Sources */,
+				9242D480284A19B900C4471B /* ApiUrl.swift in Sources */,
+				9242D48C284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				9242D44A284A01C700C4471B /* ApiCallResult.swift in Sources */,
 				9242D452284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
 				92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
+				9242D469284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */,
 				92B5AD5C2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 				9242D45B284A050D00C4471B /* NetworkService.swift in Sources */,
 				9242D445284A012000C4471B /* MonstarGallaryService.swift in Sources */,
+				9242D491284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */,
 				922720AE2848B4AE0027E003 /* SceneDelegate.swift in Sources */,
+				9242D488284A1B8A00C4471B /* ApiCallResponseCode.swift in Sources */,
 				922720EC2848B9FE0027E003 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -481,22 +591,31 @@
 			files = (
 				9242D44F284A020C00C4471B /* ResponseStatus.swift in Sources */,
 				9242D4422849FFA300C4471B /* ServiceManger.swift in Sources */,
+				9242D492284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */,
 				9242D464284A05CA00C4471B /* ApiGwResponse.swift in Sources */,
 				92B5AD5D2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 				922720C62848B4AF0027E003 /* gallaryTests.swift in Sources */,
 				9242D4312849F24900C4471B /* Router.swift in Sources */,
+				9242D489284A1B8A00C4471B /* ApiCallResponseCode.swift in Sources */,
 				9242D45C284A050D00C4471B /* NetworkService.swift in Sources */,
 				9242D4292849F22A00C4471B /* Presenter.swift in Sources */,
 				9242D4362849F56100C4471B /* ImageUrlEntity.swift in Sources */,
+				9242D478284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D4212849F20E00C4471B /* View.swift in Sources */,
 				9242D458284A041B00C4471B /* PhotoService.swift in Sources */,
+				9242D485284A1A3100C4471B /* ApiProtectionLabel.swift in Sources */,
 				9242D446284A012000C4471B /* MonstarGallaryService.swift in Sources */,
 				92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
 				920808272848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				9242D44B284A01C700C4471B /* ApiCallResult.swift in Sources */,
 				9242D4252849F21E00C4471B /* Interactor.swift in Sources */,
+				9242D473284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
+				9242D46A284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */,
+				9242D48D284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				922720ED2848B9FE0027E003 /* SplashViewController.swift in Sources */,
+				9242D481284A19B900C4471B /* ApiUrl.swift in Sources */,
 				9242D453284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
+				9242D47C284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D460284A055D00C4471B /* ApiGwCallResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -505,15 +624,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9242D474284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				9242D4322849F24900C4471B /* Router.swift in Sources */,
 				9242D44C284A01C700C4471B /* ApiCallResult.swift in Sources */,
+				9242D493284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */,
+				9242D47D284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D42A2849F22A00C4471B /* Presenter.swift in Sources */,
+				9242D48E284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				9242D447284A012000C4471B /* MonstarGallaryService.swift in Sources */,
 				9242D45D284A050D00C4471B /* NetworkService.swift in Sources */,
 				9242D461284A055D00C4471B /* ApiGwCallResult.swift in Sources */,
+				9242D486284A1A3100C4471B /* ApiProtectionLabel.swift in Sources */,
+				9242D48A284A1B8A00C4471B /* ApiCallResponseCode.swift in Sources */,
 				9242D4372849F56100C4471B /* ImageUrlEntity.swift in Sources */,
 				922720EE2848B9FE0027E003 /* SplashViewController.swift in Sources */,
 				920808282848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
+				9242D482284A19B900C4471B /* ApiUrl.swift in Sources */,
 				9242D465284A05CA00C4471B /* ApiGwResponse.swift in Sources */,
 				9242D4432849FFA300C4471B /* ServiceManger.swift in Sources */,
 				922720D02848B4AF0027E003 /* gallaryUITests.swift in Sources */,
@@ -522,8 +648,10 @@
 				92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
 				9242D4222849F20E00C4471B /* View.swift in Sources */,
 				9242D454284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
+				9242D479284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D459284A041B00C4471B /* PhotoService.swift in Sources */,
 				9242D4262849F21E00C4471B /* Interactor.swift in Sources */,
+				9242D46B284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */,
 				92B5AD5E2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
