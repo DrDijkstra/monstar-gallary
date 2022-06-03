@@ -11,7 +11,8 @@ public class ServiceManger {
     
     static var selfRef : ServiceManger? = nil
     
-    
+    var monstarGalleryService : MonstarGallaryService? = nil
+
     
     public static func getInstance() -> ServiceManger {
         guard selfRef != nil else {
@@ -20,5 +21,14 @@ public class ServiceManger {
             
         }
         return selfRef!
+    }
+    
+    public func initManager(sdkConfig : ServiceManagerConfig) -> Void {
+        monstarGalleryService = MonstarGallaryServiceImpl()
+    }
+    
+    
+    public func getMonstarGalleryService() -> MonstarGallaryService? {
+        return monstarGalleryService
     }
 }

@@ -10,6 +10,7 @@ import Foundation
 class DomainModule {
     
     var networkService : NetworkService? = nil
+    var photoService : PhotoService? = nil
     
     static var selfRef : DomainModule? = nil
     
@@ -29,5 +30,12 @@ class DomainModule {
     
     func getNetworkService() -> NetworkService {
         return networkService!
+    }
+    
+    func getPhotoService() -> PhotoService {
+        if (photoService == nil) {
+            photoService = PhotoServiceImpl()
+        }
+        return photoService!
     }
 }

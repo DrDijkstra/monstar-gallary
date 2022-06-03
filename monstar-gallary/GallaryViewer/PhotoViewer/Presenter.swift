@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+
+class PhotoViewerPresenter{
+    
+    
+    
+    
+    init(){
+        let serviceManager = ServiceManger.getInstance()
+        serviceManager.getMonstarGalleryService()?.getPhotosBy(page: 1, callback: {_ in 
+            
+        })
+    }
+    
+}

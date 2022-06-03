@@ -9,5 +9,5 @@ import Foundation
 
 
 protocol NetworkService {
-    func checkUserStatus(moibleNumber:String,  gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) -> Void
+    func getPhotosBy(pageNumber:String,  gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) -> Void
 }

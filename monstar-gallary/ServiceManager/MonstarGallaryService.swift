@@ -10,6 +10,5 @@ import Foundation
 
 
 public protocol MonstarGallaryService {
-    
-    func checkUserStatus(mobileNumber : String, callback : @escaping (ApiCallResult<String>) -> Void) -> Void
+    func getPhotosBy(page: String, callback: @escaping (ApiCallResult<String>) -> Void) -> Void
 }

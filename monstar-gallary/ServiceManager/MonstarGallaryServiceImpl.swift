@@ -8,12 +8,23 @@
 import Foundation
 
 
-class KonaPayServiceImpl: MonstarGallaryService {
+class MonstarGallaryServiceImpl: MonstarGallaryService {
+    var photoService: PhotoService 
     
-    
-    func checkUserStatus(mobileNumber: String, callback: @escaping (ApiCallResult<String>) -> Void) {
+    init() {
+        let domainModule = DomainModule.getInstance()
+        photoService = domainModule.getPhotoService()
         
     }
+    
+    func getPhotosBy(page: String, callback: @escaping (ApiCallResult<String>) -> Void) {
+        photoService.getPhotosBy(pageNumber: page, callback: callback)
+        
+    }
+    
+    
+    
+    
     
     
 }

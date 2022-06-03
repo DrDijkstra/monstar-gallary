@@ -95,6 +95,12 @@
 		9242D491284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */; };
 		9242D492284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */; };
 		9242D493284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */; };
+		9242D495284A1F9C00C4471B /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D494284A1F9C00C4471B /* RequestRouter.swift */; };
+		9242D496284A1F9C00C4471B /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D494284A1F9C00C4471B /* RequestRouter.swift */; };
+		9242D497284A1F9C00C4471B /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D494284A1F9C00C4471B /* RequestRouter.swift */; };
+		9242D49E284A2A6300C4471B /* ServiceManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D49D284A2A6300C4471B /* ServiceManagerConfig.swift */; };
+		9242D49F284A2A6300C4471B /* ServiceManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D49D284A2A6300C4471B /* ServiceManagerConfig.swift */; };
+		9242D4A0284A2A6300C4471B /* ServiceManagerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D49D284A2A6300C4471B /* ServiceManagerConfig.swift */; };
 		92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
@@ -181,6 +187,8 @@
 		9242D487284A1B8A00C4471B /* ApiCallResponseCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallResponseCode.swift; sourceTree = "<group>"; };
 		9242D48B284A1C5600C4471B /* ApiGwError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiGwError.swift; sourceTree = "<group>"; };
 		9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+ConvertDataToUtf8String.swift"; sourceTree = "<group>"; };
+		9242D494284A1F9C00C4471B /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		9242D49D284A2A6300C4471B /* ServiceManagerConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerConfig.swift; sourceTree = "<group>"; };
 		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
@@ -242,6 +250,7 @@
 		922720AA2848B4AE0027E003 /* monstar-gallary */ = {
 			isa = PBXGroup;
 			children = (
+				9242D49C284A2A4400C4471B /* Config */,
 				9242D48F284A1D3400C4471B /* Extention */,
 				9242D448284A01A900C4471B /* NetworkManager */,
 				9242D43F2849FE4A00C4471B /* ServiceManager */,
@@ -387,6 +396,7 @@
 			isa = PBXGroup;
 			children = (
 				9242D47F284A19B900C4471B /* ApiUrl.swift */,
+				9242D494284A1F9C00C4471B /* RequestRouter.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -397,6 +407,14 @@
 				9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */,
 			);
 			path = Extention;
+			sourceTree = "<group>";
+		};
+		9242D49C284A2A4400C4471B /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				9242D49D284A2A6300C4471B /* ServiceManagerConfig.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 		92B5AD60284923E0003E9FE7 /* Frameworks */ = {
@@ -575,8 +593,10 @@
 				9242D452284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
 				92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
 				9242D469284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */,
+				9242D49E284A2A6300C4471B /* ServiceManagerConfig.swift in Sources */,
 				92B5AD5C2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 				9242D45B284A050D00C4471B /* NetworkService.swift in Sources */,
+				9242D495284A1F9C00C4471B /* RequestRouter.swift in Sources */,
 				9242D445284A012000C4471B /* MonstarGallaryService.swift in Sources */,
 				9242D491284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */,
 				922720AE2848B4AE0027E003 /* SceneDelegate.swift in Sources */,
@@ -612,9 +632,11 @@
 				9242D473284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				9242D46A284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */,
 				9242D48D284A1C5600C4471B /* ApiGwError.swift in Sources */,
+				9242D496284A1F9C00C4471B /* RequestRouter.swift in Sources */,
 				922720ED2848B9FE0027E003 /* SplashViewController.swift in Sources */,
 				9242D481284A19B900C4471B /* ApiUrl.swift in Sources */,
 				9242D453284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
+				9242D49F284A2A6300C4471B /* ServiceManagerConfig.swift in Sources */,
 				9242D47C284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D460284A055D00C4471B /* ApiGwCallResult.swift in Sources */,
 			);
@@ -628,6 +650,7 @@
 				9242D4322849F24900C4471B /* Router.swift in Sources */,
 				9242D44C284A01C700C4471B /* ApiCallResult.swift in Sources */,
 				9242D493284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */,
+				9242D4A0284A2A6300C4471B /* ServiceManagerConfig.swift in Sources */,
 				9242D47D284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D42A2849F22A00C4471B /* Presenter.swift in Sources */,
 				9242D48E284A1C5600C4471B /* ApiGwError.swift in Sources */,
@@ -650,6 +673,7 @@
 				9242D454284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
 				9242D479284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D459284A041B00C4471B /* PhotoService.swift in Sources */,
+				9242D497284A1F9C00C4471B /* RequestRouter.swift in Sources */,
 				9242D4262849F21E00C4471B /* Interactor.swift in Sources */,
 				9242D46B284A0A1C00C4471B /* ApiPhotosResponse.swift in Sources */,
 				92B5AD5E2849146D003E9FE7 /* BaseViewController.swift in Sources */,

@@ -11,15 +11,14 @@ enum ApiUrl : String{
    
     
     case void = "/"
-    case checkUserStatus = "api/user/check-user-status-for-log-in"
-    
+    case photos = "photos"
 
 
-static let values = [checkUserStatus]
+static let values = [photos]
     
     static func getApiCallProtectionLevel(url : String)-> [ApiCallProtectionLevel]{
         switch mapToApiUrl(url: url) {
-        case .checkUserStatus:
+        case  .photos:
             return [.none]
         default:
             return [.none]
@@ -31,8 +30,8 @@ static let values = [checkUserStatus]
     
     private static func mapToApiUrl(url : String)->ApiUrl{
         
-        if (url.contains(ApiUrl.checkUserStatus.rawValue)){
-            return .checkUserStatus
+        if (url.contains(ApiUrl.photos.rawValue)){
+            return .photos
         }
         return .void
     }

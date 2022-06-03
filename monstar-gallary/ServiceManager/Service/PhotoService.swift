@@ -7,19 +7,26 @@
 
 import Foundation
 
-protocol PhotoService {
-    func checkUserStatus(_ mobileNumber:String, callback : @escaping (ApiCallResult<String>) -> Void) -> Void
+
+public protocol PhotoService {
+   
+    func getPhotosBy(pageNumber:String, callback : @escaping (ApiCallResult<String>) -> Void) -> Void
 }
 
 class PhotoServiceImpl: PhotoService {
-    func checkUserStatus(_ mobileNumber: String, callback: @escaping (ApiCallResult<String>) -> Void) {
-        
+    
+    func getPhotosBy(pageNumber: String, callback: @escaping (ApiCallResult<String>) -> Void) {
+        networkService.getPhotosBy(pageNumber: pageNumber, gwCallback: {_ in 
+            
+        })
     }
     
-    let apiGwService:NetworkService
-    init() {
+    
+    
+    let networkService:NetworkService
+    public init() {
         let domainModule = DomainModule.getInstance()
-        apiGwService = domainModule.getNetworkService()
+        networkService = domainModule.getNetworkService()
         
     }
 
