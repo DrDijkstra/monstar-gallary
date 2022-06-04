@@ -21,9 +21,7 @@ class PhotoCollectionVC: BaseViewController {
     var responseUrlList:[ImageUrlData]?
 
     @IBAction func onButtonClick(_ sender: Any) {
-//        performSegue(withIdentifier: "goToImageView", sender: self)
-        
-        let presenter = PhotoViewerPresenter()
+
         
         let serviceManager = ServiceManger.getInstance()
         serviceManager.getMonstarGalleryService()?.getPhotosBy(page: "2", callback: {

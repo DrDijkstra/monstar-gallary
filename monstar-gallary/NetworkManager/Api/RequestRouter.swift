@@ -11,7 +11,7 @@ import Alamofire
 enum RequestRouter : URLRequestConvertible, URLConvertible{
     case getAllPhotos(pageNumber:String)
     
-    static var baseUrl = "https://api.unsplash.com"
+    static var baseUrl = "https://api.unplash.com"
     
     
     var method: HTTPMethod {
@@ -51,7 +51,7 @@ enum RequestRouter : URLRequestConvertible, URLConvertible{
     
 
     public func getFullUrl()throws -> URL{
-        return try RequestRouter.baseUrl.asURL().appendingPathComponent(path)
+        return try AppConfig.serverUrl.asURL().appendingPathComponent(path)
     }
     
    

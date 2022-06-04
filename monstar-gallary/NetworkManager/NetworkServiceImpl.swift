@@ -51,7 +51,7 @@ class NetworkServiceImpl: NetworkService {
             .responseString { (response: AFDataResponse<String>) in
                 print("Sanjay")
                 #if DEBUG
-                //self.printRequestResponse(response)
+                self.printRequestResponse(response)
                 #endif
                 
                 
@@ -61,18 +61,19 @@ class NetworkServiceImpl: NetworkService {
                     
                     
                     
+                    
                     let statusCode = response.response?.statusCode
-                    print(responseString.prefix(2))
+                    //print(responseString.prefix(2))
                     
                     responseString = "{\"photos\":" + responseString + "}"
-                    print(responseString)
+                    //print(responseString)
                     
                     guard let object = Mapper<T>().map(JSONString: responseString) else{
                         
                         let error = self.convertToApiGwErrorResponse(error: ApiGwError.unknownError(error: nil, httpStatusCode: statusCode))
                         
                         
-                        print(error.code)
+                        //print(error.code)
                         gwCallback(ApiGwCallResult<T>.failure(
                                     error : error))
                         
@@ -87,7 +88,7 @@ class NetworkServiceImpl: NetworkService {
                     
                     
                 case .failure(let error):
-                    print(error)
+                    //print(error)
                     let apiGwError = self.prepareApiGwError(response: response, error: error, castingClassType: T.self)
                     gwCallback(ApiGwCallResult<T>.failure(error : self.convertToApiGwErrorResponse(error: apiGwError)))
                     
@@ -149,12 +150,19 @@ class NetworkServiceImpl: NetworkService {
         print("\(request!.httpBody.map { body in String(data: body, encoding: .utf8) ?? "" } ?? "")")
 
         switch response.result {
-        case .success(let value):
+        case .success(_):
             print("✅✅✅ ------------ Response ------------ ✅✅✅")
             print("Headers:{")
             response.response?.allHeaderFields.forEach{print("\t\($0): \($1)")}
             print("}")
-            print("Response with content \(value)")
+            
+            
+            let string = response.data?.prettyPrintedJSONString
+
+            print("Response with content \(string ?? "{}")")
+           
+            
+           
         case .failure( let error):
 
             if isSuccessResponse(httpStatusCode: response.response?.statusCode ) {
