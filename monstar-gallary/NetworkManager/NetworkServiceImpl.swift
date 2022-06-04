@@ -55,10 +55,16 @@ class NetworkServiceImpl: NetworkService {
                 
                 
                 switch response.result{
-                case .success(let responseString):
-                    //print(responseString)
+                case .success(var responseString):
+                   
+                    
+                    
                     
                     let statusCode = response.response?.statusCode
+                    print(responseString.prefix(2))
+                    
+                    responseString = "{\"photos\":" + responseString + "}"
+                    print(responseString)
                     
                     guard let object = Mapper<T>().map(JSONString: responseString) else{
                         
@@ -73,10 +79,11 @@ class NetworkServiceImpl: NetworkService {
                         
                         return
                     }
-                    print(object)
-                
                     
-                    gwCallback(ApiGwCallResult<T>.failure(error : self.converApiGwStatusToResponseStatus(apiGwStatus: object, response: object)))
+                    print("object", object)
+                    gwCallback(ApiGwCallResult<T>.success(sc : object))
+                    
+                    
                     
                 case .failure(let error):
                     print(error)

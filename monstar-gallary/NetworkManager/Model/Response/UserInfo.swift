@@ -46,7 +46,7 @@ class UserInfo : ApiGwResponse{
         instagram_username <- map["instagram_username"]
         twitter_username <- map["twitter_username"]
         profile_image <- map["profile_image"]
-        links <- map["links"]
+        //links <- map["links"]
     }
     
     

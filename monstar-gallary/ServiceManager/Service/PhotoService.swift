@@ -16,8 +16,13 @@ public protocol PhotoService {
 class PhotoServiceImpl: PhotoService {
     
     func getPhotosBy(pageNumber: String, callback: @escaping (ApiCallResult<String>) -> Void) {
-        networkService.getPhotosBy(pageNumber: pageNumber, gwCallback: {_ in 
-            
+        networkService.getPhotosBy(pageNumber: pageNumber, gwCallback: {result  in
+            switch result {
+            case .success(let apiResponse):
+                print(apiResponse.photos?[0].urls?.regular)
+            case .failure(let error):
+                callback(.failure(error: error))
+            }
         })
     }
     
