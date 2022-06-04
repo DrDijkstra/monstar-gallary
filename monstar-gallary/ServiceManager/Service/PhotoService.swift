@@ -19,11 +19,12 @@ class PhotoServiceImpl: PhotoService {
         networkService.getPhotosBy(pageNumber: pageNumber, gwCallback: {result  in
             switch result {
             case .success(let apiResponse):
-                var urls:[ImageUrlData] = []
+                let urlEntity = ImageUrlsEntity()
                 for photoInfo in apiResponse.photos ?? []{
                     let urlInfo = ImageUrlData(url: photoInfo.urls ?? UrlInfo())
-                    urls.append(urlInfo)
+                    urlEntity.urls?.append(urlInfo)
                 }
+                callback(.success(sc: urlEntity))
                 
                 
                 

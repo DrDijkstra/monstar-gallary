@@ -8,7 +8,7 @@
 import Foundation
 
 public class ImageUrlsEntity{
-    let urls: [ImageUrlData]?
+    var urls: [ImageUrlData]?
  
     
     init() {

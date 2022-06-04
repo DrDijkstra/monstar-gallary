@@ -23,6 +23,7 @@ class NetworkServiceImpl: NetworkService {
        print("hello sanjay")
         let smConfig = URLSessionConfiguration.default
         smConfig.timeoutIntervalForRequest = 10
+        smConfig.requestCachePolicy = .returnCacheDataElseLoad
         
         self.requestInterceptor = interceptor
         
