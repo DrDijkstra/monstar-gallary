@@ -49,19 +49,27 @@ class NetworkServiceImpl: NetworkService {
             .responseString { (response: AFDataResponse<String>) in
                 print("Sanjay")
                 #if DEBUG
-                self.printRequestResponse(response)
+                //self.printRequestResponse(response)
                 #endif
                 
                 
                 switch response.result{
                 case .success(var responseString):
                     print(responseString)
+                    //dump(<#T##value: T##T#>)
+                    let jsonData = responseString.data(using: .utf8)!
+                    //let data = jsonData.ma
                     
                 case .failure(let error):
                     print(error)
                     
                 }
             }
+    }
+    
+    func getType<T : Decodable>(from jsonString:String) throws -> T {
+        let jsonData = Data(jsonString.utf8)
+        return try JSONDecoder().decode(T.self, from: jsonData)
     }
     
     
