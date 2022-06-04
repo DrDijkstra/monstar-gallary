@@ -9,16 +9,17 @@ import Foundation
 import ObjectMapper
 
 public class ApiGwResponse : Mappable {
+
     public var reason : String? = nil
     public var message : String? = nil
     public var devMessage : String? = nil
+    public var errors:[String]?
+    
     required public init?(map: Map) {
         
     }
     public func mapping(map: Map) {
-        reason    <- map["reason"]
-        message         <- map["message"]
-        devMessage      <- map["devMessage"]
+       errors <- map["errors"]
     }
     
     public init() {}

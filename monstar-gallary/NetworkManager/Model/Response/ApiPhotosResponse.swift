@@ -35,18 +35,18 @@ class ApiPhotosResponse : ApiGwResponse{
     override func mapping(map: Map) {
         super.mapping(map: map)
         id <- map["id"]
-        created_at <- map["created_at"]
-        updated_at <- map["updated_at"]
-        width <- map["width"]
-        height <- map["height"]
-        color <- map["color"]
-        blur_hash <- map["blur_hash"]
-        description <- map["description"]
-        user <- map["user"]
-        currentUserCollections <- map["currentUserCollections"]
-        blur_hash <- map["blur_hash"]
-        url <- map["url"]
-        links <- map["links"]
+//        created_at <- map["created_at"]
+//        updated_at <- map["updated_at"]
+//        width <- map["width"]
+//        height <- map["height"]
+//        color <- map["color"]
+//        blur_hash <- map["blur_hash"]
+//        description <- map["description"]
+//        user <- map["user"]
+//        currentUserCollections <- map["currentUserCollections"]
+//        blur_hash <- map["blur_hash"]
+//        url <- map["url"]
+//        links <- map["links"]
     }
     
     

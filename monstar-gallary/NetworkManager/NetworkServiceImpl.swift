@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import ObjectMapper
 
 class NetworkServiceImpl: NetworkService {
     func getPhotosBy(pageNumber: String, gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) {
@@ -54,42 +55,71 @@ class NetworkServiceImpl: NetworkService {
                 
                 
                 switch response.result{
-                case .success(var responseString):
-                    print(responseString)
-                    //dump(<#T##value: T##T#>)
-                    let jsonData = responseString.data(using: .utf8)!
-                    //let data = jsonData.ma
+                case .success(let responseString):
+                    //print(responseString)
+                    
+                    let statusCode = response.response?.statusCode
+                    
+                    guard let object = Mapper<T>().map(JSONString: responseString) else{
+                        
+                        let error = self.convertToApiGwErrorResponse(error: ApiGwError.unknownError(error: nil, httpStatusCode: statusCode))
+                        
+                        
+                        print(error.code)
+                        gwCallback(ApiGwCallResult<T>.failure(
+                                    error : error))
+                        
+                        
+                        
+                        return
+                    }
+                    print(object)
+                
+                    
+                    gwCallback(ApiGwCallResult<T>.failure(error : self.converApiGwStatusToResponseStatus(apiGwStatus: object, response: object)))
                     
                 case .failure(let error):
                     print(error)
                     
                 }
+                
+
+    
             }
     }
     
-    func getType<T : Decodable>(from jsonString:String) throws -> T {
-        let jsonData = Data(jsonString.utf8)
-        return try JSONDecoder().decode(T.self, from: jsonData)
+    
+    
+    private func convertToApiGwErrorResponse(error:Error) -> ResponseStatus{
+        if error is ApiGwError{
+            switch error as! ApiGwError {
+            case ApiGwError.network( _):
+                return ResponseStatus(responseCode: ApiCallResponseCode.unknown.rawValue, message: nil, devMessage: "Alamofire Network error")
+            case ApiGwError.responseError( _ , let gwErrorStatus):
+                let code = gwErrorStatus?.reason ?? ApiCallResponseCode.unknown.rawValue
+                return ResponseStatus(responseCode: code, message: gwErrorStatus?.errors?[0], devMessage: nil, response: gwErrorStatus)
+            case ApiGwError.requestBodySerialization( _,  _):
+                return ResponseStatus(responseCode: ApiCallResponseCode.requestEncodeError.rawValue, message: nil, devMessage: "Cannot encode request")
+            case ApiGwError.responseBodyDeserialization( _, _):
+                return ResponseStatus(responseCode: ApiCallResponseCode.requestEncodeError.rawValue, message: nil, devMessage: "Cannot decode response")
+            case ApiGwError.unknownError( _ , _):
+                return ResponseStatus(responseCode: ApiCallResponseCode.unknown.rawValue, message: nil, devMessage: "Unknow error")
+            }
+        }
+        return ResponseStatus(responseCode: ApiCallResponseCode.unknown.rawValue, message: nil, devMessage: "Unknow error")
     }
-    
-    
-  
-    
-
-    
-
     
     
     fileprivate func printRequestResponse<T>(_ response: AFDataResponse<T>) {
         let request = response.request
         print("➡️➡️➡️ ------------ Request ------------ ➡️➡️➡️")
-    
+
         print("Headers:{")
         request?.allHTTPHeaderFields?.forEach{print("\t\($0): \($1)")}
         print("}")
         print("\(request!.httpMethod!) - \(request!.url!.absoluteString)")
         print("\(request!.httpBody.map { body in String(data: body, encoding: .utf8) ?? "" } ?? "")")
-    
+
         switch response.result {
         case .success(let value):
             print("✅✅✅ ------------ Response ------------ ✅✅✅")
@@ -98,21 +128,21 @@ class NetworkServiceImpl: NetworkService {
             print("}")
             print("Response with content \(value)")
         case .failure( let error):
-    
+
             if isSuccessResponse(httpStatusCode: response.response?.statusCode ) {
                 print("✅✅✅ ------------ Response ------------ ✅✅✅")
             }else{
                 print("❌❌❌ ------------ Response ------------ ❌❌❌")
             }
-    
-    
+
+
             let isServerTrustEvaluationError =
                     error.asAFError?.isServerTrustEvaluationError ?? false
-    
+
             if isServerTrustEvaluationError {
                 print("Certificate Pinning Error")
             }
-    
+
             let responseBodyRawString = response.data?.convertDataToUtf8String()
             guard responseBodyRawString != nil else{
                 print("Empty Response body")
@@ -124,14 +154,14 @@ class NetworkServiceImpl: NetworkService {
         }
         print("------------------- End --------------------")
     }
-      
-
-    
-    
-    
-    
     
 }
+        
+        
+
+        
+        
+
 
 
 
