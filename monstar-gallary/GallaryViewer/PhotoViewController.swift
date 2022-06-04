@@ -7,12 +7,15 @@
 
 import UIKit
 import AVFoundation
+import Kingfisher
 
 class PhotoViewController: BaseViewController {
   
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var imageView: UIImageView!
     
+    var imageUrl:String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +24,20 @@ class PhotoViewController: BaseViewController {
         } else {
             // Fallback on earlier versions
         }
+        menuButton.isEnabled = false
+        print("imageUrl:    ",imageUrl)
+        showImage()
 
         
+    }
+    
+    func showImage(){
+        print("image sanjay", imageUrl)
+        let urlString = URL(string: imageUrl!)
+        print("sanjay url", urlString)
+        imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"),completionHandler: {_ in 
+            self.menuButton.isEnabled = true
+        })
     }
     
     @IBAction func onBackButtonPress(_ sender: Any) {
@@ -60,7 +75,7 @@ class PhotoViewController: BaseViewController {
     }
     
     func sharePhoto(){
-       let image = UIImage(named: "appstore.png")
+        let image = imageView.image
                
        let imageToShare = [ image! ]
        let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
@@ -72,13 +87,13 @@ class PhotoViewController: BaseViewController {
     }
     
     func copyPhoto(){
-        let image = UIImage(named: "appstore.png")
-        UIPasteboard.general.image = image;
+        
+        UIPasteboard.general.image = imageView.image;
         self.showToast(message: "Copied")
     }
     
     func savePhoto(){
-        UIImageWriteToSavedPhotosAlbum(UIImage(named: "appstore.png")!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+        UIImageWriteToSavedPhotosAlbum(imageView.image!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {

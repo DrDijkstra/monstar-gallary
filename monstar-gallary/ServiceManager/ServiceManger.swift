@@ -27,10 +27,11 @@ public class ServiceManger {
         monstarGalleryService = MonstarGallaryServiceImpl()
     }
     
-    public static func initManager( appConfig: AppConfig) -> Void {
+    public static func initManager() -> Void {
+        getInstance()
         let domainModule = DomainModule()
         DomainModule.initModule(domainModule)
-        RequestRouter.baseUrl = appConfig.serverUrl
+        RequestRouter.baseUrl = AppConfig.serverUrl
         
     }
     

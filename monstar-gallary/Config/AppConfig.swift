@@ -10,9 +10,13 @@ import Foundation
 public class AppConfig {
     
 
-    
+   
     #if PROD
-        let serverUrl = "https://api.unsplash.com"
+        static let serverUrl = "https://api.unsplash.com"
+    #endif
+       
+    #if DEV
+        static let  serverUrl = "https://api.unsplash.com"
     #endif
     
     

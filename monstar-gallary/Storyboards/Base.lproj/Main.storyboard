@@ -133,6 +133,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Y4Q-LN-BcR"/>
                     <connections>
+                        <outlet property="imageView" destination="88J-fX-b1x" id="4AO-EG-mEz"/>
                         <outlet property="menuButton" destination="gxh-gd-Pvm" id="6fY-A3-ato"/>
                     </connections>
                 </viewController>

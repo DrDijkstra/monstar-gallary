@@ -29,7 +29,11 @@ class DomainModule {
 
     
     static func getInstance() -> DomainModule {
+        if (selfRef == nil) {
+            selfRef = DomainModule()
+        }
         return selfRef!
+       
     }
     
     func getNetworkService() -> NetworkService {
