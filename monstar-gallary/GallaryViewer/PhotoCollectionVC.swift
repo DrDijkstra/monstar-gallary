@@ -14,7 +14,7 @@ class PhotoCollectionVC: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ServiceManger.initManager(sdkConfig: ServiceManagerConfig())
+        ServiceManger.initManager(appConfig: AppConfig())
         
     }
     

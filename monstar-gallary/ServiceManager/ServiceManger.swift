@@ -24,13 +24,14 @@ public class ServiceManger {
     }
     
     private init(){
-        let domainModule = DomainModule()
-        DomainModule.initModule(domainModule)
         monstarGalleryService = MonstarGallaryServiceImpl()
     }
     
-    public static func initManager(sdkConfig : ServiceManagerConfig) -> Void {
-     
+    public static func initManager( appConfig: AppConfig) -> Void {
+        let domainModule = DomainModule()
+        DomainModule.initModule(domainModule)
+        RequestRouter.baseUrl = appConfig.serverUrl
+        
     }
     
     

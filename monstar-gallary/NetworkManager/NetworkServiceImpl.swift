@@ -80,13 +80,15 @@ class NetworkServiceImpl: NetworkService {
                         return
                     }
                     
-                    print("object", object)
+
                     gwCallback(ApiGwCallResult<T>.success(sc : object))
                     
                     
                     
                 case .failure(let error):
                     print(error)
+                    let apiGwError = self.prepareApiGwError(response: response, error: error, castingClassType: T.self)
+                    gwCallback(ApiGwCallResult<T>.failure(error : self.convertToApiGwErrorResponse(error: apiGwError)))
                     
                 }
                 
@@ -94,6 +96,24 @@ class NetworkServiceImpl: NetworkService {
     
             }
     }
+    
+    func prepareApiGwError<T : ApiGwResponse, U>(response: AFDataResponse<U>, error: Error, castingClassType : T.Type) -> ApiGwError{
+        
+       
+        
+        guard let data = response.data else {
+            return ApiGwError.unknownError(error: error, httpStatusCode: response.response?.statusCode)
+        }
+        
+        guard let responseBodyRawString = data.convertDataToUtf8String() else {
+            return ApiGwError.responseBodyDeserialization(error: error, data: data)
+        }
+        
+        let apiGwStatus = Mapper<T>().map(JSONString: responseBodyRawString)
+        return ApiGwError.responseError(error: error, gwErrorStatus: apiGwStatus)
+        
+    }
+    
     
     
     

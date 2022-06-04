@@ -8,19 +8,19 @@
 import Foundation
 
 
-public class ImageUrlEntity{
+public class ImageUrlData{
     let raw: String?
     let full:String?
     let regular:String?
     let small:String?
     let thumb:String?
     
-    init() {
-        self.raw = ""
-        self.full = ""
-        self.regular = ""
-        self.small = ""
-        self.thumb = ""
+    init(url: UrlInfo) {
+        self.raw = url.raw
+        self.full = url.full
+        self.regular = url.regular
+        self.small = url.small
+        self.thumb = url.thumb
     }
     
 }
