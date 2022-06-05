@@ -22,6 +22,11 @@ class PhotoServiceImpl: PhotoService {
                 let urlEntity = ImageUrlListEntity()
                 for photoInfo in apiResponse.photos ?? []{
                     let urlInfo = ImageUrlData(url: photoInfo.urls ?? UrlInfo())
+                    
+                    self.databaseService.saveImageUrlData(urlData: urlInfo, callback: {
+                        res in
+                        print(res)
+                    })
                     urlEntity.urlList?.append(urlInfo)
                 }
                 callback(.success(sc: urlEntity))
@@ -37,10 +42,11 @@ class PhotoServiceImpl: PhotoService {
     
     
     let networkService:NetworkService
+    let databaseService:DatabaseService
     public init() {
         let domainModule = DomainModule.getInstance()
         networkService = domainModule.getNetworkService()
-        
+        databaseService = domainModule.getDbService()
     }
 
     

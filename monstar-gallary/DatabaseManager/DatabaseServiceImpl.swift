@@ -53,7 +53,7 @@ class DatabaseServiceImpl: DatabaseService {
     
     func saveImageUrlData(urlData: ImageUrlData, callback: @escaping (DbCallResult<String>) -> Void) {
         
-        let imageUrlData = NSEntityDescription.insertNewObject(forEntityName: "ImageUrlData", into: context) as! ImgUrlData
+        let imageUrlData = NSEntityDescription.insertNewObject(forEntityName: "ImgUrlData", into: context) as! ImgUrlData
         imageUrlData.raw = urlData.full
         imageUrlData.thumb = urlData.thumb
         UserDefaults.lastImageIndex = UserDefaults.lastImageIndex + 1
