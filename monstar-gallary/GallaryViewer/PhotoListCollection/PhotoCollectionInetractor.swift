@@ -18,13 +18,13 @@ class PhotoCollectionInetractorImpl: PhotoCollectionInetractor{
     
     weak var presenter: PhotoCollectionPresenter?
     
-    var serviceManager:ServiceManger?
+    var serviceManager:ServiceManger = ServiceManger.getInstance()
     
     
     
     func getAllPhotoListAccorddingTo(pageNumber: String, callback: @escaping (ApiCallResult<ImageUrlListEntity>) -> Void) {
-        serviceManager = ServiceManger.getInstance()
-        serviceManager?.getMonstarGalleryService()?.getPhotosBy(page: pageNumber, callback: {result in
+        
+        serviceManager.getMonstarGalleryService()?.getPhotosBy(page: pageNumber, callback: {result in
             switch result{
             case .success(let response):
                 callback(.success(sc: response))

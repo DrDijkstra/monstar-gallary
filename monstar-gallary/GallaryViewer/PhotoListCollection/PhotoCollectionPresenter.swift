@@ -54,7 +54,6 @@ class PhotoCollectionPresenterImpl:PhotoCollectionPresenter{
        
         self.interactor = PhotoCollectionInetractorImpl(presenter: self)
         self.router = PhotoRouterImpl.start(view: view, presenter: self, interactor: self.interactor!)
-        //self.view = view
     }
     
     

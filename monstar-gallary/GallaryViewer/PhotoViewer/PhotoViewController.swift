@@ -15,6 +15,8 @@ class PhotoViewController: BaseViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     
+    var thumbImage: UIImage!
+    
     var imageUrl:String?
 
     override func viewDidLoad() {
@@ -36,7 +38,7 @@ class PhotoViewController: BaseViewController {
         //imageUrl = imageUrl?.replacingOccurrences(of: "\", with: "")
         let urlString = URL(string: imageUrl!)
         print("sanjay url", urlString ?? "")
-        imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"),completionHandler: {_ in
+        imageView.kf.setImage(with: urlString, placeholder: thumbImage,completionHandler: {_ in
             print("Sanjay cahed")
             self.menuButton.isEnabled = true
         })
