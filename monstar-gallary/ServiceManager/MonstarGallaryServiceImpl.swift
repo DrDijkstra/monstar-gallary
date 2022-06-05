@@ -17,7 +17,7 @@ class MonstarGallaryServiceImpl: MonstarGallaryService {
         
     }
     
-    func getPhotosBy(page: String, callback: @escaping (ApiCallResult<ImageUrlsEntity>) -> Void) {
+    func getPhotosBy(page: String, callback: @escaping (ApiCallResult<ImageUrlListEntity>) -> Void) {
         photoService.getPhotosBy(pageNumber: page, callback: callback)
         
     }

@@ -20,7 +20,6 @@ class NetworkServiceImpl: NetworkService {
     var requestInterceptor:Interceptor
     
     init(interceptor:Interceptor){
-       print("hello sanjay")
         let smConfig = URLSessionConfiguration.default
         smConfig.timeoutIntervalForRequest = 10
         smConfig.requestCachePolicy = .returnCacheDataElseLoad
@@ -49,9 +48,9 @@ class NetworkServiceImpl: NetworkService {
         sm.request(urlRequest)
             .validate()
             .responseString { (response: AFDataResponse<String>) in
-                print("Sanjay")
+               
                 #if DEBUG
-                self.printRequestResponse(response)
+                    self.printRequestResponse(response)
                 #endif
                 
                 

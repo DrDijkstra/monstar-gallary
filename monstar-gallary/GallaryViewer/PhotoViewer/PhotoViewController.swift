@@ -25,17 +25,17 @@ class PhotoViewController: BaseViewController {
             // Fallback on earlier versions
         }
         menuButton.isEnabled = false
-        print("imageUrl:    ",imageUrl)
+        print("imageUrl:    ",imageUrl ?? "")
         showImage()
 
         
     }
     
     func showImage(){
-        print("image sanjay", imageUrl)
+        print("image sanjay", imageUrl ?? "")
         //imageUrl = imageUrl?.replacingOccurrences(of: "\", with: "")
         let urlString = URL(string: imageUrl!)
-        print("sanjay url", urlString)
+        print("sanjay url", urlString ?? "")
         imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"),completionHandler: {_ in
             print("Sanjay cahed")
             self.menuButton.isEnabled = true

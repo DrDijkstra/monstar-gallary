@@ -10,5 +10,5 @@ import Foundation
 
 
 public protocol MonstarGallaryService {
-    func getPhotosBy(page: String, callback: @escaping (ApiCallResult<ImageUrlsEntity>) -> Void) -> Void
+    func getPhotosBy(page: String, callback: @escaping (ApiCallResult<ImageUrlListEntity>) -> Void) -> Void
 }

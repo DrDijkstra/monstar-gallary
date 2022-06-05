@@ -10,19 +10,19 @@ import Foundation
 
 public protocol PhotoService {
    
-    func getPhotosBy(pageNumber:String, callback : @escaping (ApiCallResult<ImageUrlsEntity>) -> Void) -> Void
+    func getPhotosBy(pageNumber:String, callback : @escaping (ApiCallResult<ImageUrlListEntity>) -> Void) -> Void
 }
 
 class PhotoServiceImpl: PhotoService {
     
-    func getPhotosBy(pageNumber: String, callback: @escaping (ApiCallResult<ImageUrlsEntity>) -> Void) {
+    func getPhotosBy(pageNumber: String, callback: @escaping (ApiCallResult<ImageUrlListEntity>) -> Void) {
         networkService.getPhotosBy(pageNumber: pageNumber, gwCallback: {result  in
             switch result {
             case .success(let apiResponse):
-                let urlEntity = ImageUrlsEntity()
+                let urlEntity = ImageUrlListEntity()
                 for photoInfo in apiResponse.photos ?? []{
                     let urlInfo = ImageUrlData(url: photoInfo.urls ?? UrlInfo())
-                    urlEntity.urls?.append(urlInfo)
+                    urlEntity.urlList?.append(urlInfo)
                 }
                 callback(.success(sc: urlEntity))
                 

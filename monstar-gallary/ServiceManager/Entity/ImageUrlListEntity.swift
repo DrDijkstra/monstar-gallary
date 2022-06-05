@@ -7,12 +7,12 @@
 
 import Foundation
 
-public class ImageUrlsEntity{
-    var urls: [ImageUrlData]?
+public class ImageUrlListEntity{
+    var urlList: [ImageUrlData]?
  
     
     init() {
-        self.urls = []
+        self.urlList = []
     }
     
 }

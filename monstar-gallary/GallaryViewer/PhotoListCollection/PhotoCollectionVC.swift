@@ -7,7 +7,24 @@
 
 import UIKit
 
-class PhotoCollectionVC: BaseViewController {
+
+protocol  PhotoCollectionView:AnyObject{
+    var presenter: PhotoCollectionPresenter? {get set}
+    func onSuccessGetPhotoList(response: [ImageUrlData])
+    func onFailureGetPhotoList(msg: String)
+}
+
+class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
+    var presenter: PhotoCollectionPresenter?
+    
+    func onSuccessGetPhotoList(response: [ImageUrlData]) {
+        print(response)
+    }
+    
+    func onFailureGetPhotoList(msg: String) {
+        
+    }
+    
 
     @IBOutlet weak var navBar: UINavigationBar!
     
@@ -15,7 +32,7 @@ class PhotoCollectionVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
      
-        
+        presenter = PhotoCollectionPresenterImpl(view: self)
     }
     
     var responseUrlList:[ImageUrlData]?
@@ -23,21 +40,9 @@ class PhotoCollectionVC: BaseViewController {
     @IBAction func onButtonClick(_ sender: Any) {
 
         
-        let serviceManager = ServiceManger.getInstance()
-        serviceManager.getMonstarGalleryService()?.getPhotosBy(page: "2", callback: {
-            result in
-            switch result {
-            case .success(let response):
-                self.responseUrlList = response.urls
-                self.performSegue(withIdentifier: "goToImageView", sender: self)
-                break
-            case .failure(let error):
-                self.showToast(message: error.message ?? "something went wrong")
-                break
-            }
-            
-        })
-       
+        
+        
+        presenter?.getAllPhotoListAccorddingTo(pageNumber: "1")
         
         
         

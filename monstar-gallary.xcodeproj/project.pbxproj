@@ -13,7 +13,7 @@
 		922720AC2848B4AE0027E003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720AB2848B4AE0027E003 /* AppDelegate.swift */; };
 		922720AE2848B4AE0027E003 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720AD2848B4AE0027E003 /* SceneDelegate.swift */; };
 		922720B32848B4AE0027E003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
-		922720B62848B4AE0027E003 /* gallary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 922720B42848B4AE0027E003 /* gallary.xcdatamodeld */; };
+		922720B62848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 922720B42848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld */; };
 		922720B82848B4AF0027E003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922720B72848B4AF0027E003 /* Assets.xcassets */; };
 		922720BB2848B4AF0027E003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B92848B4AF0027E003 /* LaunchScreen.storyboard */; };
 		922720C62848B4AF0027E003 /* gallaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720C52848B4AF0027E003 /* gallaryTests.swift */; };
@@ -22,18 +22,15 @@
 		922720EC2848B9FE0027E003 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720EB2848B9FE0027E003 /* SplashViewController.swift */; };
 		922720ED2848B9FE0027E003 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720EB2848B9FE0027E003 /* SplashViewController.swift */; };
 		922720EE2848B9FE0027E003 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720EB2848B9FE0027E003 /* SplashViewController.swift */; };
-		9242D4202849F20E00C4471B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D41F2849F20E00C4471B /* View.swift */; };
-		9242D4212849F20E00C4471B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D41F2849F20E00C4471B /* View.swift */; };
-		9242D4222849F20E00C4471B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D41F2849F20E00C4471B /* View.swift */; };
-		9242D4242849F21E00C4471B /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4232849F21E00C4471B /* Interactor.swift */; };
-		9242D4252849F21E00C4471B /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4232849F21E00C4471B /* Interactor.swift */; };
-		9242D4262849F21E00C4471B /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4232849F21E00C4471B /* Interactor.swift */; };
-		9242D4282849F22A00C4471B /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4272849F22A00C4471B /* Presenter.swift */; };
-		9242D4292849F22A00C4471B /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4272849F22A00C4471B /* Presenter.swift */; };
-		9242D42A2849F22A00C4471B /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4272849F22A00C4471B /* Presenter.swift */; };
-		9242D4302849F24900C4471B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D42F2849F24900C4471B /* Router.swift */; };
-		9242D4312849F24900C4471B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D42F2849F24900C4471B /* Router.swift */; };
-		9242D4322849F24900C4471B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D42F2849F24900C4471B /* Router.swift */; };
+		9242D4242849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4232849F21E00C4471B /* PhotoCollectionInetractor.swift */; };
+		9242D4252849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4232849F21E00C4471B /* PhotoCollectionInetractor.swift */; };
+		9242D4262849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4232849F21E00C4471B /* PhotoCollectionInetractor.swift */; };
+		9242D4282849F22A00C4471B /* PhotoCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4272849F22A00C4471B /* PhotoCollectionPresenter.swift */; };
+		9242D4292849F22A00C4471B /* PhotoCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4272849F22A00C4471B /* PhotoCollectionPresenter.swift */; };
+		9242D42A2849F22A00C4471B /* PhotoCollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4272849F22A00C4471B /* PhotoCollectionPresenter.swift */; };
+		9242D4302849F24900C4471B /* PhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D42F2849F24900C4471B /* PhotoRouter.swift */; };
+		9242D4312849F24900C4471B /* PhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D42F2849F24900C4471B /* PhotoRouter.swift */; };
+		9242D4322849F24900C4471B /* PhotoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D42F2849F24900C4471B /* PhotoRouter.swift */; };
 		9242D4352849F56100C4471B /* ImageUrlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4342849F56100C4471B /* ImageUrlInfo.swift */; };
 		9242D4362849F56100C4471B /* ImageUrlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4342849F56100C4471B /* ImageUrlInfo.swift */; };
 		9242D4372849F56100C4471B /* ImageUrlInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4342849F56100C4471B /* ImageUrlInfo.swift */; };
@@ -123,9 +120,9 @@
 		9242D4C4284B7BF600C4471B /* ApiPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4C3284B7BF600C4471B /* ApiPhotosResponse.swift */; };
 		9242D4C5284B7BF600C4471B /* ApiPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4C3284B7BF600C4471B /* ApiPhotosResponse.swift */; };
 		9242D4C6284B7BF600C4471B /* ApiPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4C3284B7BF600C4471B /* ApiPhotosResponse.swift */; };
-		9242D4C9284B8DB000C4471B /* ImageUrlsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4C8284B8DB000C4471B /* ImageUrlsEntity.swift */; };
-		9242D4CA284B8DB000C4471B /* ImageUrlsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4C8284B8DB000C4471B /* ImageUrlsEntity.swift */; };
-		9242D4CB284B8DB000C4471B /* ImageUrlsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4C8284B8DB000C4471B /* ImageUrlsEntity.swift */; };
+		9242D4C9284B8DB000C4471B /* ImageUrlListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4C8284B8DB000C4471B /* ImageUrlListEntity.swift */; };
+		9242D4CA284B8DB000C4471B /* ImageUrlListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4C8284B8DB000C4471B /* ImageUrlListEntity.swift */; };
+		9242D4CB284B8DB000C4471B /* ImageUrlListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4C8284B8DB000C4471B /* ImageUrlListEntity.swift */; };
 		9242D4CD284B91E200C4471B /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4CC284B91E200C4471B /* AppConfig.swift */; };
 		9242D4CE284B91E200C4471B /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4CC284B91E200C4471B /* AppConfig.swift */; };
 		9242D4CF284B91E200C4471B /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242D4CC284B91E200C4471B /* AppConfig.swift */; };
@@ -192,10 +189,9 @@
 		922720CF2848B4AF0027E003 /* gallaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gallaryUITests.swift; sourceTree = "<group>"; };
 		922720D12848B4AF0027E003 /* gallaryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gallaryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		922720EB2848B9FE0027E003 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		9242D41F2849F20E00C4471B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
-		9242D4232849F21E00C4471B /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
-		9242D4272849F22A00C4471B /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
-		9242D42F2849F24900C4471B /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9242D4232849F21E00C4471B /* PhotoCollectionInetractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionInetractor.swift; sourceTree = "<group>"; };
+		9242D4272849F22A00C4471B /* PhotoCollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionPresenter.swift; sourceTree = "<group>"; };
+		9242D42F2849F24900C4471B /* PhotoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoRouter.swift; sourceTree = "<group>"; };
 		9242D4342849F56100C4471B /* ImageUrlInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrlInfo.swift; sourceTree = "<group>"; };
 		9242D4392849FA6C00C4471B /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		9242D4402849FFA300C4471B /* ServiceManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManger.swift; sourceTree = "<group>"; };
@@ -225,7 +221,7 @@
 		9242D4B9284A659B00C4471B /* LinksInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksInfo.swift; sourceTree = "<group>"; };
 		9242D4BD284B5ACA00C4471B /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
 		9242D4C3284B7BF600C4471B /* ApiPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiPhotosResponse.swift; sourceTree = "<group>"; };
-		9242D4C8284B8DB000C4471B /* ImageUrlsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrlsEntity.swift; sourceTree = "<group>"; };
+		9242D4C8284B8DB000C4471B /* ImageUrlListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrlListEntity.swift; sourceTree = "<group>"; };
 		9242D4CC284B91E200C4471B /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -299,10 +295,9 @@
 				92E321DF2848C129004E1AC5 /* GallaryViewer */,
 				922720AB2848B4AE0027E003 /* AppDelegate.swift */,
 				922720AD2848B4AE0027E003 /* SceneDelegate.swift */,
-				922720EB2848B9FE0027E003 /* SplashViewController.swift */,
 				922720B72848B4AF0027E003 /* Assets.xcassets */,
 				922720BC2848B4AF0027E003 /* Info.plist */,
-				922720B42848B4AE0027E003 /* gallary.xcdatamodeld */,
+				922720B42848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld */,
 				92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */,
 			);
 			path = "monstar-gallary";
@@ -334,22 +329,22 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		9242D41E2849F13400C4471B /* PhotoViewer */ = {
+		9242D41E2849F13400C4471B /* PhotoListCollection */ = {
 			isa = PBXGroup;
 			children = (
-				9242D41F2849F20E00C4471B /* View.swift */,
-				9242D4232849F21E00C4471B /* Interactor.swift */,
-				9242D4272849F22A00C4471B /* Presenter.swift */,
-				9242D42F2849F24900C4471B /* Router.swift */,
+				9242D42F2849F24900C4471B /* PhotoRouter.swift */,
+				9242D4232849F21E00C4471B /* PhotoCollectionInetractor.swift */,
+				9242D4272849F22A00C4471B /* PhotoCollectionPresenter.swift */,
+				920808252848CB74002E88DA /* PhotoCollectionVC.swift */,
 			);
-			path = PhotoViewer;
+			path = PhotoListCollection;
 			sourceTree = "<group>";
 		};
 		9242D4332849F3C500C4471B /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				9242D4342849F56100C4471B /* ImageUrlInfo.swift */,
-				9242D4C8284B8DB000C4471B /* ImageUrlsEntity.swift */,
+				9242D4C8284B8DB000C4471B /* ImageUrlListEntity.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -466,6 +461,22 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		92AE2EA4284CC17B00543434 /* PhotoViewer */ = {
+			isa = PBXGroup;
+			children = (
+				92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */,
+			);
+			path = PhotoViewer;
+			sourceTree = "<group>";
+		};
+		92AE2EA5284CC1B900543434 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				922720EB2848B9FE0027E003 /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		92B5AD60284923E0003E9FE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,9 +490,9 @@
 		92E321DF2848C129004E1AC5 /* GallaryViewer */ = {
 			isa = PBXGroup;
 			children = (
-				9242D41E2849F13400C4471B /* PhotoViewer */,
-				920808252848CB74002E88DA /* PhotoCollectionVC.swift */,
-				92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */,
+				92AE2EA5284CC1B900543434 /* Splash */,
+				92AE2EA4284CC17B00543434 /* PhotoViewer */,
+				9242D41E2849F13400C4471B /* PhotoListCollection */,
 			);
 			path = GallaryViewer;
 			sourceTree = "<group>";
@@ -626,19 +637,18 @@
 				9242D4CD284B91E200C4471B /* AppConfig.swift in Sources */,
 				9242D47B284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D463284A05CA00C4471B /* ApiGwResponse.swift in Sources */,
-				9242D4202849F20E00C4471B /* View.swift in Sources */,
 				9242D4BA284A659B00C4471B /* LinksInfo.swift in Sources */,
-				922720B62848B4AE0027E003 /* gallary.xcdatamodeld in Sources */,
+				922720B62848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld in Sources */,
 				9242D457284A041B00C4471B /* PhotoService.swift in Sources */,
 				9242D45F284A055D00C4471B /* ApiGwCallResult.swift in Sources */,
 				9242D44E284A020C00C4471B /* ResponseStatus.swift in Sources */,
 				9242D4412849FFA300C4471B /* ServiceManger.swift in Sources */,
 				920808262848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
-				9242D4242849F21E00C4471B /* Interactor.swift in Sources */,
+				9242D4242849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */,
 				9242D484284A1A3100C4471B /* ApiProtectionLabel.swift in Sources */,
-				9242D4302849F24900C4471B /* Router.swift in Sources */,
+				9242D4302849F24900C4471B /* PhotoRouter.swift in Sources */,
 				9242D4C4284B7BF600C4471B /* ApiPhotosResponse.swift in Sources */,
-				9242D4282849F22A00C4471B /* Presenter.swift in Sources */,
+				9242D4282849F22A00C4471B /* PhotoCollectionPresenter.swift in Sources */,
 				922720AC2848B4AE0027E003 /* AppDelegate.swift in Sources */,
 				9242D477284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D4A2284A4AC200C4471B /* Interceptor.swift in Sources */,
@@ -650,7 +660,7 @@
 				9242D4A6284A5FC200C4471B /* UserInfo.swift in Sources */,
 				92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
 				9242D469284A0A1C00C4471B /* PhotosInfo.swift in Sources */,
-				9242D4C9284B8DB000C4471B /* ImageUrlsEntity.swift in Sources */,
+				9242D4C9284B8DB000C4471B /* ImageUrlListEntity.swift in Sources */,
 				92B5AD5C2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 				9242D45B284A050D00C4471B /* NetworkService.swift in Sources */,
 				9242D495284A1F9C00C4471B /* RequestRouter.swift in Sources */,
@@ -674,14 +684,13 @@
 				92B5AD5D2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 				9242D4AB284A61D300C4471B /* ProfileImageInfo.swift in Sources */,
 				922720C62848B4AF0027E003 /* gallaryTests.swift in Sources */,
-				9242D4312849F24900C4471B /* Router.swift in Sources */,
+				9242D4312849F24900C4471B /* PhotoRouter.swift in Sources */,
 				9242D489284A1B8A00C4471B /* ApiCallResponseCode.swift in Sources */,
 				9242D45C284A050D00C4471B /* NetworkService.swift in Sources */,
-				9242D4292849F22A00C4471B /* Presenter.swift in Sources */,
+				9242D4292849F22A00C4471B /* PhotoCollectionPresenter.swift in Sources */,
 				9242D4362849F56100C4471B /* ImageUrlInfo.swift in Sources */,
 				9242D478284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D4B3284A643200C4471B /* CurrentUserCollectionsInfo.swift in Sources */,
-				9242D4212849F20E00C4471B /* View.swift in Sources */,
 				9242D458284A041B00C4471B /* PhotoService.swift in Sources */,
 				9242D485284A1A3100C4471B /* ApiProtectionLabel.swift in Sources */,
 				9242D446284A012000C4471B /* MonstarGallaryService.swift in Sources */,
@@ -689,9 +698,9 @@
 				920808272848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				9242D44B284A01C700C4471B /* ApiCallResult.swift in Sources */,
 				9242D4BB284A659C00C4471B /* LinksInfo.swift in Sources */,
-				9242D4252849F21E00C4471B /* Interactor.swift in Sources */,
+				9242D4252849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */,
 				9242D4A7284A5FC200C4471B /* UserInfo.swift in Sources */,
-				9242D4CA284B8DB000C4471B /* ImageUrlsEntity.swift in Sources */,
+				9242D4CA284B8DB000C4471B /* ImageUrlListEntity.swift in Sources */,
 				9242D4B7284A653100C4471B /* UrlInfo.swift in Sources */,
 				9242D473284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				9242D46A284A0A1C00C4471B /* PhotosInfo.swift in Sources */,
@@ -714,11 +723,11 @@
 			files = (
 				9242D474284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				9242D4CF284B91E200C4471B /* AppConfig.swift in Sources */,
-				9242D4322849F24900C4471B /* Router.swift in Sources */,
+				9242D4322849F24900C4471B /* PhotoRouter.swift in Sources */,
 				9242D44C284A01C700C4471B /* ApiCallResult.swift in Sources */,
 				9242D493284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */,
 				9242D47D284A0F6000C4471B /* DomainModule.swift in Sources */,
-				9242D42A2849F22A00C4471B /* Presenter.swift in Sources */,
+				9242D42A2849F22A00C4471B /* PhotoCollectionPresenter.swift in Sources */,
 				9242D48E284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				9242D447284A012000C4471B /* MonstarGallaryService.swift in Sources */,
 				9242D45D284A050D00C4471B /* NetworkService.swift in Sources */,
@@ -734,19 +743,18 @@
 				9242D465284A05CA00C4471B /* ApiGwResponse.swift in Sources */,
 				9242D4432849FFA300C4471B /* ServiceManger.swift in Sources */,
 				9242D4AC284A61D300C4471B /* ProfileImageInfo.swift in Sources */,
-				9242D4CB284B8DB000C4471B /* ImageUrlsEntity.swift in Sources */,
+				9242D4CB284B8DB000C4471B /* ImageUrlListEntity.swift in Sources */,
 				922720D02848B4AF0027E003 /* gallaryUITests.swift in Sources */,
 				9242D450284A020C00C4471B /* ResponseStatus.swift in Sources */,
 				922720D22848B4AF0027E003 /* gallaryUITestsLaunchTests.swift in Sources */,
 				9242D4B4284A643200C4471B /* CurrentUserCollectionsInfo.swift in Sources */,
 				92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
-				9242D4222849F20E00C4471B /* View.swift in Sources */,
 				9242D454284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
 				9242D479284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D459284A041B00C4471B /* PhotoService.swift in Sources */,
 				9242D4A4284A4AC200C4471B /* Interceptor.swift in Sources */,
 				9242D497284A1F9C00C4471B /* RequestRouter.swift in Sources */,
-				9242D4262849F21E00C4471B /* Interactor.swift in Sources */,
+				9242D4262849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */,
 				9242D46B284A0A1C00C4471B /* PhotosInfo.swift in Sources */,
 				9242D4A8284A5FC200C4471B /* UserInfo.swift in Sources */,
 				9242D4C6284B7BF600C4471B /* ApiPhotosResponse.swift in Sources */,
@@ -1128,13 +1136,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		922720B42848B4AE0027E003 /* gallary.xcdatamodeld */ = {
+		922720B42848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				922720B52848B4AE0027E003 /* gallary.xcdatamodel */,
 			);
 			currentVersion = 922720B52848B4AE0027E003 /* gallary.xcdatamodel */;
-			path = gallary.xcdatamodeld;
+			path = "monstar-gallary-db.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
