@@ -11,6 +11,7 @@ class DomainModule {
     
     var networkService : NetworkService? = nil
     var photoService : PhotoService? = nil
+    var databaseService:DatabaseService? = nil
     
     static var selfRef : DomainModule? = nil
     
@@ -45,5 +46,12 @@ class DomainModule {
             photoService = PhotoServiceImpl()
         }
         return photoService!
+    }
+    
+    func getDbService() -> DatabaseService {
+        if (databaseService == nil) {
+            databaseService = DatabaseServiceImpl()
+        }
+        return databaseService!
     }
 }
