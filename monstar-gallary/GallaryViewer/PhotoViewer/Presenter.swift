@@ -12,12 +12,19 @@ protocol PhotoCollectionPresenter{
     var router: PhotoRouter? {get set}
     var interaxtor:PhotoCollectionInetractor? {get set}
     
+    func getAllPhotoListAccorddingTo(pageNumber: String)
+    
     
 }
 
 class PhotoCollectionPresenterImpl:PhotoCollectionPresenter{
-    var router: PhotoRouter?
     
+    
+    func getAllPhotoListAccorddingTo(pageNumber: String) {
+        
+    }
+    
+    var router: PhotoRouter?
     var interaxtor: PhotoCollectionInetractor?
     
     init() {

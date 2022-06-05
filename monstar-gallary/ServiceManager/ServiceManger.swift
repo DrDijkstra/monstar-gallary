@@ -28,10 +28,10 @@ public class ServiceManger {
     }
     
     public static func initManager() -> Void {
-        getInstance()
+       
         let domainModule = DomainModule()
         DomainModule.initModule(domainModule)
-        RequestRouter.baseUrl = AppConfig.serverUrl
+       
         
     }
     

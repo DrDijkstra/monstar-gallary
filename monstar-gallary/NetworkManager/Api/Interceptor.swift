@@ -9,7 +9,6 @@ import Foundation
 import Alamofire
 
 class Interceptor: RequestInterceptor {
-    private typealias RefreshCompletion = (_ succeeded: Bool, _ accessToken: String?) -> Void
     
     
     typealias AdapterResult = Swift.Result<URLRequest, Error>

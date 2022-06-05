@@ -11,7 +11,7 @@ import Alamofire
 enum RequestRouter : URLRequestConvertible, URLConvertible{
     case getAllPhotos(pageNumber:String)
     
-    static var baseUrl = "https://api.unplash.com"
+    //static var baseUrl = ""
     
     
     var method: HTTPMethod {

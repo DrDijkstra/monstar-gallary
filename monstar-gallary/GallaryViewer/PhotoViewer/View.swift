@@ -8,5 +8,10 @@
 import Foundation
 
 protocol  PhotoCollectionView{
-    var router:
+    
+}
+
+
+class PhotoCollectionViewController:BaseViewController,PhotoCollectionView{
+    
 }
