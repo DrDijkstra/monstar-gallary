@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+
+protocol PhotoCollectionInetractor {
+    
+}
+
+class PhotoCollectionInetractorImpl: PhotoCollectionInetractor{
+    
+}

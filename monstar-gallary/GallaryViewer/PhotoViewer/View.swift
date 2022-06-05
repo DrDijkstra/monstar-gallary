@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+protocol  PhotoCollectionView{
+    var router:
+}

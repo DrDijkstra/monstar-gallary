@@ -8,17 +8,25 @@
 import Foundation
 
 
-class PhotoViewerPresenter{
+protocol PhotoCollectionPresenter{
+    var router: PhotoRouter? {get set}
+    var interaxtor:PhotoCollectionInetractor? {get set}
     
-    
-    
-    
-    init(){
-        let serviceManager = ServiceManger.getInstance()
-        print("initiated")
-        serviceManager.getMonstarGalleryService()?.getPhotosBy(page: "1", callback: {_ in 
-            
-        })
-    }
     
 }
+
+class PhotoCollectionPresenterImpl:PhotoCollectionPresenter{
+    var router: PhotoRouter?
+    
+    var interaxtor: PhotoCollectionInetractor?
+    
+    init() {
+        self.router = PhotoRouterImpl()
+        self.interaxtor = PhotoCollectionInetractorImpl()
+    }
+    
+    
+}
+
+  
+

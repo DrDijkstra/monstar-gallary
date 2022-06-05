@@ -9,13 +9,13 @@ import Foundation
 
 
 
-protocol AnyRouter{
-    static func start()->AnyRouter
+protocol PhotoRouter{
+    static func start()->PhotoRouter
 }
 
-class PhotoRouter: AnyRouter{
-    static func start() -> AnyRouter {
-        let router = PhotoRouter()
+class PhotoRouterImpl: PhotoRouter{
+    static func start() -> PhotoRouter {
+        let router = PhotoRouterImpl()
         //
         
         return router
