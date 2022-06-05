@@ -18,6 +18,7 @@ protocol  PhotoCollectionView:AnyObject{
 
 class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     func onSuccessGetPhotoBy(id: ImgUrlData) {
+        isFirstTime = false
         performSegue(withIdentifier: "goToImageView", sender: self)
     }
     
@@ -26,6 +27,8 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     }
     
     var presenter: PhotoCollectionPresenter?
+    var isFirstTime:Bool = true
+    
     
     func onSuccessGetPhotoList(response: [ImageUrlData]) {
         responseUrlList = response
@@ -57,7 +60,10 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
 
     
     override func viewWillAppear(_ animated: Bool) {
-        presenter?.getAllPhotoListAccorddingTo(pageNumber: "1")
+        if isFirstTime{
+            presenter?.getAllPhotoListAccorddingTo(pageNumber: "1")
+        }
+       
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
