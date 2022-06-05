@@ -12,9 +12,19 @@ protocol  PhotoCollectionView:AnyObject{
     var presenter: PhotoCollectionPresenter? {get set}
     func onSuccessGetPhotoList(response: [ImageUrlData])
     func onFailureGetPhotoList(msg: String)
+    func onSuccessGetPhotoBy(id: ImgUrlData)
+    func onFailureGetPhotoBy(msg: String)
 }
 
 class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
+    func onSuccessGetPhotoBy(id: ImgUrlData) {
+        performSegue(withIdentifier: "goToImageView", sender: self)
+    }
+    
+    func onFailureGetPhotoBy(msg: String) {
+        showToast(message: "error")
+    }
+    
     var presenter: PhotoCollectionPresenter?
     
     func onSuccessGetPhotoList(response: [ImageUrlData]) {
@@ -79,7 +89,8 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndex = indexPath
-        performSegue(withIdentifier: "goToImageView", sender: self)
+        presenter?.getPhotosBy(id: indexPath.row)
+       
     }
     
     

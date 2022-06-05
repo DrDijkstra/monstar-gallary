@@ -39,4 +39,8 @@ public class ServiceManger {
     public func getMonstarGalleryService() -> MonstarGallaryService? {
         return monstarGalleryService
     }
+    
+     func getDatabaseService() -> DatabaseService? {
+        return DomainModule.getInstance().getDbService()
+    }
 }

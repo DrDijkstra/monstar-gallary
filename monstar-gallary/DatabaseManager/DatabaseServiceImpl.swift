@@ -28,8 +28,9 @@ class DatabaseServiceImpl: DatabaseService {
         let fetchRequest:NSFetchRequest<ImgUrlData>
         fetchRequest = ImgUrlData.fetchRequest()
         let strId = String(id)
+        print(strId)
         fetchRequest.predicate = NSPredicate(
-            format: "id = %@", strId
+            format: "id = \"\(strId)\""
         )
         
         do{
@@ -56,11 +57,13 @@ class DatabaseServiceImpl: DatabaseService {
         let imageUrlData = NSEntityDescription.insertNewObject(forEntityName: "ImgUrlData", into: context) as! ImgUrlData
         imageUrlData.raw = urlData.full
         imageUrlData.thumb = urlData.thumb
-        UserDefaults.lastImageIndex = UserDefaults.lastImageIndex + 1
+       
+        print(UserDefaults.lastImageIndex)
         imageUrlData.id = String(UserDefaults.lastImageIndex)
         
         do{
             try context.save()
+            UserDefaults.lastImageIndex = UserDefaults.lastImageIndex + 1
             callback(.success(sc: "data saved successfully"))
             
         }
