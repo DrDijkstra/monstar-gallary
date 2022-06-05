@@ -10,6 +10,8 @@ import UIKit
 import CoreData
 
 class DatabaseServiceImpl: DatabaseService {
+    
+    
     func deleteImageUrlData(callback: @escaping (DbCallResult<String>) -> Void) {
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "ImgUrlData")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
@@ -22,9 +24,9 @@ class DatabaseServiceImpl: DatabaseService {
         }
     }
     
-    func fetchImageUrlData(id: Int, callback: @escaping (DbCallResult<ImageUrlData>) -> Void) {
-        let fetchRequest:NSFetchRequest<ImageUrlData>
-        fetchRequest = ImageUrlData.fetchRequest()
+    func fetchImageUrlData(id: Int, callback: @escaping (DbCallResult<ImgUrlData>) -> Void) {
+        let fetchRequest:NSFetchRequest<ImgUrlData>
+        fetchRequest = ImgUrlData.fetchRequest()
         let strId = String(id)
         fetchRequest.predicate = NSPredicate(
             format: "id = %@", strId
@@ -32,6 +34,7 @@ class DatabaseServiceImpl: DatabaseService {
         
         do{
             let object = try context.fetch(fetchRequest)
+           
             callback(.success(sc: object[0]))
             
         }
@@ -48,9 +51,9 @@ class DatabaseServiceImpl: DatabaseService {
     
     
     
-    func saveImageUrlData(urlData: ImgUrlData, callback: @escaping (DbCallResult<String>) -> Void) {
+    func saveImageUrlData(urlData: ImageUrlData, callback: @escaping (DbCallResult<String>) -> Void) {
         
-        let imageUrlData = NSEntityDescription.insertNewObject(forEntityName: "ImageUrlData", into: context) as! ImageUrlData
+        let imageUrlData = NSEntityDescription.insertNewObject(forEntityName: "ImageUrlData", into: context) as! ImgUrlData
         imageUrlData.raw = urlData.full
         imageUrlData.thumb = urlData.thumb
         UserDefaults.lastImageIndex = UserDefaults.lastImageIndex + 1
