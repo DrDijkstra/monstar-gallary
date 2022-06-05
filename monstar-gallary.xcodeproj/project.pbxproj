@@ -13,7 +13,7 @@
 		922720AC2848B4AE0027E003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720AB2848B4AE0027E003 /* AppDelegate.swift */; };
 		922720AE2848B4AE0027E003 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720AD2848B4AE0027E003 /* SceneDelegate.swift */; };
 		922720B32848B4AE0027E003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
-		922720B62848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 922720B42848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld */; };
+		922720B62848B4AE0027E003 /* gallary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 922720B42848B4AE0027E003 /* gallary.xcdatamodeld */; };
 		922720B82848B4AF0027E003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922720B72848B4AF0027E003 /* Assets.xcassets */; };
 		922720BB2848B4AF0027E003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B92848B4AF0027E003 /* LaunchScreen.storyboard */; };
 		922720C62848B4AF0027E003 /* gallaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720C52848B4AF0027E003 /* gallaryTests.swift */; };
@@ -129,6 +129,21 @@
 		92A7AF90284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF8F284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift */; };
 		92A7AF91284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF8F284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift */; };
 		92A7AF92284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF8F284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift */; };
+		92A7AF95284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF93284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift */; };
+		92A7AF96284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF93284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift */; };
+		92A7AF97284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF93284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift */; };
+		92A7AF98284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF94284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift */; };
+		92A7AF99284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF94284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift */; };
+		92A7AF9A284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF94284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift */; };
+		92A7AF9E284CF18B00EFC5A2 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF9D284CF18B00EFC5A2 /* DatabaseService.swift */; };
+		92A7AF9F284CF18B00EFC5A2 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF9D284CF18B00EFC5A2 /* DatabaseService.swift */; };
+		92A7AFA0284CF18B00EFC5A2 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AF9D284CF18B00EFC5A2 /* DatabaseService.swift */; };
+		92A7AFA2284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFA1284CF3A700EFC5A2 /* DatabaseServiceImpl.swift */; };
+		92A7AFA3284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFA1284CF3A700EFC5A2 /* DatabaseServiceImpl.swift */; };
+		92A7AFA4284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFA1284CF3A700EFC5A2 /* DatabaseServiceImpl.swift */; };
+		92A7AFA6284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */; };
+		92A7AFA7284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */; };
+		92A7AFA8284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */; };
 		92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
@@ -227,6 +242,11 @@
 		9242D4C8284B8DB000C4471B /* ImageUrlListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrlListEntity.swift; sourceTree = "<group>"; };
 		9242D4CC284B91E200C4471B /* AppConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		92A7AF8F284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		92A7AF93284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageUrlData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		92A7AF94284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageUrlData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		92A7AF9D284CF18B00EFC5A2 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		92A7AFA1284CF3A700EFC5A2 /* DatabaseServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseServiceImpl.swift; sourceTree = "<group>"; };
+		92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
@@ -291,6 +311,7 @@
 		922720AA2848B4AE0027E003 /* monstar-gallary */ = {
 			isa = PBXGroup;
 			children = (
+				92A7AF9B284CEEB200EFC5A2 /* DatabaseManager */,
 				9242D49C284A2A4400C4471B /* Config */,
 				9242D48F284A1D3400C4471B /* Extention */,
 				9242D448284A01A900C4471B /* NetworkManager */,
@@ -301,7 +322,7 @@
 				922720AD2848B4AE0027E003 /* SceneDelegate.swift */,
 				922720B72848B4AF0027E003 /* Assets.xcassets */,
 				922720BC2848B4AF0027E003 /* Info.plist */,
-				922720B42848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld */,
+				922720B42848B4AE0027E003 /* gallary.xcdatamodeld */,
 				92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */,
 			);
 			path = "monstar-gallary";
@@ -454,6 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */,
+				92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -464,6 +486,25 @@
 				9242D4CC284B91E200C4471B /* AppConfig.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		92A7AF9B284CEEB200EFC5A2 /* DatabaseManager */ = {
+			isa = PBXGroup;
+			children = (
+				92A7AF9C284CF17100EFC5A2 /* Model */,
+				92A7AF9D284CF18B00EFC5A2 /* DatabaseService.swift */,
+				92A7AFA1284CF3A700EFC5A2 /* DatabaseServiceImpl.swift */,
+			);
+			path = DatabaseManager;
+			sourceTree = "<group>";
+		};
+		92A7AF9C284CF17100EFC5A2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				92A7AF93284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift */,
+				92A7AF94284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		92AE2EA4284CC17B00543434 /* PhotoViewer */ = {
@@ -639,12 +680,13 @@
 				9242D4AA284A61D300C4471B /* ProfileImageInfo.swift in Sources */,
 				92A7AF90284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */,
 				9242D4B6284A653100C4471B /* UrlInfo.swift in Sources */,
+				92A7AF9E284CF18B00EFC5A2 /* DatabaseService.swift in Sources */,
 				9242D472284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				9242D4CD284B91E200C4471B /* AppConfig.swift in Sources */,
 				9242D47B284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D463284A05CA00C4471B /* ApiGwResponse.swift in Sources */,
 				9242D4BA284A659B00C4471B /* LinksInfo.swift in Sources */,
-				922720B62848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld in Sources */,
+				922720B62848B4AE0027E003 /* gallary.xcdatamodeld in Sources */,
 				9242D457284A041B00C4471B /* PhotoService.swift in Sources */,
 				9242D45F284A055D00C4471B /* ApiGwCallResult.swift in Sources */,
 				9242D44E284A020C00C4471B /* ResponseStatus.swift in Sources */,
@@ -659,6 +701,7 @@
 				9242D477284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D4A2284A4AC200C4471B /* Interceptor.swift in Sources */,
 				9242D4352849F56100C4471B /* ImageUrlInfo.swift in Sources */,
+				92A7AFA2284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */,
 				9242D480284A19B900C4471B /* ApiUrl.swift in Sources */,
 				9242D48C284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				9242D44A284A01C700C4471B /* ApiCallResult.swift in Sources */,
@@ -670,9 +713,12 @@
 				92B5AD5C2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 				9242D45B284A050D00C4471B /* NetworkService.swift in Sources */,
 				9242D495284A1F9C00C4471B /* RequestRouter.swift in Sources */,
+				92A7AF95284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift in Sources */,
+				92A7AF98284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift in Sources */,
 				9242D445284A012000C4471B /* MonstarGallaryService.swift in Sources */,
 				9242D491284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */,
 				9242D4B2284A643200C4471B /* CurrentUserCollectionsInfo.swift in Sources */,
+				92A7AFA6284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */,
 				922720AE2848B4AE0027E003 /* SceneDelegate.swift in Sources */,
 				9242D488284A1B8A00C4471B /* ApiCallResponseCode.swift in Sources */,
 				922720EC2848B9FE0027E003 /* SplashViewController.swift in Sources */,
@@ -684,7 +730,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9242D44F284A020C00C4471B /* ResponseStatus.swift in Sources */,
+				92A7AFA7284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */,
 				9242D4422849FFA300C4471B /* ServiceManger.swift in Sources */,
+				92A7AF9F284CF18B00EFC5A2 /* DatabaseService.swift in Sources */,
 				9242D492284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */,
 				9242D464284A05CA00C4471B /* ApiGwResponse.swift in Sources */,
 				92B5AD5D2849146D003E9FE7 /* BaseViewController.swift in Sources */,
@@ -703,12 +751,15 @@
 				92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
 				920808272848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				9242D44B284A01C700C4471B /* ApiCallResult.swift in Sources */,
+				92A7AF96284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift in Sources */,
 				9242D4BB284A659C00C4471B /* LinksInfo.swift in Sources */,
 				9242D4252849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */,
 				9242D4A7284A5FC200C4471B /* UserInfo.swift in Sources */,
 				92A7AF91284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */,
 				9242D4CA284B8DB000C4471B /* ImageUrlListEntity.swift in Sources */,
 				9242D4B7284A653100C4471B /* UrlInfo.swift in Sources */,
+				92A7AFA3284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */,
+				92A7AF99284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift in Sources */,
 				9242D473284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				9242D46A284A0A1C00C4471B /* PhotosInfo.swift in Sources */,
 				9242D48D284A1C5600C4471B /* ApiGwError.swift in Sources */,
@@ -750,8 +801,11 @@
 				9242D4B8284A653100C4471B /* UrlInfo.swift in Sources */,
 				9242D465284A05CA00C4471B /* ApiGwResponse.swift in Sources */,
 				9242D4432849FFA300C4471B /* ServiceManger.swift in Sources */,
+				92A7AF97284CEE1500EFC5A2 /* ImageUrlData+CoreDataClass.swift in Sources */,
 				9242D4AC284A61D300C4471B /* ProfileImageInfo.swift in Sources */,
 				9242D4CB284B8DB000C4471B /* ImageUrlListEntity.swift in Sources */,
+				92A7AF9A284CEE1500EFC5A2 /* ImageUrlData+CoreDataProperties.swift in Sources */,
+				92A7AFA0284CF18B00EFC5A2 /* DatabaseService.swift in Sources */,
 				922720D02848B4AF0027E003 /* gallaryUITests.swift in Sources */,
 				9242D450284A020C00C4471B /* ResponseStatus.swift in Sources */,
 				922720D22848B4AF0027E003 /* gallaryUITestsLaunchTests.swift in Sources */,
@@ -761,12 +815,14 @@
 				9242D479284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D459284A041B00C4471B /* PhotoService.swift in Sources */,
 				9242D4A4284A4AC200C4471B /* Interceptor.swift in Sources */,
+				92A7AFA8284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */,
 				9242D497284A1F9C00C4471B /* RequestRouter.swift in Sources */,
 				9242D4262849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */,
 				9242D46B284A0A1C00C4471B /* PhotosInfo.swift in Sources */,
 				9242D4A8284A5FC200C4471B /* UserInfo.swift in Sources */,
 				9242D4C6284B7BF600C4471B /* ApiPhotosResponse.swift in Sources */,
 				92B5AD5E2849146D003E9FE7 /* BaseViewController.swift in Sources */,
+				92A7AFA4284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1144,13 +1200,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		922720B42848B4AE0027E003 /* monstar-gallary-db.xcdatamodeld */ = {
+		922720B42848B4AE0027E003 /* gallary.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				922720B52848B4AE0027E003 /* gallary.xcdatamodel */,
 			);
 			currentVersion = 922720B52848B4AE0027E003 /* gallary.xcdatamodel */;
-			path = "monstar-gallary-db.xcdatamodeld";
+			path = gallary.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

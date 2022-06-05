@@ -10,14 +10,14 @@ import UIKit
 
 protocol  PhotoCollectionView:AnyObject{
     var presenter: PhotoCollectionPresenter? {get set}
-    func onSuccessGetPhotoList(response: [ImageUrlData])
+    func onSuccessGetPhotoList(response: [ImgUrlData])
     func onFailureGetPhotoList(msg: String)
 }
 
 class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     var presenter: PhotoCollectionPresenter?
     
-    func onSuccessGetPhotoList(response: [ImageUrlData]) {
+    func onSuccessGetPhotoList(response: [ImgUrlData]) {
         responseUrlList = response
         if responseUrlList?.count != 0{
             noPhotosText.isHidden = true
@@ -41,7 +41,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
         presenter = PhotoCollectionPresenterImpl(view: self)
     }
     
-    var responseUrlList:[ImageUrlData]?
+    var responseUrlList:[ImgUrlData]?
     var selectedIndex:IndexPath = IndexPath(row: 0, section: 0)
 
 

@@ -13,6 +13,9 @@ enum ApiGwCallResult<T : ApiGwResponse>{
     case failure(error : ResponseStatus)
 }
 
-
+enum DbCallResult<T : Any>{
+    case success(sc : T)
+    case failure(error : String)
+}
 
 

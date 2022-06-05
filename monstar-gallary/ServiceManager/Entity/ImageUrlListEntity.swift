@@ -8,7 +8,7 @@
 import Foundation
 
 public class ImageUrlListEntity{
-    var urlList: [ImageUrlData]?
+    var urlList: [ImgUrlData]?
  
     
     init() {

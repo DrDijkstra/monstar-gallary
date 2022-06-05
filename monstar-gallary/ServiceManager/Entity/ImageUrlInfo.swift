@@ -8,7 +8,7 @@
 import Foundation
 
 
-public class ImageUrlData{
+public class ImgUrlData{
     let raw: String?
     let full:String?
     let regular:String?
