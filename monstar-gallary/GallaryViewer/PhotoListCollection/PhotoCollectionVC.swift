@@ -24,8 +24,9 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     
     func onSuccessGetPhotoList(response: [ImageUrlData]) {
         isFirstTime = false
-        responseUrlList = response
-        if responseUrlList?.count != 0{
+        
+        totalImageCount += response.count
+        if response.count != 0{
             noPhotosText.isHidden = true
         }
         collectionView.reloadData()
@@ -47,7 +48,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
         presenter = PhotoCollectionPresenterImpl(view: self)
     }
     
-    var responseUrlList:[ImageUrlData]?
+    var totalImageCount:Int = 0
     var selectedUrlData:ImgUrlData?
     var selectedIndex:IndexPath = IndexPath(row: 0, section: 0)
 
@@ -55,7 +56,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     
     override func viewWillAppear(_ animated: Bool) {
         if isFirstTime{
-            presenter?.getAllPhotoListAccorddingTo(pageNumber: "1")
+            presenter?.getAllPhotoListAccorddingTo()
         }
        
     }
@@ -73,9 +74,9 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
 }
 
 
-extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource{
+extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return responseUrlList?.count ?? 0
+        return totalImageCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -95,6 +96,13 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         selectedUrlData = urlData
         performSegue(withIdentifier: "goToImageView", sender: self)
        
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let position = scrollView.contentOffset.y
+        if position > (collectionView.contentSize.height - 100 - scrollView.frame.size.height) {
+            presenter?.getAllPhotoListAccorddingTo()
+        }
     }
     
     

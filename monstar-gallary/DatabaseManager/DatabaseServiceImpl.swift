@@ -28,7 +28,7 @@ class DatabaseServiceImpl: DatabaseService {
         let fetchRequest:NSFetchRequest<ImgUrlData>
         fetchRequest = ImgUrlData.fetchRequest()
         let strId = String(id)
-        print(strId)
+
         fetchRequest.predicate = NSPredicate(
             format: "id = \"\(strId)\""
         )

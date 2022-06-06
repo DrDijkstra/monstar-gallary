@@ -13,7 +13,7 @@ protocol PhotoCollectionPresenter:AnyObject{
     var view:PhotoCollectionView?{get set}
     var interactor:PhotoCollectionInetractor? {get set}
     
-    func getAllPhotoListAccorddingTo(pageNumber: String)
+    func getAllPhotoListAccorddingTo()
     func getPhotosBy(id: Int)->ImgUrlData?
     
     
@@ -32,14 +32,17 @@ class PhotoCollectionPresenterImpl:PhotoCollectionPresenter{
     var interactor: PhotoCollectionInetractor?
     
     
-    func getAllPhotoListAccorddingTo(pageNumber: String) {
+    static var pageNumber = 0
+    
+    func getAllPhotoListAccorddingTo() {
        
-      
-        interactor?.getAllPhotoListAccorddingTo(pageNumber: pageNumber, callback: {
+        let pageNumberString = String(PhotoCollectionPresenterImpl.pageNumber)
+        interactor?.getAllPhotoListAccorddingTo(pageNumber: pageNumberString, callback: {
             result in
             switch result{
             case .success(let sc):
                 self.view?.onSuccessGetPhotoList(response: sc.urlList ?? [])
+                PhotoCollectionPresenterImpl.pageNumber += 1
                 break
             case .failure(let error):
                 self.view?.onFailureGetPhotoList(msg: error.message ?? "unknown error")
