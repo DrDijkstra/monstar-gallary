@@ -44,7 +44,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        collectionView.decelerationRate = .fast
         presenter = PhotoCollectionPresenterImpl(view: self)
     }
     
@@ -101,9 +101,11 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let position = scrollView.contentOffset.y
         if position > (collectionView.contentSize.height - 100 - scrollView.frame.size.height) {
+            //infinity scrolling
             presenter?.getAllPhotoListAccorddingTo()
         }
     }
     
     
 }
+ 
