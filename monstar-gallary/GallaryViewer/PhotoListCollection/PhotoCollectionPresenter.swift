@@ -14,24 +14,14 @@ protocol PhotoCollectionPresenter:AnyObject{
     var interactor:PhotoCollectionInetractor? {get set}
     
     func getAllPhotoListAccorddingTo(pageNumber: String)
-    func getPhotosBy(id: Int)
+    func getPhotosBy(id: Int)->ImgUrlData?
     
     
 }
 
 class PhotoCollectionPresenterImpl:PhotoCollectionPresenter{
-    func getPhotosBy(id: Int) {
-        interactor?.getPhotosBy(id: id, callback: {
-            result in
-            switch result{
-            case .success(let sc):
-                self.view?.onSuccessGetPhotoBy(id: sc)
-                break
-            case .failure(let error):
-                self.view?.onFailureGetPhotoBy(msg: error)
-                break
-            }
-        })
+    func getPhotosBy(id: Int) -> ImgUrlData?{
+        return interactor?.getPhotosBy(id: id)
     }
     
     

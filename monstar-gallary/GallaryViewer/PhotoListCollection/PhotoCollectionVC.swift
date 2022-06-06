@@ -12,25 +12,18 @@ protocol  PhotoCollectionView:AnyObject{
     var presenter: PhotoCollectionPresenter? {get set}
     func onSuccessGetPhotoList(response: [ImageUrlData])
     func onFailureGetPhotoList(msg: String)
-    func onSuccessGetPhotoBy(id: ImgUrlData)
-    func onFailureGetPhotoBy(msg: String)
+
 }
 
 class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
-    func onSuccessGetPhotoBy(id: ImgUrlData) {
-        isFirstTime = false
-        performSegue(withIdentifier: "goToImageView", sender: self)
-    }
     
-    func onFailureGetPhotoBy(msg: String) {
-        showToast(message: "error")
-    }
     
     var presenter: PhotoCollectionPresenter?
     var isFirstTime:Bool = true
     
     
     func onSuccessGetPhotoList(response: [ImageUrlData]) {
+        isFirstTime = false
         responseUrlList = response
         if responseUrlList?.count != 0{
             noPhotosText.isHidden = true
@@ -55,6 +48,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     }
     
     var responseUrlList:[ImageUrlData]?
+    var selectedUrlData:ImgUrlData?
     var selectedIndex:IndexPath = IndexPath(row: 0, section: 0)
 
 
@@ -69,7 +63,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToImageView"{
             let vc = segue.destination as! PhotoViewController
-            vc.imageUrl = responseUrlList?[selectedIndex.row].regular
+            vc.imageUrl = selectedUrlData?.raw
             vc.thumbImage = (collectionView.cellForItem(at: selectedIndex) as! PhotoCollectionViewCell).imageView.image
             
         }
@@ -87,7 +81,9 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoView", for: indexPath) as! PhotoCollectionViewCell
         
-        let urlString = URL(string: responseUrlList?[indexPath.row].thumb ?? "")
+      
+        let urlData = presenter?.getPhotosBy(id: indexPath.row)
+        let urlString = URL(string: urlData?.thumb ?? "")
         
         cell.imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"))
         return cell
@@ -95,7 +91,9 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndex = indexPath
-        presenter?.getPhotosBy(id: indexPath.row)
+        let urlData = presenter?.getPhotosBy(id: indexPath.row)
+        selectedUrlData = urlData
+        performSegue(withIdentifier: "goToImageView", sender: self)
        
     }
     

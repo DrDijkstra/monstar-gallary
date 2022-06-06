@@ -24,7 +24,7 @@ class DatabaseServiceImpl: DatabaseService {
         }
     }
     
-    func fetchImageUrlData(id: Int, callback: @escaping (DbCallResult<ImgUrlData>) -> Void) {
+    func fetchImageUrlData(id: Int)->ImgUrlData? {
         let fetchRequest:NSFetchRequest<ImgUrlData>
         fetchRequest = ImgUrlData.fetchRequest()
         let strId = String(id)
@@ -36,11 +36,11 @@ class DatabaseServiceImpl: DatabaseService {
         do{
             let object = try context.fetch(fetchRequest)
            
-            callback(.success(sc: object[0]))
+            return object[0]
             
         }
         catch{
-            callback(.failure(error: "data saving failure"))
+            return nil
         }
         
         
