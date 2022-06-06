@@ -25,7 +25,7 @@ class PhotoServiceImpl: PhotoService {
                     
                     self.databaseService.saveImageUrlData(urlData: urlInfo, callback: {
                         res in
-                        print(res)
+                        //print(res)
                     })
                     urlEntity.urlList?.append(urlInfo)
                 }

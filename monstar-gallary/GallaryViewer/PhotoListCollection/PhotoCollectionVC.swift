@@ -45,6 +45,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.decelerationRate = .fast
+        collectionView.prefetchDataSource = self
         presenter = PhotoCollectionPresenterImpl(view: self)
     }
     
@@ -74,7 +75,12 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
 }
 
 
-extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate{
+extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDataSourcePrefetching{
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        
+    }
+    
+   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return totalImageCount
     }

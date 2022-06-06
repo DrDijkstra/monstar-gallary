@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreData
+import Kingfisher
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,12 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
         ServiceManger.initManager()
         
+    }
+    
+    func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
+        let memoryStorage = ImageCache.default.memoryStorage
+        memoryStorage.config.totalCostLimit = 300 * 1024 * 1024
     }
 
     // MARK: UISceneSession Lifecycle

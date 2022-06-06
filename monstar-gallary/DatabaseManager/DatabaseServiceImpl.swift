@@ -58,7 +58,7 @@ class DatabaseServiceImpl: DatabaseService {
         imageUrlData.raw = urlData.full
         imageUrlData.thumb = urlData.thumb
        
-        print(UserDefaults.lastImageIndex)
+        //print(UserDefaults.lastImageIndex)
         imageUrlData.id = String(UserDefaults.lastImageIndex)
         
         do{

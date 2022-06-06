@@ -158,7 +158,7 @@ class NetworkServiceImpl: NetworkService {
             
             let string = response.data?.prettyPrintedJSONString
 
-            print("Response with content \(string ?? "{}")")
+            //print("Response with content \(string ?? "{}")")
            
             
            

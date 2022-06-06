@@ -37,12 +37,13 @@ class PhotoCollectionPresenterImpl:PhotoCollectionPresenter{
     func getAllPhotoListAccorddingTo() {
        
         let pageNumberString = String(PhotoCollectionPresenterImpl.pageNumber)
+        PhotoCollectionPresenterImpl.pageNumber += 1
         interactor?.getAllPhotoListAccorddingTo(pageNumber: pageNumberString, callback: {
             result in
             switch result{
             case .success(let sc):
                 self.view?.onSuccessGetPhotoList(response: sc.urlList ?? [])
-                PhotoCollectionPresenterImpl.pageNumber += 1
+                
                 break
             case .failure(let error):
                 self.view?.onFailureGetPhotoList(msg: error.message ?? "unknown error")

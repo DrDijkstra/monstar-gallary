@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 import Kingfisher
 
-class PhotoViewController: BaseViewController {
+class PhotoViewController: BaseViewController,UIScrollViewDelegate {
   
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
@@ -29,9 +29,21 @@ class PhotoViewController: BaseViewController {
         menuButton.isEnabled = false
         print("imageUrl:    ",imageUrl ?? "")
         showImage()
-
+       
         
     }
+    
+    var scrollImg: UIScrollView!
+    
+ 
+    
+
+
+       
+
+
+    
+    
     
     func showImage(){
         print("image sanjay", imageUrl ?? "")
