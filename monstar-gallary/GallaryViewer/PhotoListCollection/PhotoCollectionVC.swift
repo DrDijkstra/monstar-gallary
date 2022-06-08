@@ -46,6 +46,13 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
         super.viewDidLoad()
         //collectionView.decelerationRate = .fast
         collectionView.prefetchDataSource = self
+        // Do any additional setup after loading the view, typically from a nib.
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/5)
+        layout.minimumInteritemSpacing = 10
+        layout.minimumLineSpacing = 10
+        collectionView!.collectionViewLayout = layout
         presenter = PhotoCollectionPresenterImpl(view: self)
     }
     
@@ -111,11 +118,16 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 80, height: 80)
-        }
-    
-    
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//            return CGSize(width: 80, height: 80)
+//        }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+//        return 10.0;
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+//        return (UIScreen.main.bounds.size.width - (80 * 4))/3;
+//    }
     
     
 }
