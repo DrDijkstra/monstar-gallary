@@ -163,8 +163,7 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         var imageHeight:Int = 0
         if let imgUrlData = preloadedImageUrlData[strId]{
             
-            
-            
+        
 
             let height:Int = Int(imgUrlData.height ?? "1")!
             let width:Int = Int(imgUrlData.width ?? "1")!
