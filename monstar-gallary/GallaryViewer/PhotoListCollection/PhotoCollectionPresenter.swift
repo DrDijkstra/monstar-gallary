@@ -15,11 +15,27 @@ protocol PhotoCollectionPresenter:AnyObject{
     
     func getAllPhotoListAccorddingTo()
     func getPhotosBy(id: Int)->ImgUrlData?
+    func getPhotosBy(indexPaths: [IndexPath])->[String: ImgUrlData]
     
     
 }
 
 class PhotoCollectionPresenterImpl:PhotoCollectionPresenter{
+    func getPhotosBy(indexPaths: [IndexPath]) -> [String:ImgUrlData] {
+        var dict: [String:ImgUrlData] = [String :ImgUrlData]()
+        
+        var idList:[Int] = []
+        
+        for indexPath in indexPaths {
+            idList.append(indexPath.item)
+        }
+        let imgUrlList = interactor?.getPhotoListBy(idList: idList)
+        for imgUrl in imgUrlList ?? []{
+            dict[imgUrl.id!] = imgUrl
+        }
+        return dict
+    }
+    
     func getPhotosBy(id: Int) -> ImgUrlData?{
         return interactor?.getPhotosBy(id: id)
     }
@@ -32,7 +48,7 @@ class PhotoCollectionPresenterImpl:PhotoCollectionPresenter{
     var interactor: PhotoCollectionInetractor?
     
     
-    static var pageNumber = 0
+    static var pageNumber = 1
     
     func getAllPhotoListAccorddingTo() {
        

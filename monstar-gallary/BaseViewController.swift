@@ -62,7 +62,7 @@ class BaseViewController: UIViewController {
         if toastLabel.frame.width <= toastWidth{
             toastWidth = toastLabel.frame.width
         }
-        debugPrint(UIScreen.main.bounds.width, UIScreen.main.bounds.width/2 - (toastWidth/2), toastWidth)
+//        debugPrint(UIScreen.main.bounds.width, UIScreen.main.bounds.width/2 - (toastWidth/2), toastWidth)
         
         //add padding
         toastLabel.frame = CGRect(x: UIScreen.main.bounds.width/2 - (toastWidth/2),

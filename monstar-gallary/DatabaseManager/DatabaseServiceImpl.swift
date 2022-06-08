@@ -10,6 +10,40 @@ import UIKit
 import CoreData
 
 class DatabaseServiceImpl: DatabaseService {
+    func fetchImageUrlDataList(idList: [Int]) -> [ImgUrlData]? {
+        let fetchRequest:NSFetchRequest<ImgUrlData>
+        fetchRequest = ImgUrlData.fetchRequest()
+        var strId:String = ""
+        
+        var strPredicate = ""
+        for (i,id) in idList.enumerated(){
+            if i == idList.count - 1{
+                break
+            }
+            strId = String(id)
+            strPredicate += "id = \"\(strId)\" OR "
+            
+        }
+        
+        strId = String(idList[idList.count - 1])
+        
+        strPredicate += "id = \"\(strId)\""
+        //print("strPredicate ", strPredicate)
+        
+        
+        do{
+            let object = try context.fetch(fetchRequest)
+           
+            return object
+            
+        }
+        catch{
+            return nil
+        }
+        
+        
+    }
+    
     
     
     func deleteImageUrlData(callback: @escaping (DbCallResult<String>) -> Void) {
@@ -19,7 +53,7 @@ class DatabaseServiceImpl: DatabaseService {
         do {
             try context.execute(deleteRequest)
             callback(.success(sc: "successfully deleted"))
-        } catch let error as NSError {
+        } catch _ as NSError {
             callback(.failure(error: "can not deleted"))
         }
     }

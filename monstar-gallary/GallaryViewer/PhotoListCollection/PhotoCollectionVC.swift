@@ -23,13 +23,66 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     
     
     func onSuccessGetPhotoList(response: [ImageUrlData]) {
-        isFirstTime = false
         
-        totalImageCount += response.count
+        
+        
+        
         if response.count != 0{
             noPhotosText.isHidden = true
         }
-        collectionView.reloadData()
+        
+        
+        
+        if isFirstTime == true{
+            isFirstTime = false
+            
+            print("total image count", totalImageCount)
+            totalImageCount += response.count
+            
+            
+   //         collectionView.numberOfItems(inSection: totalImageCount)
+            
+            collectionView.reloadData()
+            
+        }else{
+            var count = 0
+            var indexPathList:[IndexPath] = []
+            for _ in response{
+                count += 1;
+                
+                
+                let indexPath = IndexPath(item: totalImageCount + count, section: 0)
+                indexPathList.append(indexPath)
+                
+            }
+            
+            
+            //print("total image count", totalImageCount)
+            totalImageCount += response.count
+            
+            //collectionView.numberOfItems(inSection: 0)
+            
+            //print("total image count", totalImageCount)
+            
+            //print(indexPathList[0].section)
+            
+            
+
+            collectionView.performBatchUpdates({
+                
+                collectionView.reloadData()
+                //collectionView.insertItems(at: indexPathList)
+                
+            })
+
+            
+        }
+        
+        
+        
+        
+        
+       
     }
     
     func onFailureGetPhotoList(msg: String) {
@@ -53,16 +106,22 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
         layout.minimumInteritemSpacing = 10
         layout.minimumLineSpacing = 10
         collectionView!.collectionViewLayout = layout
+        collectionView.numberOfItems(inSection: totalImageCount)
         presenter = PhotoCollectionPresenterImpl(view: self)
+        
+        
     }
     
     var totalImageCount:Int = 0
     var selectedUrlData:ImgUrlData?
     var selectedIndex:IndexPath = IndexPath(row: 0, section: 0)
-
+    
+    
+    var preloadedImageUrlData:[String:ImgUrlData] = [:]
 
     
     override func viewWillAppear(_ animated: Bool) {
+        print("is first time", isFirstTime)
         if isFirstTime{
             presenter?.getAllPhotoListAccorddingTo()
         }
@@ -83,22 +142,41 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
 
 
 extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        print("test", indexPaths)
-    }
-    
-   
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return totalImageCount
     }
     
+    
+    
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        //print("test", indexPaths)
+        if indexPaths.count > 0{
+            preloadedImageUrlData =  presenter?.getPhotosBy(indexPaths: indexPaths) ?? [:]
+            //print("test", preloadedImageUrlData)
+        }
+        
+        
+    }
+    
+   
+
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoView", for: indexPath) as! PhotoCollectionViewCell
         
-        let urlData = presenter?.getPhotosBy(id: indexPath.row)
-        let urlString = URL(string: urlData?.thumb ?? "")
         
-        cell.imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"))
+        let strId = String(indexPath.item)
+        
+        if let imgUrlData = preloadedImageUrlData[strId]{
+            let urlString = URL(string: imgUrlData.thumb ?? "")
+            cell.imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"))
+        }else{
+            let urlData = presenter?.getPhotosBy(id: indexPath.row)
+            let urlString = URL(string: urlData?.thumb ?? "")
+            
+            cell.imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"))
+        }
+        
         return cell
     }
     
@@ -118,16 +196,7 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         }
     }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//            return CGSize(width: 80, height: 80)
-//        }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 10.0;
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return (UIScreen.main.bounds.size.width - (80 * 4))/3;
-//    }
+
     
     
 }

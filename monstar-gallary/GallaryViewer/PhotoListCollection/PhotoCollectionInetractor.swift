@@ -12,10 +12,15 @@ protocol PhotoCollectionInetractor:AnyObject {
     var presenter:PhotoCollectionPresenter? {get set}
     func getAllPhotoListAccorddingTo(pageNumber: String, callback: @escaping (ApiCallResult<ImageUrlListEntity>) -> Void)->Void
     func getPhotosBy(id: Int) ->ImgUrlData?
+    func getPhotoListBy(idList: [Int])->[ImgUrlData]
+    
     
 }
 
 class PhotoCollectionInetractorImpl: PhotoCollectionInetractor{
+    func getPhotoListBy(idList: [Int])->[ImgUrlData]{
+        return serviceManager.getDatabaseService()?.fetchImageUrlDataList(idList: idList) ?? []
+    }
     func getPhotosBy(id: Int) -> ImgUrlData? {
         return serviceManager.getDatabaseService()?.fetchImageUrlData(id: id)
     }
