@@ -14,13 +14,17 @@ public class ImageUrlData{
     let regular:String?
     let small:String?
     let thumb:String?
+    let width:String?
+    let height:String?
     
-    init(url: UrlInfo) {
-        self.raw = url.raw
-        self.full = url.full
-        self.regular = url.regular
-        self.small = url.small
-        self.thumb = url.thumb
+    init(photoInfo: PhotoInfo) {
+        self.raw = photoInfo.urls?.raw
+        self.full = photoInfo.urls?.full
+        self.regular = photoInfo.urls?.regular
+        self.small = photoInfo.urls?.small
+        self.thumb = photoInfo.urls?.thumb
+        self.width = photoInfo.width
+        self.height = photoInfo.height
     }
     
 }

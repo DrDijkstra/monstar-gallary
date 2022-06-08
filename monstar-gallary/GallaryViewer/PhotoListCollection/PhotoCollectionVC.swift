@@ -15,7 +15,9 @@ protocol  PhotoCollectionView:AnyObject{
 
 }
 
-class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
+class PhotoCollectionVC: BaseViewController, PhotoCollectionView, PinterestLayoutDelegate{
+    
+    
     
     
     var presenter: PhotoCollectionPresenter?
@@ -40,8 +42,6 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
             totalImageCount += response.count
             
             
-   //         collectionView.numberOfItems(inSection: totalImageCount)
-            
             collectionView.reloadData()
             
         }else{
@@ -57,22 +57,15 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
             }
             
             
-            //print("total image count", totalImageCount)
+
             totalImageCount += response.count
             
-            //collectionView.numberOfItems(inSection: 0)
-            
-            //print("total image count", totalImageCount)
-            
-            //print(indexPathList[0].section)
+
             
             
 
             collectionView.performBatchUpdates({
-                
                 collectionView.reloadData()
-                //collectionView.insertItems(at: indexPathList)
-                
             })
 
             
@@ -100,13 +93,19 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
         //collectionView.decelerationRate = .fast
         collectionView.prefetchDataSource = self
         // Do any additional setup after loading the view, typically from a nib.
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/5)
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 10
-        collectionView!.collectionViewLayout = layout
-        collectionView.numberOfItems(inSection: totalImageCount)
+//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+//        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+//        layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width/4, height: UIScreen.main.bounds.size.width/4)
+//        layout.minimumInteritemSpacing = 10
+//        layout.minimumLineSpacing = 10
+//        collectionView!.collectionViewLayout = layout
+//        collectionView.numberOfItems(inSection: totalImageCount)
+      
+        
+        if let layout = collectionView?.collectionViewLayout as? PinterestLayout {
+          layout.delegate = self
+        }
+        
         presenter = PhotoCollectionPresenterImpl(view: self)
         
         
@@ -156,6 +155,46 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         }
         
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        let strId = String(indexPath.item)
+        
+        var imageHeight:Int = 0
+        if let imgUrlData = preloadedImageUrlData[strId]{
+            
+            
+            
+
+            let height:Int = Int(imgUrlData.height ?? "1")!
+            let width:Int = Int(imgUrlData.width ?? "1")!
+            
+            let heightMultiplier = height/width
+            
+            let screenWidth = UIScreen.main.bounds.width
+            let imageWidth = (screenWidth - 4 * 6) / 3
+            imageHeight = Int(imageWidth) * heightMultiplier
+            
+        }else{
+            let urlData = presenter?.getPhotosBy(id: indexPath.row)
+            
+            print("urldata sanjay", urlData?.width)
+            let height:Int = Int(urlData?.height ?? "1")!
+            let width:Int = Int(urlData?.width ?? "1")!
+            
+            let heightMultiplier = height/width
+            
+            let screenWidth = UIScreen.main.bounds.width
+            let imageWidth = (screenWidth - 4 * 6) / 3
+            imageHeight = Int(imageWidth) * heightMultiplier
+            
+            
+        }
+        
+        
+       
+        
+        return CGFloat(imageHeight)
     }
     
    

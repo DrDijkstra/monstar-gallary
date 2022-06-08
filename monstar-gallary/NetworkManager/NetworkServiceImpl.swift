@@ -65,7 +65,7 @@ class NetworkServiceImpl: NetworkService {
                     //print(responseString.prefix(2))
                     
                     responseString = "{\"photos\":" + responseString + "}"
-                    //print(responseString)
+                    print(responseString)
                     
                     guard let object = Mapper<T>().map(JSONString: responseString) else{
                         

@@ -152,6 +152,9 @@
 		92B5AD9F28492438003E9FE7 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD61284923E0003E9FE7 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92E321E42848C298004E1AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
 		92E321E52848C299004E1AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
+		D2954D022851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2954D012851144500E37B36 /* WaterfallGridFlowLayout.swift */; };
+		D2954D032851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2954D012851144500E37B36 /* WaterfallGridFlowLayout.swift */; };
+		D2954D042851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2954D012851144500E37B36 /* WaterfallGridFlowLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -247,6 +250,7 @@
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
 		92E321E72848C29A004E1AC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D2954D012851144500E37B36 /* WaterfallGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGridFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +362,7 @@
 				9242D4272849F22A00C4471B /* PhotoCollectionPresenter.swift */,
 				920808252848CB74002E88DA /* PhotoCollectionVC.swift */,
 				92A7AF8F284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift */,
+				D2954D012851144500E37B36 /* WaterfallGridFlowLayout.swift */,
 			);
 			path = PhotoListCollection;
 			sourceTree = "<group>";
@@ -673,6 +678,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2954D022851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */,
 				9242D4AA284A61D300C4471B /* ProfileImageInfo.swift in Sources */,
 				92A7AF90284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */,
 				9242D4B6284A653100C4471B /* UrlInfo.swift in Sources */,
@@ -755,6 +761,7 @@
 				9242D4B7284A653100C4471B /* UrlInfo.swift in Sources */,
 				92A7AFA3284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */,
 				9242D473284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
+				D2954D032851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */,
 				9242D46A284A0A1C00C4471B /* PhotosInfo.swift in Sources */,
 				9242D48D284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				9242D496284A1F9C00C4471B /* RequestRouter.swift in Sources */,
@@ -803,6 +810,7 @@
 				922720D22848B4AF0027E003 /* gallaryUITestsLaunchTests.swift in Sources */,
 				9242D4B4284A643200C4471B /* CurrentUserCollectionsInfo.swift in Sources */,
 				92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
+				D2954D042851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */,
 				9242D454284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
 				9242D479284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D459284A041B00C4471B /* PhotoService.swift in Sources */,

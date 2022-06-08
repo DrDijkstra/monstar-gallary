@@ -19,6 +19,8 @@ extension ImgUrlData {
     @NSManaged public var id: String?
     @NSManaged public var raw: String?
     @NSManaged public var thumb: String?
+    @NSManaged public var width: String?
+    @NSManaged public var height: String?
 
 }
 
