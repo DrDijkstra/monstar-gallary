@@ -44,7 +44,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.decelerationRate = .fast
+        //collectionView.decelerationRate = .fast
         collectionView.prefetchDataSource = self
         presenter = PhotoCollectionPresenterImpl(view: self)
     }
@@ -75,9 +75,9 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
 }
 
 
-extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDataSourcePrefetching{
+extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        
+        print("test", indexPaths)
     }
     
    
@@ -88,7 +88,6 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoView", for: indexPath) as! PhotoCollectionViewCell
         
-      
         let urlData = presenter?.getPhotosBy(id: indexPath.row)
         let urlString = URL(string: urlData?.thumb ?? "")
         
@@ -111,6 +110,12 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
             presenter?.getAllPhotoListAccorddingTo()
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            return CGSize(width: 80, height: 80)
+        }
+    
+    
     
     
 }
