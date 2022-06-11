@@ -81,7 +81,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-bQ-gzp">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-bQ-gzp">
                                                     <rect key="frame" x="2" y="0.0" width="124" height="128"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="RMv-bQ-gzp" secondAttribute="height" multiplier="1:1" id="Ma2-sr-OVc"/>
@@ -144,6 +144,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" maximumZoomScale="10" translatesAutoresizingMaskIntoConstraints="NO" id="FEA-mC-jun">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="5XI-WN-zSC">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3J7-MP-Cr8" appends="YES" id="sTb-Pq-2hn"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="5XI-WN-zSC" firstAttribute="bottom" secondItem="ZUF-PF-bIz" secondAttribute="bottom" id="3PU-2P-Lvh"/>
+                                    <constraint firstItem="5XI-WN-zSC" firstAttribute="top" secondItem="ZUF-PF-bIz" secondAttribute="top" id="NKd-Cs-9kF"/>
+                                    <constraint firstItem="5XI-WN-zSC" firstAttribute="height" secondItem="rYM-zJ-7qP" secondAttribute="height" id="aGk-Lm-fis"/>
+                                    <constraint firstItem="5XI-WN-zSC" firstAttribute="trailing" secondItem="ZUF-PF-bIz" secondAttribute="trailing" id="abZ-UK-5KQ"/>
+                                    <constraint firstItem="5XI-WN-zSC" firstAttribute="width" secondItem="rYM-zJ-7qP" secondAttribute="width" id="evW-r9-udJ"/>
+                                    <constraint firstItem="5XI-WN-zSC" firstAttribute="leading" secondItem="ZUF-PF-bIz" secondAttribute="leading" id="u55-ah-twn"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ZUF-PF-bIz"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="rYM-zJ-7qP"/>
+                            </scrollView>
                             <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nG-xS-A2d">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <constraints>
@@ -160,31 +183,31 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="88J-fX-b1x">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OdP-M8-cCM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="4nG-xS-A2d" firstAttribute="leading" secondItem="9CX-gR-nMS" secondAttribute="leading" id="7Pf-wU-waI"/>
-                            <constraint firstAttribute="trailing" secondItem="4nG-xS-A2d" secondAttribute="trailing" id="Ffh-VR-f1O"/>
-                            <constraint firstItem="4nG-xS-A2d" firstAttribute="top" secondItem="OdP-M8-cCM" secondAttribute="top" id="Q83-2d-59s"/>
-                            <constraint firstItem="OdP-M8-cCM" firstAttribute="trailing" secondItem="88J-fX-b1x" secondAttribute="trailing" id="U5W-lP-GZh"/>
-                            <constraint firstItem="88J-fX-b1x" firstAttribute="top" secondItem="4nG-xS-A2d" secondAttribute="bottom" id="bph-FQ-lLA"/>
-                            <constraint firstItem="OdP-M8-cCM" firstAttribute="bottom" secondItem="88J-fX-b1x" secondAttribute="bottom" id="cR2-80-FJY"/>
-                            <constraint firstItem="88J-fX-b1x" firstAttribute="leading" secondItem="OdP-M8-cCM" secondAttribute="leading" id="zND-NY-Sjg"/>
+                            <constraint firstItem="4nG-xS-A2d" firstAttribute="leading" secondItem="OdP-M8-cCM" secondAttribute="leading" id="67s-Od-FZY"/>
+                            <constraint firstItem="OdP-M8-cCM" firstAttribute="trailing" secondItem="4nG-xS-A2d" secondAttribute="trailing" id="ZY5-0x-YN3"/>
+                            <constraint firstItem="4nG-xS-A2d" firstAttribute="top" secondItem="OdP-M8-cCM" secondAttribute="top" id="ze7-vm-83D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Y4Q-LN-BcR"/>
                     <connections>
-                        <outlet property="imageView" destination="88J-fX-b1x" id="4AO-EG-mEz"/>
+                        <outlet property="imageView" destination="5XI-WN-zSC" id="eQ1-gl-U3F"/>
                         <outlet property="menuButton" destination="gxh-gd-Pvm" id="6fY-A3-ato"/>
+                        <outlet property="navBar" destination="4nG-xS-A2d" id="1Q3-AF-d3h"/>
+                        <outlet property="scrollView" destination="FEA-mC-jun" id="F2l-jk-r5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMf-7h-bjT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3J7-MP-Cr8">
+                    <connections>
+                        <action selector="onScreenTap:" destination="fKc-7K-XuS" id="4AV-CM-VfP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1017" y="68"/>
+            <point key="canvasLocation" x="-1017.3913043478261" y="67.633928571428569"/>
         </scene>
     </scenes>
     <resources>

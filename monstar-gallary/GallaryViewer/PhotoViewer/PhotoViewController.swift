@@ -12,9 +12,11 @@ import Kingfisher
 class PhotoViewController: BaseViewController,UIScrollViewDelegate {
   
     
+    @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     var thumbImage: UIImage!
     
     var imageUrl:String?
@@ -29,13 +31,22 @@ class PhotoViewController: BaseViewController,UIScrollViewDelegate {
         menuButton.isEnabled = false
         print("imageUrl:    ",imageUrl ?? "")
         showImage()
+        setupScrollView()
        
         
     }
     
-    var scrollImg: UIScrollView!
+    func setupScrollView(){
+        scrollView.delegate = self
+    }
+    
+    
+   
     
  
+    @IBAction func onScreenTap(_ sender: Any) {
+        navBar.isHidden  = !navBar.isHidden
+    }
     
 
 
@@ -53,6 +64,7 @@ class PhotoViewController: BaseViewController,UIScrollViewDelegate {
         imageView.kf.setImage(with: urlString, placeholder: thumbImage,completionHandler: {_ in
             print("Sanjay cahed")
             self.menuButton.isEnabled = true
+            self.imageView.enableZoomWithTapGesture()
         })
     }
     
@@ -123,5 +135,24 @@ class PhotoViewController: BaseViewController,UIScrollViewDelegate {
     
     
    
+    
+}
+
+
+extension PhotoViewController{
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
+    }
+    
+    func scrollViewDidEndZooming(_ scrollView: UIScrollView, with view: UIView?, atScale scale: CGFloat) {
+        if scale == 1{
+            navBar.isHidden = false
+        }
+        else{
+            navBar.isHidden = true
+        }
+    }
+    
+    
     
 }
