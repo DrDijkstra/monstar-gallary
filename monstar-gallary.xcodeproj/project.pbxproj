@@ -158,6 +158,9 @@
 		92EA800128547EB400BAFC4A /* WaterFallGridCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA800028547EB400BAFC4A /* WaterFallGridCollectionLayout.swift */; };
 		92EA800228547EB400BAFC4A /* WaterFallGridCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA800028547EB400BAFC4A /* WaterFallGridCollectionLayout.swift */; };
 		92EA800328547EB400BAFC4A /* WaterFallGridCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA800028547EB400BAFC4A /* WaterFallGridCollectionLayout.swift */; };
+		92EA800528549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA800428549DC600BAFC4A /* UiVIew+RoundedCorner.swift */; };
+		92EA800628549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA800428549DC600BAFC4A /* UiVIew+RoundedCorner.swift */; };
+		92EA800728549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA800428549DC600BAFC4A /* UiVIew+RoundedCorner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +258,7 @@
 		92E321E72848C29A004E1AC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+EnableZoom.swift"; sourceTree = "<group>"; };
 		92EA800028547EB400BAFC4A /* WaterFallGridCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallGridCollectionLayout.swift; sourceTree = "<group>"; };
+		92EA800428549DC600BAFC4A /* UiVIew+RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiVIew+RoundedCorner.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -482,6 +486,7 @@
 				9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */,
 				92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */,
 				92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */,
+				92EA800428549DC600BAFC4A /* UiVIew+RoundedCorner.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -686,6 +691,7 @@
 				9242D4AA284A61D300C4471B /* ProfileImageInfo.swift in Sources */,
 				92A7AF90284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */,
 				9242D4B6284A653100C4471B /* UrlInfo.swift in Sources */,
+				92EA800528549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */,
 				92A7AF9E284CF18B00EFC5A2 /* DatabaseService.swift in Sources */,
 				9242D472284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				9242D4CD284B91E200C4471B /* AppConfig.swift in Sources */,
@@ -760,6 +766,7 @@
 				920808272848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				9242D44B284A01C700C4471B /* ApiCallResult.swift in Sources */,
 				9242D4BB284A659C00C4471B /* LinksInfo.swift in Sources */,
+				92EA800628549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */,
 				9242D4252849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */,
 				9242D4A7284A5FC200C4471B /* UserInfo.swift in Sources */,
 				92A7AF91284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */,
@@ -814,6 +821,7 @@
 				9242D4CB284B8DB000C4471B /* ImageUrlListEntity.swift in Sources */,
 				92A7AFA0284CF18B00EFC5A2 /* DatabaseService.swift in Sources */,
 				922720D02848B4AF0027E003 /* gallaryUITests.swift in Sources */,
+				92EA800728549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */,
 				9242D450284A020C00C4471B /* ResponseStatus.swift in Sources */,
 				922720D22848B4AF0027E003 /* gallaryUITestsLaunchTests.swift in Sources */,
 				9242D4B4284A643200C4471B /* CurrentUserCollectionsInfo.swift in Sources */,

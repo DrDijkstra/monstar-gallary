@@ -76,7 +76,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-bQ-gzp">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-bQ-gzp">
                                                     <rect key="frame" x="2" y="0.0" width="46" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="RMv-bQ-gzp" secondAttribute="height" multiplier="1:1" id="Ma2-sr-OVc"/>

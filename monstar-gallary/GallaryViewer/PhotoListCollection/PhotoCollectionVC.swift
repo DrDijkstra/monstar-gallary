@@ -71,6 +71,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
             collectionView.performBatchUpdates({
                 
                 collectionView.reloadData()
+         
                 //collectionView.insertItems(at: indexPathList)
                 
             })
@@ -100,7 +101,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
         super.viewDidLoad()
         //collectionView.decelerationRate = .fast
         collectionView.prefetchDataSource = self
-        // Do any additional setup after loading the view, typically from a nib.
+
 //        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
 //        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
 //        layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/5)
@@ -166,6 +167,7 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         let height = cellWidth * hm
         
         print("heightx", height, "widthx", collectionView.cellForItem(at: indexPath)?.frame.width)
+       
         
         return height
         
@@ -212,6 +214,8 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
             urlImgData = urlData
             cell.imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"))
         }
+        
+        cell.imageView.setRadius(radius: 10)
         
         
         

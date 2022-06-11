@@ -18,7 +18,7 @@ class WaterFallGridCollectionLayoutLayout: UICollectionViewLayout {
 
   // 2
   private let numberOfColumns = 3
-  private let cellPadding: CGFloat = 2
+  private let cellPadding: CGFloat = 6
 
   // 3
   private var cache: [UICollectionViewLayoutAttributes] = []
@@ -41,13 +41,17 @@ class WaterFallGridCollectionLayoutLayout: UICollectionViewLayout {
   
   override func prepare() {
     // 1
-    guard
-      cache.isEmpty == true,
-      let collectionView = collectionView
-      else {
-        return
-    }
+      
+      print("prepare started")
+//    guard
+//      cache.isEmpty == true,
+//      let collectionView = collectionView
+//      else {
+//        return
+//    }
     // 2
+      
+      print("prepare ended")
     let columnWidth = contentWidth / CGFloat(numberOfColumns)
     var xOffset: [CGFloat] = []
     for column in 0..<numberOfColumns {
@@ -57,12 +61,12 @@ class WaterFallGridCollectionLayoutLayout: UICollectionViewLayout {
     var yOffset: [CGFloat] = .init(repeating: 0, count: numberOfColumns)
       
     // 3
-    for item in 0..<collectionView.numberOfItems(inSection: 0) {
+      for item in 0..<(collectionView?.numberOfItems(inSection: 0))! {
       let indexPath = IndexPath(item: item, section: 0)
         
       // 4
       let photoHeight = delegate?.collectionView(
-        collectionView,
+        collectionView!,
         heightForPhotoAtIndexPath: indexPath) ?? 180
       let height = cellPadding * 2 + photoHeight
       let frame = CGRect(x: xOffset[column],
