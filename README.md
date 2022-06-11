@@ -1,11 +1,24 @@
 # Introduction
 
-This is a template for getting started with iOS development using GitLab and [fastlane](https://fastlane.tools/).
+ In this project,  a simple <B>"Monstar Lab"</B> iOS app is created that displays a list of photos as a gallery. Users can tap the photo to see a full-screen view of it with the possibility to zoom in and out.
 
-# Reference links
+# Setup Tools 
+For setup the project in mac machine, you need 
+- XCode 13.4
 
-- [GitLab CI Documentation](https://docs.gitlab.com/ee/ci/)
-- [Blog post: Android publishing with iOS and fastlane](https://about.gitlab.com/2019/03/06/ios-publishing-with-gitlab-and-fastlane/)
+Minimum ios version support, for this app is
+- iOS 13.0
+
+The frameworks used for make the project. 
+- Alamofire
+- Object Mapper
+- Kingphiser
+- UIkit
+- CoreData
+## Alamofire
+Alamofire is mainly used for http network call like get, put, post, delete. I am using carthage to use the alamofire.
+
+
 
 # Getting started
 
