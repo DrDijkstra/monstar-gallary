@@ -152,6 +152,12 @@
 		92B5AD9F28492438003E9FE7 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92B5AD61284923E0003E9FE7 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92E321E42848C298004E1AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
 		92E321E52848C299004E1AC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
+		92EA7FF1285443FC00BAFC4A /* UIImageView+EnableZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */; };
+		92EA7FF2285443FC00BAFC4A /* UIImageView+EnableZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */; };
+		92EA7FF3285443FC00BAFC4A /* UIImageView+EnableZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */; };
+		92EA7FF52854601100BAFC4A /* UIapplication+StatusBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA7FF42854601100BAFC4A /* UIapplication+StatusBarColor.swift */; };
+		92EA7FF62854601200BAFC4A /* UIapplication+StatusBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA7FF42854601100BAFC4A /* UIapplication+StatusBarColor.swift */; };
+		92EA7FF72854601200BAFC4A /* UIapplication+StatusBarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA7FF42854601100BAFC4A /* UIapplication+StatusBarColor.swift */; };
 		D2954D022851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2954D012851144500E37B36 /* WaterfallGridFlowLayout.swift */; };
 		D2954D032851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2954D012851144500E37B36 /* WaterfallGridFlowLayout.swift */; };
 		D2954D042851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2954D012851144500E37B36 /* WaterfallGridFlowLayout.swift */; };
@@ -250,6 +256,8 @@
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
 		92E321E72848C29A004E1AC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+EnableZoom.swift"; sourceTree = "<group>"; };
+		92EA7FF42854601100BAFC4A /* UIapplication+StatusBarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIapplication+StatusBarColor.swift"; sourceTree = "<group>"; };
 		D2954D012851144500E37B36 /* WaterfallGridFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallGridFlowLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -477,6 +485,8 @@
 			children = (
 				9242D490284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift */,
 				92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */,
+				92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */,
+				92EA7FF42854601100BAFC4A /* UIapplication+StatusBarColor.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -688,6 +698,7 @@
 				9242D47B284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D463284A05CA00C4471B /* ApiGwResponse.swift in Sources */,
 				9242D4BA284A659B00C4471B /* LinksInfo.swift in Sources */,
+				92EA7FF52854601100BAFC4A /* UIapplication+StatusBarColor.swift in Sources */,
 				922720B62848B4AE0027E003 /* gallary.xcdatamodeld in Sources */,
 				9242D457284A041B00C4471B /* PhotoService.swift in Sources */,
 				9242D45F284A055D00C4471B /* ApiGwCallResult.swift in Sources */,
@@ -701,6 +712,7 @@
 				9242D4C4284B7BF600C4471B /* ApiPhotosResponse.swift in Sources */,
 				9242D4282849F22A00C4471B /* PhotoCollectionPresenter.swift in Sources */,
 				922720AC2848B4AE0027E003 /* AppDelegate.swift in Sources */,
+				92EA7FF1285443FC00BAFC4A /* UIImageView+EnableZoom.swift in Sources */,
 				9242D477284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D4A2284A4AC200C4471B /* Interceptor.swift in Sources */,
 				9242D4352849F56100C4471B /* ImageUrlInfo.swift in Sources */,
@@ -745,6 +757,7 @@
 				9242D45C284A050D00C4471B /* NetworkService.swift in Sources */,
 				9242D4292849F22A00C4471B /* PhotoCollectionPresenter.swift in Sources */,
 				9242D4362849F56100C4471B /* ImageUrlInfo.swift in Sources */,
+				92EA7FF62854601200BAFC4A /* UIapplication+StatusBarColor.swift in Sources */,
 				9242D478284A0C3A00C4471B /* HeaderName.swift in Sources */,
 				9242D4B3284A643200C4471B /* CurrentUserCollectionsInfo.swift in Sources */,
 				9242D458284A041B00C4471B /* PhotoService.swift in Sources */,
@@ -762,6 +775,7 @@
 				92A7AFA3284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */,
 				9242D473284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				D2954D032851144500E37B36 /* WaterfallGridFlowLayout.swift in Sources */,
+				92EA7FF2285443FC00BAFC4A /* UIImageView+EnableZoom.swift in Sources */,
 				9242D46A284A0A1C00C4471B /* PhotosInfo.swift in Sources */,
 				9242D48D284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				9242D496284A1F9C00C4471B /* RequestRouter.swift in Sources */,
@@ -790,6 +804,7 @@
 				9242D48E284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				9242D447284A012000C4471B /* MonstarGallaryService.swift in Sources */,
 				9242D45D284A050D00C4471B /* NetworkService.swift in Sources */,
+				92EA7FF72854601200BAFC4A /* UIapplication+StatusBarColor.swift in Sources */,
 				9242D461284A055D00C4471B /* ApiGwCallResult.swift in Sources */,
 				9242D486284A1A3100C4471B /* ApiProtectionLabel.swift in Sources */,
 				9242D4BC284A659C00C4471B /* LinksInfo.swift in Sources */,
@@ -821,6 +836,7 @@
 				9242D46B284A0A1C00C4471B /* PhotosInfo.swift in Sources */,
 				9242D4A8284A5FC200C4471B /* UserInfo.swift in Sources */,
 				9242D4C6284B7BF600C4471B /* ApiPhotosResponse.swift in Sources */,
+				92EA7FF3285443FC00BAFC4A /* UIImageView+EnableZoom.swift in Sources */,
 				92B5AD5E2849146D003E9FE7 /* BaseViewController.swift in Sources */,
 				92A7AFA4284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */,
 			);
@@ -984,7 +1000,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WV8465A3HD;
+				DEVELOPMENT_TEAM = 2UZAVNXXC5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
@@ -999,7 +1015,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1023,7 +1039,7 @@
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WV8465A3HD;
+				DEVELOPMENT_TEAM = 2UZAVNXXC5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks/**",
@@ -1038,7 +1054,7 @@
 				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
