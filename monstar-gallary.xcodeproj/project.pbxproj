@@ -295,6 +295,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		921327692854C215000E782E /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		9227209F2848B4AE0027E003 = {
 			isa = PBXGroup;
 			children = (
@@ -420,18 +427,11 @@
 		9242D467284A09DD00C4471B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				921327692854C215000E782E /* Request */,
 				9242D470284A0B0900C4471B /* BaseResponse */,
 				9242D46F284A0ABA00C4471B /* Response */,
-				9242D46C284A0AA100C4471B /* Request */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		9242D46C284A0AA100C4471B /* Request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		9242D46F284A0ABA00C4471B /* Response */ = {

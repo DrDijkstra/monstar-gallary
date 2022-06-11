@@ -9,27 +9,31 @@ For setup the project in mac machine, you need
 Minimum ios version support, for this app is
 - iOS 13.0
 
-The frameworks used for make the project. 
+The frameworks used for making the project are
 - Alamofire
 - Object Mapper
 - Kingphiser
 - UIkit
 - CoreData
 ## Alamofire
-Alamofire is mainly used for http network call like get, put, post, delete. I am using carthage to use the alamofire.
+Alamofire is mainly used for http network call like get, put, post, delete. It is also cache the response.  For more info, please vist [Alamofire](https://github.com/Alamofire/Alamofire).
+
+## Object Mapper
+Object Mapper is mainly used for json serialiazation and deserialzation. I am using carthage to use the object mapper. For more info, please visit [Object Mapper](https://github.com/tristanhimmelman/ObjectMapper).
 
 
+## Kingpfisher
+Kingfiser is used for image downloading and caching. For more info, plaease visit [Kingfiser](https://github.com/onevcat/Kingfisher).
 
-# Getting started
+## UIKit
+UIKit is a framework supported by apple used here for buliding the UI/UX flow. For more info, please visit [UIKit](https://developer.apple.com/documentation/uikit).
 
-You'll need a working MacOS development environment with XCode 10 to use this
-template. You can find instructions to get up and running on the Apple [XCode website](https://developer.apple.com/xcode/).
+## Core Data
+Core data is responsible for client side database which is supported by apple. For more query, please visit [Core Data](https://developer.apple.com/documentation/coredata).
 
-If you want to use GitLab CI with your own MacOS runners (a requirement since we
-do not currently yet offer shared MacOS runners - follow [infrastructure#5294](https://gitlab.com/gitlab-com/gl-infra/infrastructure/issues/5294) for
-updates on that front) please read through the blog post above which will walk 
-you through everything you need to get up and running.
+All of the frameworks are used by [carthage](https://github.com/Carthage/Carthage) for dependancy injection.
 
-## What's contained in this project
+# Architecture of the framework
 
-This template contains a simple Food Tracker App based off of the [Start Developing iOS Apps (Swift) Lessons](https://developer.apple.com/library/archive/referencelibrary/GettingStarted/DevelopiOSAppsSwift/index.html). Where necessary the template has been upgraded to use Swift 4. The app displays a list of meals consisting of a name, rating, and photo. Users are able to add or edit a meal by navigating to a detail screen. The app also includes a lightweight solution for basic data persistence.
+This app mainly designed with modified VIPER architechure pattern. 
+[MarineGEO circle logo](/Resource/arch.png)
