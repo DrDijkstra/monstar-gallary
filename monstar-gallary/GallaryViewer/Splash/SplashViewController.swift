@@ -12,19 +12,17 @@ class SplashViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let seconds = 0.1
+        
         UserDefaults.lastImageIndex = 0
         let sm = ServiceManger.getInstance()
         DispatchQueue.main.async {
-            sm.getDatabaseService()?.deleteImageUrlData(callback: {_ in
+            sm.getDatabaseService()?.deleteImageUrlData(callback: {[weak self]_ in
                 sleep(1)
-                self.performSegue(withIdentifier: "goToImageCollectionView", sender: self)
+                self?.performSegue(withIdentifier: "goToImageCollectionView", sender: self)
             })
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {[weak self] in
-          
-        }
+
 
     }
     

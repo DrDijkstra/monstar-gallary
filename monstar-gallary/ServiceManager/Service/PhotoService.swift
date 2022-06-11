@@ -21,7 +21,7 @@ class PhotoServiceImpl: PhotoService {
             case .success(let apiResponse):
                 let urlEntity = ImageUrlListEntity()
                 for photoInfo in apiResponse.photos ?? []{
-                    let urlInfo = ImageUrlData(url: photoInfo.urls ?? UrlInfo())
+                    let urlInfo = ImageUrlData(res: photoInfo)
                     
                     self.databaseService.saveImageUrlData(urlData: urlInfo, callback: {
                         res in

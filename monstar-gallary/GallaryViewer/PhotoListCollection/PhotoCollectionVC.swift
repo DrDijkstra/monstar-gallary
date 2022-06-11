@@ -146,6 +146,8 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         return totalImageCount
     }
     
+
+    
     
     
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
@@ -167,15 +169,25 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         
         let strId = String(indexPath.item)
         
+        let urlImgData :ImgUrlData?
+        
         if let imgUrlData = preloadedImageUrlData[strId]{
             let urlString = URL(string: imgUrlData.thumb ?? "")
             cell.imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"))
+            urlImgData = imgUrlData
         }else{
             let urlData = presenter?.getPhotosBy(id: indexPath.row)
             let urlString = URL(string: urlData?.thumb ?? "")
-            
+            urlImgData = urlData
             cell.imageView.kf.setImage(with: urlString, placeholder: UIImage(named: "appstore"))
         }
+        
+        
+        print("img data", urlImgData)
+        
+        let height = cell.frame.width * (Double(urlImgData?.heightMultiplier ?? "1")!)
+        
+        cell.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.width, height: height)
         
         return cell
     }
@@ -195,6 +207,8 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
             presenter?.getAllPhotoListAccorddingTo()
         }
     }
+    
+
     
 
     

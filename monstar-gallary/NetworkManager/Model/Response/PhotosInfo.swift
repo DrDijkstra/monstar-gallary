@@ -12,8 +12,8 @@ class PhotoInfo: ApiGwResponse{
     var id : String?
     var created_at : String?
     var updated_at : String?
-    var width : String?
-    var height : String?
+    var width : NSNumber?
+    var height : NSNumber?
     var color : String?
     var blur_hash : String?
     var likes : String?

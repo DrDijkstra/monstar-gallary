@@ -155,6 +155,9 @@
 		92EA7FF1285443FC00BAFC4A /* UIImageView+EnableZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */; };
 		92EA7FF2285443FC00BAFC4A /* UIImageView+EnableZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */; };
 		92EA7FF3285443FC00BAFC4A /* UIImageView+EnableZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */; };
+		92EA800128547EB400BAFC4A /* WaterFallGridCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA800028547EB400BAFC4A /* WaterFallGridCollectionLayout.swift */; };
+		92EA800228547EB400BAFC4A /* WaterFallGridCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA800028547EB400BAFC4A /* WaterFallGridCollectionLayout.swift */; };
+		92EA800328547EB400BAFC4A /* WaterFallGridCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EA800028547EB400BAFC4A /* WaterFallGridCollectionLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -251,6 +254,7 @@
 		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
 		92E321E72848C29A004E1AC5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		92EA7FF0285443FC00BAFC4A /* UIImageView+EnableZoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+EnableZoom.swift"; sourceTree = "<group>"; };
+		92EA800028547EB400BAFC4A /* WaterFallGridCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallGridCollectionLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -362,6 +366,7 @@
 				9242D4272849F22A00C4471B /* PhotoCollectionPresenter.swift */,
 				920808252848CB74002E88DA /* PhotoCollectionVC.swift */,
 				92A7AF8F284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift */,
+				92EA800028547EB400BAFC4A /* WaterFallGridCollectionLayout.swift */,
 			);
 			path = PhotoListCollection;
 			sourceTree = "<group>";
@@ -722,6 +727,7 @@
 				9242D4B2284A643200C4471B /* CurrentUserCollectionsInfo.swift in Sources */,
 				92A7AFA6284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */,
 				922720AE2848B4AE0027E003 /* SceneDelegate.swift in Sources */,
+				92EA800128547EB400BAFC4A /* WaterFallGridCollectionLayout.swift in Sources */,
 				9242D488284A1B8A00C4471B /* ApiCallResponseCode.swift in Sources */,
 				922720EC2848B9FE0027E003 /* SplashViewController.swift in Sources */,
 			);
@@ -770,6 +776,7 @@
 				922720ED2848B9FE0027E003 /* SplashViewController.swift in Sources */,
 				9242D481284A19B900C4471B /* ApiUrl.swift in Sources */,
 				9242D453284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
+				92EA800228547EB400BAFC4A /* WaterFallGridCollectionLayout.swift in Sources */,
 				9242D4CE284B91E200C4471B /* AppConfig.swift in Sources */,
 				9242D47C284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D460284A055D00C4471B /* ApiGwCallResult.swift in Sources */,
@@ -784,6 +791,7 @@
 				9242D4CF284B91E200C4471B /* AppConfig.swift in Sources */,
 				9242D4322849F24900C4471B /* PhotoRouter.swift in Sources */,
 				9242D44C284A01C700C4471B /* ApiCallResult.swift in Sources */,
+				92EA800328547EB400BAFC4A /* WaterFallGridCollectionLayout.swift in Sources */,
 				9242D493284A1D5700C4471B /* Data+ConvertDataToUtf8String.swift in Sources */,
 				9242D47D284A0F6000C4471B /* DomainModule.swift in Sources */,
 				9242D42A2849F22A00C4471B /* PhotoCollectionPresenter.swift in Sources */,

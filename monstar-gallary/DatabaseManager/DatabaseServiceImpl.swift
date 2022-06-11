@@ -91,6 +91,9 @@ class DatabaseServiceImpl: DatabaseService {
         let imageUrlData = NSEntityDescription.insertNewObject(forEntityName: "ImgUrlData", into: context) as! ImgUrlData
         imageUrlData.raw = urlData.full
         imageUrlData.thumb = urlData.thumb
+        imageUrlData.heightMultiplier = urlData.heightMultiplier
+        
+        print("height multi", urlData.heightMultiplier)
        
         //print(UserDefaults.lastImageIndex)
         imageUrlData.id = String(UserDefaults.lastImageIndex)
