@@ -64,7 +64,6 @@ class PhotoViewController: BaseViewController,UIScrollViewDelegate {
         imageView.kf.setImage(with: urlString, placeholder: thumbImage,completionHandler: {_ in
             print("Sanjay cahed")
             self.menuButton.isEnabled = true
-            self.imageView.enableZoomWithTapGesture()
         })
     }
     

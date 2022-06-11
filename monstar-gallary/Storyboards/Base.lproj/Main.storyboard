@@ -76,7 +76,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-bQ-gzp">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appstore" translatesAutoresizingMaskIntoConstraints="NO" id="RMv-bQ-gzp">
                                                     <rect key="frame" x="2" y="0.0" width="46" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="RMv-bQ-gzp" secondAttribute="height" multiplier="1:1" id="Ma2-sr-OVc"/>
@@ -178,12 +178,22 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9IL-km-kv5">
+                                <rect key="frame" x="0.0" y="-6" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vSb-GD-S1S"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OdP-M8-cCM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4nG-xS-A2d" firstAttribute="leading" secondItem="OdP-M8-cCM" secondAttribute="leading" id="67s-Od-FZY"/>
+                            <constraint firstItem="OdP-M8-cCM" firstAttribute="trailing" secondItem="9IL-km-kv5" secondAttribute="trailing" id="7pc-hA-DFz"/>
+                            <constraint firstItem="9IL-km-kv5" firstAttribute="leading" secondItem="OdP-M8-cCM" secondAttribute="leading" id="MUx-dX-6KW"/>
                             <constraint firstItem="OdP-M8-cCM" firstAttribute="trailing" secondItem="4nG-xS-A2d" secondAttribute="trailing" id="ZY5-0x-YN3"/>
+                            <constraint firstItem="9IL-km-kv5" firstAttribute="bottom" secondItem="OdP-M8-cCM" secondAttribute="top" id="njY-hq-Qs9"/>
                             <constraint firstItem="4nG-xS-A2d" firstAttribute="top" secondItem="OdP-M8-cCM" secondAttribute="top" id="ze7-vm-83D"/>
                         </constraints>
                     </view>

@@ -22,14 +22,7 @@ extension UIImageView{
     static var zoomedInWhenTap:Bool = false
     
     
-    func enableZoomWithTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(startZoomingWhenTap(_:)))
-        
-        tapGesture.numberOfTapsRequired = 2
-        
-        isUserInteractionEnabled = true
-        addGestureRecognizer(tapGesture)
-      }
+    
     
     
     
@@ -53,38 +46,11 @@ extension UIImageView{
         
       }
     
-    @objc
-    private func startZoomingWhenTap(_ sender: UIPinchGestureRecognizer) {
-  
-        
- 
-        
-        if UIImageView.zoomedInWhenTap == false{
-            
-            print("false")
-            let scaleResult = sender.view?.transform.scaledBy(x: 2, y: 2)
-            guard let scale = scaleResult, scale.a > 1, scale.d > 1 else { return }
-            
-
-            
-            
-            UIView.animate(withDuration: 0.2) {
-                sender.view?.transform = scale
-            }
-            UIImageView.zoomedInWhenTap = true
-        }else{
-            print("true")
-            let scaleResult = sender.view?.transform.scaledBy(x: 0.5, y: 0.5)
-            guard let scale = scaleResult, scale.a > 0.5, scale.d > 0.5 else { return }
-            UIView.animate(withDuration: 0.2) {
-                sender.view?.transform = scale
-            }
-            UIImageView.zoomedInWhenTap = false
-        }
+   
         
 
         
 
       
-    }
+    
 }
