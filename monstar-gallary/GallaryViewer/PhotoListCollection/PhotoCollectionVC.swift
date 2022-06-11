@@ -86,6 +86,7 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
     }
     
     func onFailureGetPhotoList(msg: String) {
+        noPhotosText.isHidden = false
         showToast(message: msg)
     }
     
@@ -100,13 +101,17 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
         //collectionView.decelerationRate = .fast
         collectionView.prefetchDataSource = self
         // Do any additional setup after loading the view, typically from a nib.
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/5)
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 10
-        collectionView!.collectionViewLayout = layout
-        collectionView.numberOfItems(inSection: totalImageCount)
+//        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+//        layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
+//        layout.itemSize = CGSize(width: UIScreen.main.bounds.size.width/5, height: UIScreen.main.bounds.size.width/5)
+//        layout.minimumInteritemSpacing = 10
+//        layout.minimumLineSpacing = 10
+//        collectionView!.collectionViewLayout = layout
+//        collectionView.numberOfItems(inSection: totalImageCount)
+        
+        if let layout = collectionView?.collectionViewLayout as? WaterFallGridCollectionLayoutLayout {
+            layout.delegate = self
+        }
         presenter = PhotoCollectionPresenterImpl(view: self)
         
         
@@ -141,7 +146,33 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
 }
 
 
-extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout{
+extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, UICollectionViewDataSourcePrefetching, UICollectionViewDelegateFlowLayout, WaterFallGridCollectionLayoutDelegate{
+    func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
+        
+        let urlImgData :ImgUrlData?
+        let strId = String(indexPath.item)
+        
+        if let imgUrlData = preloadedImageUrlData[strId]{
+            urlImgData = imgUrlData
+        }else{
+            let urlData = presenter?.getPhotosBy(id: indexPath.row)
+           urlImgData = urlData
+        }
+        
+        let hm = CGFloat(Double((urlImgData?.heightMultiplier)!) ?? 1)
+        
+        let cellWidth = (UIScreen.main.bounds.width - 2 * 2) / 3
+        
+        let height = cellWidth * hm
+        
+        print("heightx", height, "widthx", collectionView.cellForItem(at: indexPath)?.frame.width)
+        
+        return height
+        
+        
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return totalImageCount
     }
@@ -183,11 +214,8 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
         }
         
         
-        print("img data", urlImgData)
         
         let height = cell.frame.width * (Double(urlImgData?.heightMultiplier ?? "1")!)
-        
-        cell.frame = CGRect(x: cell.frame.minX, y: cell.frame.minY, width: cell.frame.width, height: height)
         
         return cell
     }
