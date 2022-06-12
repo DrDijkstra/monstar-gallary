@@ -10,6 +10,9 @@
 		920808262848CB74002E88DA /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920808252848CB74002E88DA /* PhotoCollectionVC.swift */; };
 		920808272848CB74002E88DA /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920808252848CB74002E88DA /* PhotoCollectionVC.swift */; };
 		920808282848CB74002E88DA /* PhotoCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920808252848CB74002E88DA /* PhotoCollectionVC.swift */; };
+		9213276B28564BA4000E782E /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213276A28564BA4000E782E /* PhotoListRequest.swift */; };
+		9213276C28564BA4000E782E /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213276A28564BA4000E782E /* PhotoListRequest.swift */; };
+		9213276D28564BA4000E782E /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9213276A28564BA4000E782E /* PhotoListRequest.swift */; };
 		922720AC2848B4AE0027E003 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720AB2848B4AE0027E003 /* AppDelegate.swift */; };
 		922720AE2848B4AE0027E003 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720AD2848B4AE0027E003 /* SceneDelegate.swift */; };
 		922720B32848B4AE0027E003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922720B12848B4AE0027E003 /* Main.storyboard */; };
@@ -140,9 +143,6 @@
 		92A7AFA8284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */; };
 		92A7AFC7284D16BA00EFC5A2 /* ImgUrlData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFC5284D16BA00EFC5A2 /* ImgUrlData+CoreDataClass.swift */; };
 		92A7AFC8284D16BA00EFC5A2 /* ImgUrlData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFC6284D16BA00EFC5A2 /* ImgUrlData+CoreDataProperties.swift */; };
-		92AB0E6E2855ACD900CB209D /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */; };
-		92AB0E6F2855ACD900CB209D /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */; };
-		92AB0E702855ACD900CB209D /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */; };
 		92AB0E732855AFA600CB209D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720AB2848B4AE0027E003 /* AppDelegate.swift */; };
 		92AB0E742855AFA600CB209D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922720AB2848B4AE0027E003 /* AppDelegate.swift */; };
 		92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
@@ -203,6 +203,7 @@
 
 /* Begin PBXFileReference section */
 		920808252848CB74002E88DA /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
+		9213276A28564BA4000E782E /* PhotoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoListRequest.swift; path = "monstar-gallary/NetworkManager/Model/PhotoListRequest.swift"; sourceTree = SOURCE_ROOT; };
 		922720A82848B4AE0027E003 /* Monstar Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monstar Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922720AB2848B4AE0027E003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922720AD2848B4AE0027E003 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,7 +258,6 @@
 		92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		92A7AFC5284D16BA00EFC5A2 /* ImgUrlData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImgUrlData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		92A7AFC6284D16BA00EFC5A2 /* ImgUrlData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImgUrlData+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoListRequest.swift; path = ../../../../../PhotoListRequest.swift; sourceTree = "<group>"; };
 		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
@@ -518,7 +518,7 @@
 		92AB0E6C2855ACB000CB209D /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */,
+				9213276A28564BA4000E782E /* PhotoListRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -707,7 +707,6 @@
 				92A7AF90284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */,
 				9242D4B6284A653100C4471B /* UrlInfo.swift in Sources */,
 				92EA800528549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */,
-				92AB0E6E2855ACD900CB209D /* PhotoListRequest.swift in Sources */,
 				92A7AF9E284CF18B00EFC5A2 /* DatabaseService.swift in Sources */,
 				9242D472284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				9242D4CD284B91E200C4471B /* AppConfig.swift in Sources */,
@@ -734,6 +733,7 @@
 				92A7AFA2284CF3A700EFC5A2 /* DatabaseServiceImpl.swift in Sources */,
 				9242D480284A19B900C4471B /* ApiUrl.swift in Sources */,
 				9242D48C284A1C5600C4471B /* ApiGwError.swift in Sources */,
+				9213276B28564BA4000E782E /* PhotoListRequest.swift in Sources */,
 				9242D44A284A01C700C4471B /* ApiCallResult.swift in Sources */,
 				9242D452284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
 				9242D4A6284A5FC200C4471B /* UserInfo.swift in Sources */,
@@ -782,7 +782,6 @@
 				920808272848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				9242D44B284A01C700C4471B /* ApiCallResult.swift in Sources */,
 				92AB0E732855AFA600CB209D /* AppDelegate.swift in Sources */,
-				92AB0E6F2855ACD900CB209D /* PhotoListRequest.swift in Sources */,
 				9242D4BB284A659C00C4471B /* LinksInfo.swift in Sources */,
 				92EA800628549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */,
 				9242D4252849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */,
@@ -797,6 +796,7 @@
 				9242D48D284A1C5600C4471B /* ApiGwError.swift in Sources */,
 				9242D496284A1F9C00C4471B /* RequestRouter.swift in Sources */,
 				9242D4A3284A4AC200C4471B /* Interceptor.swift in Sources */,
+				9213276C28564BA4000E782E /* PhotoListRequest.swift in Sources */,
 				9242D4C5284B7BF600C4471B /* ApiPhotosResponse.swift in Sources */,
 				922720ED2848B9FE0027E003 /* SplashViewController.swift in Sources */,
 				9242D481284A19B900C4471B /* ApiUrl.swift in Sources */,
@@ -847,10 +847,10 @@
 				92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
 				9242D454284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
 				9242D479284A0C3A00C4471B /* HeaderName.swift in Sources */,
-				92AB0E702855ACD900CB209D /* PhotoListRequest.swift in Sources */,
 				9242D459284A041B00C4471B /* PhotoService.swift in Sources */,
 				9242D4A4284A4AC200C4471B /* Interceptor.swift in Sources */,
 				92A7AFA8284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */,
+				9213276D28564BA4000E782E /* PhotoListRequest.swift in Sources */,
 				9242D497284A1F9C00C4471B /* RequestRouter.swift in Sources */,
 				9242D4262849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */,
 				9242D46B284A0A1C00C4471B /* PhotosInfo.swift in Sources */,
