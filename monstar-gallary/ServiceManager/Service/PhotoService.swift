@@ -16,7 +16,11 @@ public protocol PhotoService {
 class PhotoServiceImpl: PhotoService {
     
     func getPhotosBy(pageNumber: String, callback: @escaping (ApiCallResult<ImageUrlListEntity>) -> Void) {
-        networkService.getPhotosBy(pageNumber: pageNumber, gwCallback: {result  in
+        let request = PhotoListRequest()
+        request.pageNumber = pageNumber
+        request.perPageListNumber = "20"
+        
+        networkService.getPhotosBy(request: request, gwCallback: {result  in
             switch result {
             case .success(let apiResponse):
                 let urlEntity = ImageUrlListEntity()

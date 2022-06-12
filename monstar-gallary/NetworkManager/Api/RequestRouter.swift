@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 enum RequestRouter : URLRequestConvertible, URLConvertible{
-    case getAllPhotos(pageNumber:String)
+    case getAllPhotos(request:PhotoListRequest)
     
     //static var baseUrl = ""
     
@@ -34,10 +34,10 @@ enum RequestRouter : URLRequestConvertible, URLConvertible{
         
         
         switch self {
-        case .getAllPhotos(let pageNumber):
+        case .getAllPhotos(let request):
             urlRequest = try URLEncoding.default.encode(urlRequest,
-            with: ["page" : pageNumber,
-                  "per_page" : "30"])
+                                                        with: ["page" : request.pageNumber ?? "1",
+                                                               "per_page" : request.perPageListNumber ?? "20"])
         
         return urlRequest
         }

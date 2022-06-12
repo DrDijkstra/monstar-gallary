@@ -10,9 +10,9 @@ import Alamofire
 import ObjectMapper
 
 class NetworkServiceImpl: NetworkService {
-    func getPhotosBy(pageNumber: String, gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) {
+    func getPhotosBy(request: PhotoListRequest, gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) {
       
-        executeRequest(RequestRouter.getAllPhotos(pageNumber: pageNumber), gwCallback: gwCallback)
+        executeRequest(RequestRouter.getAllPhotos(request:  request), gwCallback: gwCallback)
     }
     
     
@@ -62,17 +62,15 @@ class NetworkServiceImpl: NetworkService {
                     
                     
                     let statusCode = response.response?.statusCode
-                    //print(responseString.prefix(2))
                     
                     responseString = "{\"photos\":" + responseString + "}"
-                    //print(responseString)
+
                     
                     guard let object = Mapper<T>().map(JSONString: responseString) else{
                         
                         let error = self.convertToApiGwErrorResponse(error: ApiGwError.unknownError(error: nil, httpStatusCode: statusCode))
                         
                         
-                        //print(error.code)
                         gwCallback(ApiGwCallResult<T>.failure(
                                     error : error))
                         
@@ -87,7 +85,6 @@ class NetworkServiceImpl: NetworkService {
                     
                     
                 case .failure(let error):
-                    //print(error)
                     let apiGwError = self.prepareApiGwError(response: response, error: error, castingClassType: T.self)
                     gwCallback(ApiGwCallResult<T>.failure(error : self.convertToApiGwErrorResponse(error: apiGwError)))
                     
