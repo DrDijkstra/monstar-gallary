@@ -74,7 +74,20 @@ This app has a feature of inifinity scrolling. The main complexity of the proble
 
 
 ## Waterfall Grid
+Waterfall grid is a eye soothing view for user. The app is now look like pinterest. This feel is given by a custom collectionviewfloylayout. This flowlayout delegate hight setter for collection view cell. This data is also comes from database or cache.
 
+## Detailed Photo View
+Detailed photo view is feature where raw imagees are shown. It will also cache the response managed by kingfisher. In detailed view page, photos are zoomed in and out by pinch gesture. The photo is also sharable, copyable and saveable in photos(iphone gallary).
+
+## Image and Response Caching
+Image caching are managed by kingfisher. The collection view cell image sand detailed photo images are cached. In here we set highest cache memory uses for avoid the memory warning issue. Response are cached by alamofire as well.
+
+
+
+
+## Theme support
+
+This app also has a great feature of theme support based on ios default theme app. This means both light and dark mode is supported.
 
 
 # App Screenshot
