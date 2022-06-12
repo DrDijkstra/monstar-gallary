@@ -58,11 +58,26 @@ Database layer deals with data stored in rom. It is managed by Core Data which b
 ![arch](/Resource/arch.png)
 
 
-#  Infinity Scrolling 
+#  Features
+
+There are some few features in this app. These are 
+- Inifinity Scrolling
+- Waterfall Grid
+- Detailed Photo View
+- Image Caching
+- Response Caching
+- Theme Support (Dark/Light)
+
+## Infinity Scrolling
+
+This app has a feature of inifinity scrolling. The main complexity of the problem is handling the memory because if inifinte response are in app memory, it will crash the whole app. So for the better perfomance ,  I have done using database(<B>Core Data</B>). So i am deleting alll the database info in launching the app. Then, in success response i will store all the data in database based on id. And when cell needs information, it will fetech the information from database. So app memory is not increased. It is a  bit slower approch. So, for increasing the performance and better user experience , I prefectch the data and store in cache. So, for updating cell, I will first search in cache and if it is not found in cache, then I fetch data from database.
+
+
+## Waterfall Grid
 
 
 
-
+# App Screenshot
 
 Dark Mode             |  Light Mode
 :-------------------------:|:-------------------------:
