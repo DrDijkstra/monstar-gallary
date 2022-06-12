@@ -9,5 +9,5 @@ import Foundation
 
 
 protocol NetworkService {
-    func getPhotosBy(pageNumber:String,  gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) -> Void
+    func getPhotosBy(request: PhotoListRequest,  gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) -> Void
 }

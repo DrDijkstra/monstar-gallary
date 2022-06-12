@@ -57,12 +57,8 @@ class PhotoViewController: BaseViewController,UIScrollViewDelegate {
     
     
     func showImage(){
-        print("image sanjay", imageUrl ?? "")
-        //imageUrl = imageUrl?.replacingOccurrences(of: "\", with: "")
         let urlString = URL(string: imageUrl!)
-        print("sanjay url", urlString ?? "")
         imageView.kf.setImage(with: urlString, placeholder: thumbImage,completionHandler: {_ in
-            print("Sanjay cahed")
             self.menuButton.isEnabled = true
         })
     }

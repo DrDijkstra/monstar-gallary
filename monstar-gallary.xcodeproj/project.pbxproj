@@ -140,6 +140,9 @@
 		92A7AFA8284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */; };
 		92A7AFC7284D16BA00EFC5A2 /* ImgUrlData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFC5284D16BA00EFC5A2 /* ImgUrlData+CoreDataClass.swift */; };
 		92A7AFC8284D16BA00EFC5A2 /* ImgUrlData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A7AFC6284D16BA00EFC5A2 /* ImgUrlData+CoreDataProperties.swift */; };
+		92AB0E6E2855ACD900CB209D /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */; };
+		92AB0E6F2855ACD900CB209D /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */; };
+		92AB0E702855ACD900CB209D /* PhotoListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */; };
 		92B5AD572848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
 		92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */; };
@@ -252,6 +255,7 @@
 		92A7AFA5284CFCCC00EFC5A2 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		92A7AFC5284D16BA00EFC5A2 /* ImgUrlData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImgUrlData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		92A7AFC6284D16BA00EFC5A2 /* ImgUrlData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImgUrlData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoListRequest.swift; path = ../../../../../PhotoListRequest.swift; sourceTree = "<group>"; };
 		92B5AD562848FC19003E9FE7 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		92B5AD5B2849146D003E9FE7 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		92B5AD61284923E0003E9FE7 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Kingfisher.framework; sourceTree = "<group>"; };
@@ -295,13 +299,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		921327692854C215000E782E /* Request */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Request;
-			sourceTree = "<group>";
-		};
 		9227209F2848B4AE0027E003 = {
 			isa = PBXGroup;
 			children = (
@@ -427,7 +424,7 @@
 		9242D467284A09DD00C4471B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				921327692854C215000E782E /* Request */,
+				92AB0E6C2855ACB000CB209D /* Request */,
 				9242D470284A0B0900C4471B /* BaseResponse */,
 				9242D46F284A0ABA00C4471B /* Response */,
 			);
@@ -516,6 +513,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		92AB0E6C2855ACB000CB209D /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				92AB0E6D2855ACD900CB209D /* PhotoListRequest.swift */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		92AE2EA4284CC17B00543434 /* PhotoViewer */ = {
@@ -692,6 +697,7 @@
 				92A7AF90284CD1A600EFC5A2 /* PhotoCollectionViewCell.swift in Sources */,
 				9242D4B6284A653100C4471B /* UrlInfo.swift in Sources */,
 				92EA800528549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */,
+				92AB0E6E2855ACD900CB209D /* PhotoListRequest.swift in Sources */,
 				92A7AF9E284CF18B00EFC5A2 /* DatabaseService.swift in Sources */,
 				9242D472284A0B4E00C4471B /* NetworkServiceImpl.swift in Sources */,
 				9242D4CD284B91E200C4471B /* AppConfig.swift in Sources */,
@@ -765,6 +771,7 @@
 				92B5AD582848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
 				920808272848CB74002E88DA /* PhotoCollectionVC.swift in Sources */,
 				9242D44B284A01C700C4471B /* ApiCallResult.swift in Sources */,
+				92AB0E6F2855ACD900CB209D /* PhotoListRequest.swift in Sources */,
 				9242D4BB284A659C00C4471B /* LinksInfo.swift in Sources */,
 				92EA800628549DC600BAFC4A /* UiVIew+RoundedCorner.swift in Sources */,
 				9242D4252849F21E00C4471B /* PhotoCollectionInetractor.swift in Sources */,
@@ -828,6 +835,7 @@
 				92B5AD592848FC19003E9FE7 /* PhotoViewController.swift in Sources */,
 				9242D454284A026800C4471B /* MonstarGallaryServiceImpl.swift in Sources */,
 				9242D479284A0C3A00C4471B /* HeaderName.swift in Sources */,
+				92AB0E702855ACD900CB209D /* PhotoListRequest.swift in Sources */,
 				9242D459284A041B00C4471B /* PhotoService.swift in Sources */,
 				9242D4A4284A4AC200C4471B /* Interceptor.swift in Sources */,
 				92A7AFA8284CFCCC00EFC5A2 /* UserDefaultsManager.swift in Sources */,

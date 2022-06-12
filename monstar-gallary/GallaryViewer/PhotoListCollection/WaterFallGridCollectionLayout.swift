@@ -41,15 +41,7 @@ class WaterFallGridCollectionLayoutLayout: UICollectionViewLayout {
   
   override func prepare() {
     // 1
-      
-      print("prepare started")
-//    guard
-//      cache.isEmpty == true,
-//      let collectionView = collectionView
-//      else {
-//        return
-//    }
-    // 2
+
       
       print("prepare ended")
     let columnWidth = contentWidth / CGFloat(numberOfColumns)

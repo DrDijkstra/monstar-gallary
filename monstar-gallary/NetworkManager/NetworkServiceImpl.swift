@@ -10,9 +10,9 @@ import Alamofire
 import ObjectMapper
 
 class NetworkServiceImpl: NetworkService {
-    func getPhotosBy(pageNumber: String, gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) {
+    func getPhotosBy(request: PhotoListRequest, gwCallback: @escaping (ApiGwCallResult<ApiPhotosResponse>) -> Void) {
       
-        executeRequest(RequestRouter.getAllPhotos(pageNumber: pageNumber), gwCallback: gwCallback)
+        executeRequest(RequestRouter.getAllPhotos(request:  request), gwCallback: gwCallback)
     }
     
     
