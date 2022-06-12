@@ -37,7 +37,7 @@ enum RequestRouter : URLRequestConvertible, URLConvertible{
         case .getAllPhotos(let pageNumber):
             urlRequest = try URLEncoding.default.encode(urlRequest,
             with: ["page" : pageNumber,
-                  "per_page" : "30"])
+                  "per_page" : "10"])
         
         return urlRequest
         }

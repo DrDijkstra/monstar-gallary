@@ -43,22 +43,10 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
    //         collectionView.numberOfItems(inSection: totalImageCount)
             
             collectionView.reloadData()
+            print("collectionView.reloadData()")
             
         }else{
-            var count = 0
-            var indexPathList:[IndexPath] = []
-            for _ in response{
-                count += 1;
-                
-                
-                let indexPath = IndexPath(item: totalImageCount + count, section: 0)
-                indexPathList.append(indexPath)
-                
-            }
             
-            
-            //print("total image count", totalImageCount)
-            totalImageCount += response.count
             
             //collectionView.numberOfItems(inSection: 0)
             
@@ -66,13 +54,28 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
             
             //print(indexPathList[0].section)
             
+//                collectionView.reloadData()
+            var count = 0
+            var indexPathList:[IndexPath] = []
+            for _ in response{
+                count += 1;
+                
+                
+                let indexPath = IndexPath(item: totalImageCount + count - 1, section: 0)
+                indexPathList.append(indexPath)
+                
+            }
+            
+            
+            //print("total image count", totalImageCount)
+            totalImageCount += response.count
+     
             
 
             collectionView.performBatchUpdates({
-                
-                collectionView.reloadData()
-         
-                //collectionView.insertItems(at: indexPathList)
+
+                collectionView.insertItems(at: indexPathList)
+
                 
             })
 
@@ -110,9 +113,9 @@ class PhotoCollectionVC: BaseViewController, PhotoCollectionView {
 //        collectionView!.collectionViewLayout = layout
 //        collectionView.numberOfItems(inSection: totalImageCount)
         
-        if let layout = collectionView?.collectionViewLayout as? WaterFallGridCollectionLayoutLayout {
-            layout.delegate = self
-        }
+//        if let layout = collectionView?.collectionViewLayout as? WaterFallGridCollectionLayoutLayout {
+//            layout.delegate = self
+//        }
         presenter = PhotoCollectionPresenterImpl(view: self)
         
         
@@ -176,6 +179,7 @@ extension PhotoCollectionVC: UICollectionViewDelegate, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+         print("numberOfItemsInSection \(totalImageCount)")
         return totalImageCount
     }
     
