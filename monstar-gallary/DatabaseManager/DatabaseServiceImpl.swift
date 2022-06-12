@@ -93,9 +93,6 @@ class DatabaseServiceImpl: DatabaseService {
         imageUrlData.thumb = urlData.thumb
         imageUrlData.heightMultiplier = urlData.heightMultiplier
         
-        print("height multi", urlData.heightMultiplier)
-       
-        //print(UserDefaults.lastImageIndex)
         imageUrlData.id = String(UserDefaults.lastImageIndex)
         
         do{
