@@ -1,9 +1,9 @@
 # Introduction
 
- In this project,  a simple <B>"Monstar Lab"</B> iOS app is created that displays a list of photos as a gallery. Users can tap the photo to see a full-screen view of it with the possibility to zoom in and out.
+ In this project,  a simple <B>"Monstar Lab"</B> iOS app is created that displays a list of photos as a gallery where users can experience infinity scrolling. As an additional enhancement user can tap the photo to see a full-screen view of it with the possibility to zoom in and out.
 
 # Setup Tools 
-For setup the project in mac machine, you need 
+For setup the project in mac machine, the following built tool is needed :
 - XCode 13.4
 
 Minimum ios support version, for this app is
@@ -23,7 +23,7 @@ Object Mapper is used for json serialiazation and deserialzation. I am using car
 
 
 ## Kingpfisher
-Kingfiser is used for image downloading and caching. For more info, plaease visit [Kingfiser](https://github.com/onevcat/Kingfisher).
+Kingfiser is used for image downloading and caching. For more info, please visit [Kingfiser](https://github.com/onevcat/Kingfisher).
 
 ## UIKit
 UIKit is a framework supported by apple used here for buliding the UI/UX flow. For more info, please visit [UIKit](https://developer.apple.com/documentation/uikit).
@@ -37,14 +37,14 @@ All of the frameworks except apple supported frameworks are used by [carthage](h
 
 This app is mainly designed with modified VIPER architechure pattern. 
 
-The entity(E) in VIPER is accessable in service manager component. There are mainly three components required for constucting this app.
+The entity(E) in VIPER is accessible in service manager component. There are mainly three components required for constucting this app.
 - Service Layer
 - Network Layer
 - Database layer
 
 
 ## Service Layer
-Service Layer is used to make request ready for network layer and make response ready to app layer. Mainly it is the data processing unit to make network call with by alamofire. Appcliation only use service layer to do any network call or use other services like database access.
+Service Layer is used to make request ready for network layer and make response ready to app layer. Mainly it is the data processing unit to make network call with by alamofire. Application only uses service layer to do any network call or use other services like database access.
 
 
 ## Network Layer
@@ -52,7 +52,7 @@ Network layer is basically responsible for any network call like REST. It consis
 
 
 ## Database Layer
-Database layer deals with data stored in rom. It is managed by Core Data which basically uses sqlite. Database layer is only accessible from service layer. 
+Database layer deals with data stored in ROM. It is managed by Core Data which basically uses sqlite. Database layer is only accessible from service layer. 
 
 
 ![arch](/Resource/arch.png)
@@ -60,7 +60,7 @@ Database layer deals with data stored in rom. It is managed by Core Data which b
 
 #  Features
 
-There are some few features in this app. These are 
+There are some few features in this app. These are given below:
 - Inifinity Scrolling
 - Waterfall Grid
 - Detailed Photo View
@@ -70,24 +70,24 @@ There are some few features in this app. These are
 
 ## Infinity Scrolling
 
-This app has a feature of inifinity scrolling. The main complexity of the problem is handling the memory because if inifinte response are in app memory, it will crash the whole app. So for the better perfomance ,  I have done using database(<B>Core Data</B>). So i am deleting alll the database info in launching the app. Then, in success response i will store all the data in database based on id. And when cell needs information, it will fetech the information from database. So app memory is not increased. It is a  bit slower approch. So, for increasing the performance and better user experience , I prefectch the data and store in cache. So, for updating cell, I will first search in cache and if it is not found in cache, then I fetch data from database.
+This app has a feature of inifinity scrolling. The main complexity of the problem is handling the memory because if inifinte response are in app memory, it will crash the whole app. So for the better perfomance ,  I have done using database(<B>Core Data</B>). So i am deleting alll the database info in launching the app. Then, in success response i will store all the data in database based on id. And when cell needs information, it will fetch the information from database. So app memory is not increased. It is a  bit slower approach. So, for increasing the performance and better user experience , I prefetch the data and store in cache. So, for updating cell, I will first search in cache and if it is not found in cache, then I fetch data from database.
 
 
 ## Waterfall Grid
-Waterfall grid is a eye soothing view for user. The app is now look like pinterest. This feel is given by a custom collectionviewfloylayout. This flowlayout delegate hight setter for collection view cell. This data is also comes from database or cache.
+Waterfall grid is an eye soothing view for user. The app is now look like pinterest. This experience is given by a custom collectionviewfloylayout. This flowlayout delegates the height setter for collection view cell. This data also comes from database or cache.
 
 ## Detailed Photo View
-Detailed photo view is feature where raw imagees are shown. It will also cache the response managed by kingfisher. In detailed view page, photos are zoomed in and out by pinch gesture. The photo is also sharable, copyable and saveable in photos(iphone gallary).
+Detailed photo view is a feature where raw images are shown. It will also cache the response managed by kingfisher. In detailed view page, photos are zoomed in and out by pinch gesture. The photo is also sharable, copyable and saveable in photos(iphone gallary).
 
 ## Image and Response Caching
-Image caching are managed by kingfisher. The collection view cell image sand detailed photo images are cached. In here we set highest cache memory uses for avoid the memory warning issue. Response are cached by alamofire as well.
+Image caching are managed by kingfisher. The collection view cell image sand detailed photo images are cached. Here the highest cache memory usage is set for avoid the memory warning issue. Responses are cached by alamofire as well.
 
 
 
 
 ## Theme support
 
-This app also has a great feature of theme support based on ios default theme app. This means both light and dark mode is supported.
+This app also has a great feature of theme support based on ios default theme. That means both light and dark mode is supported.
 
 
 # App Screenshot
