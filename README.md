@@ -22,7 +22,7 @@ Alamofire is mainly used for http network call like get, put, post, delete. It i
 Object Mapper is used for json serialiazation and deserialzation. I am using carthage to use the object mapper. For more info, please visit [Object Mapper](https://github.com/tristanhimmelman/ObjectMapper).
 
 
-## Kingpfisher
+## Kingfisher
 Kingfiser is used for image downloading and caching. For more info, please visit [Kingfiser](https://github.com/onevcat/Kingfisher).
 
 ## UIKit
