@@ -203,7 +203,7 @@
 
 /* Begin PBXFileReference section */
 		920808252848CB74002E88DA /* PhotoCollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionVC.swift; sourceTree = "<group>"; };
-		9213276A28564BA4000E782E /* PhotoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoListRequest.swift; path = "monstar-gallary/NetworkManager/Model/PhotoListRequest.swift"; sourceTree = SOURCE_ROOT; };
+		9213276A28564BA4000E782E /* PhotoListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PhotoListRequest.swift; path = "monstar-gallary/NetworkManager/Model/Request/PhotoListRequest.swift"; sourceTree = SOURCE_ROOT; };
 		922720A82848B4AE0027E003 /* Monstar Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Monstar Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922720AB2848B4AE0027E003 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922720AD2848B4AE0027E003 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -424,7 +424,7 @@
 		9242D467284A09DD00C4471B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92AB0E6C2855ACB000CB209D /* Request */,
+				929EE142285CA36300AC16B7 /* Request */,
 				9242D470284A0B0900C4471B /* BaseResponse */,
 				9242D46F284A0ABA00C4471B /* Response */,
 			);
@@ -496,6 +496,14 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		929EE142285CA36300AC16B7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				9213276A28564BA4000E782E /* PhotoListRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		92A7AF9B284CEEB200EFC5A2 /* DatabaseManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,14 +521,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		92AB0E6C2855ACB000CB209D /* Request */ = {
-			isa = PBXGroup;
-			children = (
-				9213276A28564BA4000E782E /* PhotoListRequest.swift */,
-			);
-			path = Request;
 			sourceTree = "<group>";
 		};
 		92AB0E722855AF9800CB209D /* Common */ = {
